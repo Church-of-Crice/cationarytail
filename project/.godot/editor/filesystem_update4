@@ -1,0 +1,10 @@
+res://ui/screens/main_menu/main_menu.tscn
+res://ui/screens/character_creation/character_creation_screen.tscn
+res://ui/overlays/pause_menu_overlay/pause_menu_overlay.tscn
+res://ui/components/death_counter/death_counter.tscn
+res://ui/overlays/in_game_overlay/in-game_overlay.tscn
+res://ui/screens/credits/credits.tscn
+res://locations/animal_rescue/animal_rescue.tscn
+res://locations/home_of_adopter/home_of_adopter.tscn
+res://locations/outdoors/outdoors.tscn
+res://locations/the_pound/the_pound.tscn

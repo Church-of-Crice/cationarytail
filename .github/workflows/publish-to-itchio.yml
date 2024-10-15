@@ -1,0 +1,90 @@
+name: "publish to itch.io"
+on: release
+
+env:
+  GODOT_VERSION: 4.2.2
+  ITCH_USER: <your-itch-username>
+  ITCH_GAME: <your-games-url-stub-on-itch>
+  BUTLER_API_KEY: ${{ secrets.BUTLER_CREDENTIALS }}
+  PROJECT_PATH: <path-to-your-project-root>
+
+jobs:
+  release_web:
+    runs-on: ubuntu-latest
+    steps:
+      - name: download Web
+        id: download-linux
+        uses: dsaltares/fetch-gh-release-asset@master
+        with:
+          file: web.zip
+        env:
+          GITHUB_TOKEN: "${{ secrets.GH_CREDENTIALS }}"
+      - name: deploy to itch.io (web)
+        uses: josephbmanley/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+          CHANNEL: web
+          ITCH_GAME: ${{ env.ITCH_GAME }}
+          ITCH_USER: ${{ env.ITCH_USER }}
+          PACKAGE: web.zip
+          VERSION: ${{ steps.download-web.outputs.version }}
+
+  release_linux:
+    runs-on: ubuntu-latest
+    steps:
+      - name: download Linux
+        id: download-linux
+        uses: dsaltares/fetch-gh-release-asset@master
+        with:
+          file: linux.zip
+        env:
+          GITHUB_TOKEN: "${{ secrets.GH_CREDENTIALS }}"
+      - name: deploy to itch.io (Linux)
+        uses: josephbmanley/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+          CHANNEL: linux
+          ITCH_GAME: ${{ env.ITCH_GAME }}
+          ITCH_USER: ${{ env.ITCH_USER }}
+          PACKAGE: linux.zip
+          VERSION: ${{ steps.download-linux.outputs.version }}
+
+  release_windows:
+    runs-on: ubuntu-latest
+    steps:
+      - name: download Winows
+        id: download-windows
+        uses: dsaltares/fetch-gh-release-asset@master
+        with:
+          file: windows.zip
+        env:
+          GITHUB_TOKEN: "${{ secrets.GH_CREDENTIALS }}"
+      - name: deploy to itch.io (Windows)
+        uses: josephbmanley/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+          CHANNEL: windows
+          ITCH_GAME: ${{ env.ITCH_GAME }}
+          ITCH_USER: ${{ env.ITCH_USER }}
+          PACKAGE: windows.zip
+          VERSION: ${{ steps.download-windows.outputs.version }}
+
+  release_mac:
+    runs-on: ubuntu-latest
+    steps:
+      - name: download Winows
+        id: download-windows
+        uses: dsaltares/fetch-gh-release-asset@master
+        with:
+          file: mac.zip
+        env:
+          GITHUB_TOKEN: "${{ secrets.GH_CREDENTIALS }}"
+      - name: deploy to itch.io (Mac)
+        uses: josephbmanley/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
+          CHANNEL: mac
+          ITCH_GAME: ${{ env.ITCH_GAME }}
+          ITCH_USER: ${{ env.ITCH_USER }}
+          PACKAGE: mac.zip
+          VERSION: ${{ steps.download-windows.outputs.version }}

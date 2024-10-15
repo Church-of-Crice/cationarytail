@@ -18,6 +18,7 @@ radius = 8.0
 height = 32.0
 
 [node name="PlayerCharacter" type="CharacterBody2D" node_paths=PackedStringArray("AnimSprite")]
+collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_tdqt1")
 AnimSprite = NodePath("AnimatedSprite2D")

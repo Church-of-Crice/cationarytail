@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b2acjfik667bw"]
+
+[ext_resource type="Script" path="res://utility/SceneChangeTrigger/SceneChangeTrigger.cs" id="1_u4gue"]
+
+[node name="SceneChangeTrigger" type="Area2D"]
+collision_layer = 0
+monitorable = false
+script = ExtResource("1_u4gue")
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]

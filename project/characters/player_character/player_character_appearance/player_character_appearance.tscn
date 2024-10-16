@@ -1,20 +1,21 @@
 [gd_scene load_steps=5 format=3 uid="uid://ff0pl457qtvi"]
 
 [ext_resource type="Script" path="res://characters/player_character/player_character_appearance/player_character_appearance.gd" id="1_u3f06"]
-[ext_resource type="Texture2D" uid="uid://c7mdg5jcm6rgn" path="res://characters/player_character/art/black body.png" id="2_2j3xj"]
-[ext_resource type="Texture2D" uid="uid://ncrlpkbvn4ox" path="res://characters/player_character/art/purple collar.png" id="3_363xw"]
-[ext_resource type="Texture2D" uid="uid://c12s4bbtjpqkd" path="res://characters/player_character/art/red eyes.png" id="4_w6jbw"]
+[ext_resource type="Texture2D" uid="uid://bud5pfb30k6dl" path="res://characters/player_character/art/orange body.png" id="2_oxphx"]
+[ext_resource type="Texture2D" uid="uid://cff1cwhuyukf6" path="res://characters/player_character/art/green collar.png" id="3_o86g6"]
+[ext_resource type="Texture2D" uid="uid://cfxn3ek67fbci" path="res://characters/player_character/art/green eyes.png" id="4_helvx"]
 
 [node name="PlayerCharacterAppearance" type="Node2D"]
 script = ExtResource("1_u3f06")
-collar_type = 6
-eye_type = 6
+body_type = 4
+collar_type = 2
+eye_type = 2
 
 [node name="Body" type="Sprite2D" parent="."]
-texture = ExtResource("2_2j3xj")
+texture = ExtResource("2_oxphx")
 
 [node name="Collar" type="Sprite2D" parent="."]
-texture = ExtResource("3_363xw")
+texture = ExtResource("3_o86g6")
 
 [node name="Eyes" type="Sprite2D" parent="."]
-texture = ExtResource("4_w6jbw")
+texture = ExtResource("4_helvx")

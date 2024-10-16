@@ -1,9 +1,29 @@
-[gd_scene load_steps=5 format=3 uid="uid://bg5cs57ay7ftj"]
+[gd_scene load_steps=10 format=3 uid="uid://bg5cs57ay7ftj"]
 
-[ext_resource type="Texture2D" uid="uid://c7mdg5jcm6rgn" path="res://characters/player_character/art/black body.png" id="1_1diu3"]
-[ext_resource type="Texture2D" uid="uid://dysm5nhefj05p" path="res://characters/player_character/art/black collar.png" id="2_oggdu"]
-[ext_resource type="Texture2D" uid="uid://bg8whc2omt51r" path="res://characters/player_character/art/blue collar.png" id="3_3pxh1"]
-[ext_resource type="Texture2D" uid="uid://bm3myeiox5vqa" path="res://characters/player_character/art/blue eyes.png" id="4_wlqkg"]
+[ext_resource type="PackedScene" uid="uid://ff0pl457qtvi" path="res://characters/player_character/player_character_appearance/player_character_appearance.tscn" id="1_imksy"]
+[ext_resource type="Script" path="res://ui/screens/character_creation/character_creation_screen.gd" id="1_ljgtx"]
+[ext_resource type="Texture2D" uid="uid://dds1rvno21ter" path="res://ui/screens/character_creation/art/charactercreationarrows.png" id="2_hx4sp"]
+[ext_resource type="Script" path="res://characters/player_character/player_character_appearance/character_appearance_data.gd" id="3_lpfk3"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_lsags"]
+viewport_path = NodePath("PanelContainer/SubViewport")
+
+[sub_resource type="Resource" id="Resource_hmjgm"]
+script = ExtResource("3_lpfk3")
+body_type = 0
+collar_type = 4
+eye_type = 0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5on1"]
+atlas = ExtResource("2_hx4sp")
+region = Rect2(0, 9, 11, 14)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cadme"]
+load_path = "res://.godot/imported/charactercreationarrows.png-50d8604fb5a8ee0054976ee2fcd4463f.ctex"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3kjwt"]
+atlas = SubResource("CompressedTexture2D_cadme")
+region = Rect2(21, 9, 11, 14)
 
 [node name="CharacterCreationScreen" type="Control"]
 layout_mode = 3
@@ -12,15 +32,142 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ljgtx")
 
-[node name="BlackBody" type="Sprite2D" parent="."]
-texture = ExtResource("1_1diu3")
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -27.0
+offset_top = -27.0
+offset_right = 27.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[node name="BlackCollar" type="Sprite2D" parent="."]
-texture = ExtResource("2_oggdu")
+[node name="CatImage" type="TextureRect" parent="PanelContainer"]
+layout_mode = 2
+texture = SubResource("ViewportTexture_lsags")
+stretch_mode = 3
 
-[node name="BlueCollar" type="Sprite2D" parent="."]
-texture = ExtResource("3_3pxh1")
+[node name="SubViewport" type="SubViewport" parent="PanelContainer"]
+transparent_bg = true
+size = Vector2i(32, 32)
 
-[node name="BlueEyes" type="Sprite2D" parent="."]
-texture = ExtResource("4_wlqkg")
+[node name="PlayerCharacterAppearance" parent="PanelContainer/SubViewport" instance=ExtResource("1_imksy")]
+unique_name_in_owner = true
+position = Vector2(16, 16)
+data = SubResource("Resource_hmjgm")
+body_type = 0
+collar_type = 4
+eye_type = 0
+
+[node name="StartButton" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -72.0
+offset_top = -53.0
+offset_right = -26.0
+offset_bottom = -22.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Start"
+
+[node name="CharacterOptionsPanel" type="PanelContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -54.0
+offset_right = 96.0
+offset_bottom = 54.0
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="CharacterOptionsPanel"]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="CharacterOptionsVBox" type="VBoxContainer" parent="CharacterOptionsPanel/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="CharacterOptionRow" type="HBoxContainer" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox"]
+layout_mode = 2
+alignment = 1
+
+[node name="CharacterOptionLabel" type="Label" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox/CharacterOptionRow"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Coat"
+
+[node name="ArrowsHBoxContainer" type="HBoxContainer" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox/CharacterOptionRow"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="CoatLeftButton" type="TextureButton" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox/CharacterOptionRow/ArrowsHBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_k5on1")
+
+[node name="CoatRightButton" type="TextureButton" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox/CharacterOptionRow/ArrowsHBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_3kjwt")
+
+[node name="CharacterOptionRow2" type="HBoxContainer" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox"]
+layout_mode = 2
+
+[node name="CharacterOptionLabel" type="Label" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox/CharacterOptionRow2"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Collar"
+
+[node name="ArrowsHBoxContainer" type="HBoxContainer" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox/CharacterOptionRow2"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="CollarLeftButton" type="TextureButton" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox/CharacterOptionRow2/ArrowsHBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_k5on1")
+
+[node name="CollarRightButton" type="TextureButton" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox/CharacterOptionRow2/ArrowsHBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_3kjwt")
+
+[node name="CharacterOptionRow3" type="HBoxContainer" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox"]
+layout_mode = 2
+
+[node name="CharacterOptionLabel" type="Label" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox/CharacterOptionRow3"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "Eyes"
+
+[node name="ArrowsHBoxContainer" type="HBoxContainer" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox/CharacterOptionRow3"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+
+[node name="EyesLeftButton" type="TextureButton" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox/CharacterOptionRow3/ArrowsHBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_k5on1")
+
+[node name="EyesRightButton" type="TextureButton" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox/CharacterOptionRow3/ArrowsHBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_3kjwt")

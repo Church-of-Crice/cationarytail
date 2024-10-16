@@ -8,6 +8,9 @@ extends Node2D
 		data.body_type = val
 		if body:
 			body.texture = data.body_textures.get(body_type, null)
+		if body_animated_sprite_2d:
+			body_animated_sprite_2d.body_type = body_type
+		
 	get:
 		return data.body_type
 
@@ -29,9 +32,21 @@ extends Node2D
 @onready var body: Sprite2D = $Body
 @onready var collar: Sprite2D = $Collar
 @onready var eyes: Sprite2D = $Eyes
+@onready var body_animated_sprite_2d: BodyAnimatedSprite2D = %BodyAnimatedSprite2D
+
+var velocity: Vector2:
+	set(val):
+		velocity = val
+		if body_animated_sprite_2d:
+			body_animated_sprite_2d.velocity = velocity
 
 func _init() -> void:
 	data = CharacterData.appearance
+
+func _physics_process(delta: float) -> void:
+	var player_character = $".."
+	if player_character is CharacterBody2D:
+		velocity = player_character.velocity
 
 func _ready():
 	data = CharacterData.appearance

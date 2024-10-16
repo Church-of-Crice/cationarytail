@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="godot-project-template"
+config/name="Cationary Tail"
 run/main_scene="res://ui/screens/main_menu/main_menu.tscn"
 config/features=PackedStringArray("4.3", "C#")
 config/icon="res://icon.png"

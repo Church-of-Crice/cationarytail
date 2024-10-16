@@ -1,3 +1,17 @@
 [gd_scene format=3 uid="uid://c2v14girw0rtg"]
 
 [node name="ShelterClerk" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = -31.0
+offset_top = -103.0
+offset_right = 27.0
+offset_bottom = -54.0
+text = "Shelter
+Worker"
+
+[node name="ShelterWorker" type="ColorRect" parent="."]
+offset_left = -11.0
+offset_top = -53.0
+offset_right = 12.0
+offset_bottom = -3.0

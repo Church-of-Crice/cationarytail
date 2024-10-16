@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://b4ey1wwm6iwb1"
+path="res://.godot/imported/portrait_border_gold.aseprite-c52ed43e69bd788505c5bc3432bf2262.res"
+
+[deps]
+
+source_file="res://ui/components/borders/portrait_border_gold.aseprite"
+dest_files=["res://.godot/imported/portrait_border_gold.aseprite-c52ed43e69bd788505c5bc3432bf2262.res"]
+
+[params]
+

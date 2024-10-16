@@ -1,4 +1,3 @@
-@tool
 class_name CharacterAppearance
 extends Node2D
 

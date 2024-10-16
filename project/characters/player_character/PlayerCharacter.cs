@@ -5,21 +5,18 @@ public partial class PlayerCharacter : CharacterBody2D
 {
 	[Export] public float Speed = 80.0f;
 
-	[Export] AnimatedSprite2D AnimSprite;
-
 	Vector2 PlayerInput;
 	Vector2 PlayerMovement;
 
-    public override void _Ready()
-    {
-        GlobalPosition = Globals.Instance.Spawn;
+	public override void _Ready()
+	{
+		GlobalPosition = Globals.Instance.Spawn;
 		Globals.Instance.Spawn = Vector2.Zero;
-    }
+	}
 
-    public override void _PhysicsProcess(double delta)
+	public override void _PhysicsProcess(double delta)
 	{
 		Move();
-		AnimateSpriteToDirection();
 	}
 
 	public void Move()
@@ -30,25 +27,4 @@ public partial class PlayerCharacter : CharacterBody2D
 		MoveAndSlide();
 	}
 
-	public void AnimateSpriteToDirection()
-	{
-		if(PlayerInput.X > 0)
-		{
-			AnimSprite.FlipH = false;
-			// Play horizontal walk animation
-		}
-		else if(PlayerInput.X < 0)
-		{
-			AnimSprite.FlipH = true;
-			// Play horizontal walk animation
-		}
-		else if(PlayerInput.Y > 0)
-		{
-			// Play vertical walk DOWN animation
-		}
-		else if(PlayerInput.Y < 0)
-		{
-			// Play vertical walk UP animation
-		}
-	}
 }

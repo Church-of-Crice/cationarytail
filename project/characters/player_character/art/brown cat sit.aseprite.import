@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bjcb5gg4rm4gx"
+path="res://.godot/imported/brown cat sit.aseprite-4f5b8f1166c518a42c03c3cdf3ee621a.res"
+
+[deps]
+
+source_file="res://characters/player_character/art/brown cat sit.aseprite"
+dest_files=["res://.godot/imported/brown cat sit.aseprite-4f5b8f1166c518a42c03c3cdf3ee621a.res"]
+
+[params]
+

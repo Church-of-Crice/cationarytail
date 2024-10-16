@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bt4qgehgwfc2x"
+path="res://.godot/imported/grey cat sit.aseprite-a101b68ce31e17351d19ee613182d888.res"
+
+[deps]
+
+source_file="res://characters/player_character/art/grey cat sit.aseprite"
+dest_files=["res://.godot/imported/grey cat sit.aseprite-a101b68ce31e17351d19ee613182d888.res"]
+
+[params]
+

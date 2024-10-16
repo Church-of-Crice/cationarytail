@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bxygf64emw0jl"
+path="res://.godot/imported/grey cat walk1.aseprite-7c00ec23c593d37790d21e535ead1de6.res"
+
+[deps]
+
+source_file="res://characters/player_character/art/grey cat walk1.aseprite"
+dest_files=["res://.godot/imported/grey cat walk1.aseprite-7c00ec23c593d37790d21e535ead1de6.res"]
+
+[params]
+

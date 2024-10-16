@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://dq3a86h3vpdn5"
+path="res://.godot/imported/white cat sit.ase-7cde75d83f611eb44e3430a5fe07334b.res"
+
+[deps]
+
+source_file="res://characters/player_character/art/white cat sit.ase"
+dest_files=["res://.godot/imported/white cat sit.ase-7cde75d83f611eb44e3430a5fe07334b.res"]
+
+[params]
+

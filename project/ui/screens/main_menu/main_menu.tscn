@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://b55ikiyqxxt1i"]
+[gd_scene load_steps=2 format=3 uid="uid://b55ikiyqxxt1i"]
+
+[ext_resource type="Script" path="res://ui/screens/main_menu/main_menu.gd" id="1_w75in"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -7,3 +9,20 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_w75in")
+
+[node name="StartButton" type="Button" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start"

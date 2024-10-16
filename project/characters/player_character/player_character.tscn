@@ -1,33 +1,22 @@
 [gd_scene load_steps=5 format=3 uid="uid://c3iur4l67uyh2"]
 
 [ext_resource type="Script" path="res://characters/player_character/PlayerCharacter.cs" id="1_tdqt1"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_2g8g0"]
-size = Vector2(16, 32)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_7ypi3"]
-animations = [{
-"frames": [],
-"loop": false,
-"name": &"default",
-"speed": 12.0
-}]
+[ext_resource type="PackedScene" uid="uid://ff0pl457qtvi" path="res://characters/player_character/player_character_appearance/player_character_appearance.tscn" id="2_ro1wt"]
+[ext_resource type="Script" path="res://characters/player_character/horizontal_flipper.gd" id="3_ko3l0"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d0dnk"]
-radius = 8.0
-height = 32.0
+height = 22.0
 
-[node name="PlayerCharacter" type="CharacterBody2D" node_paths=PackedStringArray("AnimSprite")]
+[node name="PlayerCharacter" type="CharacterBody2D"]
 collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_tdqt1")
-AnimSprite = NodePath("AnimatedSprite2D")
 
-[node name="PlaceholderSprite" type="Sprite2D" parent="."]
-texture = SubResource("PlaceholderTexture2D_2g8g0")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-sprite_frames = SubResource("SpriteFrames_7ypi3")
+[node name="PlayerCharacterAppearance" parent="." instance=ExtResource("2_ro1wt")]
+unique_name_in_owner = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_d0dnk")
+
+[node name="HorizontalFlipper" type="Node" parent="."]
+script = ExtResource("3_ko3l0")

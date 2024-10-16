@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://uwyk1b85eotp"
+path="res://.godot/imported/siamese cat walk1.aseprite-37eadbcfc39c3c274efd4d1c66c5297c.res"
+
+[deps]
+
+source_file="res://characters/player_character/art/siamese cat walk1.aseprite"
+dest_files=["res://.godot/imported/siamese cat walk1.aseprite-37eadbcfc39c3c274efd4d1c66c5297c.res"]
+
+[params]
+

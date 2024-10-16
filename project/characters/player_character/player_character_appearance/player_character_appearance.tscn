@@ -1,0 +1,20 @@
+[gd_scene load_steps=6 format=3 uid="uid://ff0pl457qtvi"]
+
+[ext_resource type="Script" path="res://characters/player_character/player_character_appearance/player_character_appearance.gd" id="1_u3f06"]
+[ext_resource type="Resource" uid="uid://cql7hinv3b7br" path="res://characters/player_character/player_character_appearance/player_character_appearance_data.tres" id="2_o3lkw"]
+[ext_resource type="Texture2D" uid="uid://bud5pfb30k6dl" path="res://characters/player_character/art/orange body.png" id="2_oxphx"]
+[ext_resource type="Texture2D" uid="uid://cff1cwhuyukf6" path="res://characters/player_character/art/green collar.png" id="3_o86g6"]
+[ext_resource type="Texture2D" uid="uid://cfxn3ek67fbci" path="res://characters/player_character/art/green eyes.png" id="4_helvx"]
+
+[node name="PlayerCharacterAppearance" type="Node2D"]
+script = ExtResource("1_u3f06")
+data = ExtResource("2_o3lkw")
+
+[node name="Body" type="Sprite2D" parent="."]
+texture = ExtResource("2_oxphx")
+
+[node name="Collar" type="Sprite2D" parent="."]
+texture = ExtResource("3_o86g6")
+
+[node name="Eyes" type="Sprite2D" parent="."]
+texture = ExtResource("4_helvx")

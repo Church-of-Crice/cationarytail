@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://cjwvlamfg880t"
+path="res://.godot/imported/thicker_border_gold.aseprite-e2f3c1bffa5793a47d19cb3fa47b9087.res"
+
+[deps]
+
+source_file="res://ui/components/borders/thicker_border_gold.aseprite"
+dest_files=["res://.godot/imported/thicker_border_gold.aseprite-e2f3c1bffa5793a47d19cb3fa47b9087.res"]
+
+[params]
+

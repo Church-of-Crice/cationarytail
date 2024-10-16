@@ -1,4 +1,9 @@
-[gd_scene format=3 uid="uid://bg5cs57ay7ftj"]
+[gd_scene load_steps=5 format=3 uid="uid://bg5cs57ay7ftj"]
+
+[ext_resource type="Texture2D" uid="uid://c7mdg5jcm6rgn" path="res://characters/player_character/art/black body.png" id="1_1diu3"]
+[ext_resource type="Texture2D" uid="uid://dysm5nhefj05p" path="res://characters/player_character/art/black collar.png" id="2_oggdu"]
+[ext_resource type="Texture2D" uid="uid://bg8whc2omt51r" path="res://characters/player_character/art/blue collar.png" id="3_3pxh1"]
+[ext_resource type="Texture2D" uid="uid://bm3myeiox5vqa" path="res://characters/player_character/art/blue eyes.png" id="4_wlqkg"]
 
 [node name="CharacterCreationScreen" type="Control"]
 layout_mode = 3
@@ -7,3 +12,15 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="BlackBody" type="Sprite2D" parent="."]
+texture = ExtResource("1_1diu3")
+
+[node name="BlackCollar" type="Sprite2D" parent="."]
+texture = ExtResource("2_oggdu")
+
+[node name="BlueCollar" type="Sprite2D" parent="."]
+texture = ExtResource("3_3pxh1")
+
+[node name="BlueEyes" type="Sprite2D" parent="."]
+texture = ExtResource("4_wlqkg")

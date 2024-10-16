@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0dq1v2bu5ynb"]
+
+[ext_resource type="PackedScene" uid="uid://ff0pl457qtvi" path="res://characters/player_character/player_character_appearance/player_character_appearance.tscn" id="1_xmtau"]
+
+[node name="TestPlayerAppearance" type="Node2D"]
+
+[node name="PlayerCharacterAppearance" parent="." instance=ExtResource("1_xmtau")]
+position = Vector2(144, 86)
+body_type = 1
+eye_type = 4

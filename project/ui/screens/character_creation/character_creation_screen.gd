@@ -1,7 +1,5 @@
 extends Control
 
-const HOME_OF_ADOPTER = preload("res://locations/home_of_adopter/home_of_adopter.tscn")
-
 @onready var coat_left_button: TextureButton = %CoatLeftButton
 @onready var coat_right_button: TextureButton = %CoatRightButton
 @onready var collar_left_button: TextureButton = %CollarLeftButton
@@ -41,6 +39,4 @@ func _on_eyes_right_button_pressed():
 	player_character_appearance.set_eyes_to_next()
 
 func _on_start_button_pressed():
-	# Implement start button action, e.g., transitioning to the next scene
-	print("Start button pressed")
-	get_tree().change_scene_to_packed(HOME_OF_ADOPTER)
+	get_tree().change_scene_to_packed(SceneManager.ANIMAL_RESCUE)

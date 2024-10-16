@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="CharacterAppearanceData" load_steps=2 format=3 uid="uid://cql7hinv3b7br"]
+
+[ext_resource type="Script" path="res://characters/player_character/player_character_appearance/character_appearance_data.gd" id="1_crbxl"]
+
+[resource]
+script = ExtResource("1_crbxl")
+body_type = 4
+collar_type = 2
+eye_type = 2

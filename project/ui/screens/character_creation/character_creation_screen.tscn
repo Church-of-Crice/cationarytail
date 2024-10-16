@@ -1,11 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://bg5cs57ay7ftj"]
+[gd_scene load_steps=11 format=3 uid="uid://bg5cs57ay7ftj"]
 
 [ext_resource type="PackedScene" uid="uid://ff0pl457qtvi" path="res://characters/player_character/player_character_appearance/player_character_appearance.tscn" id="1_imksy"]
 [ext_resource type="Script" path="res://ui/screens/character_creation/character_creation_screen.gd" id="1_ljgtx"]
 [ext_resource type="Texture2D" uid="uid://dds1rvno21ter" path="res://ui/screens/character_creation/art/charactercreationarrows.png" id="2_hx4sp"]
 [ext_resource type="Texture2D" uid="uid://8ny152xv0mv7" path="res://ui/screens/character_creation/art/character creation background - tileable.png" id="3_crjwi"]
-[ext_resource type="Script" path="res://characters/player_character/player_character_appearance/character_appearance_data.gd" id="3_lpfk3"]
-[ext_resource type="SpriteFrames" uid="uid://oog3f3q3rvxy" path="res://ui/screens/character_creation/art/character creation  background dynamic.res" id="5_aw3oq"]
 [ext_resource type="Shader" path="res://ui/screens/character_creation/character_creation_screen_bg.gdshader" id="5_mkx4i"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_urj62"]
@@ -17,12 +15,6 @@ shader_parameter/my_texture = ExtResource("3_crjwi")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_lsags"]
 viewport_path = NodePath("PanelContainer/SubViewport")
-
-[sub_resource type="Resource" id="Resource_hmjgm"]
-script = ExtResource("3_lpfk3")
-body_type = 0
-collar_type = 4
-eye_type = 0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k5on1"]
 atlas = ExtResource("2_hx4sp")
@@ -36,7 +28,6 @@ atlas = SubResource("CompressedTexture2D_cadme")
 region = Rect2(21, 9, 11, 14)
 
 [node name="CharacterCreationScreen" type="Control"]
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -44,28 +35,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_ljgtx")
-
-[node name="Parallax2D" type="Parallax2D" parent="."]
-visible = false
-
-[node name="AnimatedBackground" type="TextureRect" parent="Parallax2D"]
-visible = false
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_right = 328.0
-offset_bottom = 189.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_crjwi")
-stretch_mode = 1
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-visible = false
-position = Vector2(160, 98)
-sprite_frames = ExtResource("5_aw3oq")
-autoplay = "default"
-frame_progress = 0.910599
 
 [node name="ColorRect" type="ColorRect" parent="."]
 material = SubResource("ShaderMaterial_urj62")
@@ -102,10 +71,7 @@ size = Vector2i(32, 32)
 [node name="PlayerCharacterAppearance" parent="PanelContainer/SubViewport" instance=ExtResource("1_imksy")]
 unique_name_in_owner = true
 position = Vector2(16, 16)
-data = SubResource("Resource_hmjgm")
-body_type = 0
-collar_type = 4
-eye_type = 0
+data = null
 
 [node name="StartButton" type="Button" parent="."]
 unique_name_in_owner = true

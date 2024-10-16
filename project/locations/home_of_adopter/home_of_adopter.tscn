@@ -5,3 +5,4 @@
 [node name="HomeOfAdopter" type="Node2D"]
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("1_euxw5")]
+position = Vector2(162, 90)

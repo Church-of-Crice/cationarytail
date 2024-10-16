@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://c8rxp1wt6mxwx"
+path="res://.godot/imported/orange cat walk1.aseprite-366c0957c3e45afe3095f3562ea7b5b1.res"
+
+[deps]
+
+source_file="res://characters/player_character/art/orange cat walk1.aseprite"
+dest_files=["res://.godot/imported/orange cat walk1.aseprite-366c0957c3e45afe3095f3562ea7b5b1.res"]
+
+[params]
+

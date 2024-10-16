@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bcn2s3imomcph"
+path="res://.godot/imported/siamese cat sit.aseprite-33b732799c64b2a7ea0c85984b8a6e7b.res"
+
+[deps]
+
+source_file="res://characters/player_character/art/siamese cat sit.aseprite"
+dest_files=["res://.godot/imported/siamese cat sit.aseprite-33b732799c64b2a7ea0c85984b8a6e7b.res"]
+
+[params]
+

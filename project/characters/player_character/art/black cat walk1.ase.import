@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://b455464t5q2i"
+path="res://.godot/imported/black cat walk1.ase-ebf106145201126a255d350654579734.res"
+
+[deps]
+
+source_file="res://characters/player_character/art/black cat walk1.ase"
+dest_files=["res://.godot/imported/black cat walk1.ase-ebf106145201126a255d350654579734.res"]
+
+[params]
+

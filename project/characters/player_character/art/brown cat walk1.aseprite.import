@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://d0vvw8yvs2ibq"
+path="res://.godot/imported/brown cat walk1.aseprite-f3e208f428a105cf4b3abdab9daeb2ec.res"
+
+[deps]
+
+source_file="res://characters/player_character/art/brown cat walk1.aseprite"
+dest_files=["res://.godot/imported/brown cat walk1.aseprite-f3e208f428a105cf4b3abdab9daeb2ec.res"]
+
+[params]
+

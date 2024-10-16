@@ -10,7 +10,13 @@ public partial class PlayerCharacter : CharacterBody2D
 	Vector2 PlayerInput;
 	Vector2 PlayerMovement;
 
-	public override void _PhysicsProcess(double delta)
+    public override void _Ready()
+    {
+        GlobalPosition = Globals.Instance.Spawn;
+		Globals.Instance.Spawn = Vector2.Zero;
+    }
+
+    public override void _PhysicsProcess(double delta)
 	{
 		Move();
 		AnimateSpriteToDirection();

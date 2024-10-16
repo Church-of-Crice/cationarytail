@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2dto3uagjkyx"
-path="res://.godot/imported/Persian Cat.png-f4772d4e8cbb56f35428a14e71660071.ctex"
+path="res://.godot/imported/Persian Cat.png-11bc9920a62ca5f6a654357ceefb30ae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/npcs/Persian Cat.png"
-dest_files=["res://.godot/imported/Persian Cat.png-f4772d4e8cbb56f35428a14e71660071.ctex"]
+source_file="res://characters/npcs/persian_cat/Persian Cat.png"
+dest_files=["res://.godot/imported/Persian Cat.png-11bc9920a62ca5f6a654357ceefb30ae.ctex"]
 
 [params]
 

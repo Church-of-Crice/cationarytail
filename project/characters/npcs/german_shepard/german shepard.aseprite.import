@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://ci1xvr0i7q3o2"
+path="res://.godot/imported/german shepard.aseprite-3fab399263a627c1ff843196098d70b8.res"
+
+[deps]
+
+source_file="res://characters/npcs/german_shepard/german shepard.aseprite"
+dest_files=["res://.godot/imported/german shepard.aseprite-3fab399263a627c1ff843196098d70b8.res"]
+
+[params]
+

@@ -11,7 +11,7 @@
 shader = ExtResource("5_mkx4i")
 shader_parameter/velocity = Vector2(0.2, 0.2)
 shader_parameter/pixel_snap = true
-shader_parameter/scale = 1.0
+shader_parameter/scale = 6.0
 shader_parameter/my_texture = ExtResource("3_crjwi")
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_lsags"]

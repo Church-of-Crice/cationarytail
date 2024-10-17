@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbsinc6hu6myk"
-path="res://.godot/imported/charactercreationshadow.png-acdb59d58b0d38c7934bc1805305c1fd.ctex"
+uid="uid://dtw0r5iluamob"
+path="res://.godot/imported/charactercreationshadow.png-be592990fc39c203eb19ad81872e82e2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/screens/character_creation/art/charactercreationshadow.png"
-dest_files=["res://.godot/imported/charactercreationshadow.png-acdb59d58b0d38c7934bc1805305c1fd.ctex"]
+source_file="res://ui/screens/character_creation/charactercreationshadow.png"
+dest_files=["res://.godot/imported/charactercreationshadow.png-be592990fc39c203eb19ad81872e82e2.ctex"]
 
 [params]
 

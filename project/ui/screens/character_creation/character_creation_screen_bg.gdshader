@@ -1,6 +1,6 @@
 shader_type canvas_item;
 
-uniform sampler2D my_texture;  // The texture to tile and animate.
+uniform sampler2D my_texture: filter_nearest;  // The texture to tile and animate.
 uniform vec2 velocity = vec2(0.1, 0.1); // The velocity to move the tiles.
 uniform bool pixel_snap = false;
 uniform float scale = 1.0;  // Scale factor for texture size on screen (higher values = larger texture)

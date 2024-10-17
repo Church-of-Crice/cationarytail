@@ -1,6 +1,8 @@
 class_name BodyAnimatedSprite2D
 extends AnimatedSprite2D
 
+var sitTimer = 0
+
 const BLACK_CAT_ANIMATIONS = preload("res://characters/player_character/art/animations/black cat walk1.res")
 const BROWN_CAT_ANIMATIONS = preload("res://characters/player_character/art/animations/brown cat walk1.res")
 const CALICO_CAT_ANIMATIONS = preload("res://characters/player_character/art/animations/calico cat walk1.res")
@@ -37,5 +39,10 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if velocity.length() > 0:
 		play("walk")
+		sitTimer = 0
 	else:
-		play("sit")
+		if sitTimer >= 100:
+			play("sit")
+		else:
+			play("walk", 0.0)
+			sitTimer += 1

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://beqphbp5bial0"
-path="res://.godot/imported/Shy.png-b61fa46536cdabe0b2197ec3302d7b4b.ctex"
+uid="uid://cs0n0qqoxy1pj"
+path="res://.godot/imported/main_menu_button_settings.png-92ab8c5172f2561d669773fd416d7e68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/screens/main_menu/art/Shy.png"
-dest_files=["res://.godot/imported/Shy.png-b61fa46536cdabe0b2197ec3302d7b4b.ctex"]
+source_file="res://ui/screens/main_menu/art/main_menu_button_settings.png"
+dest_files=["res://.godot/imported/main_menu_button_settings.png-92ab8c5172f2561d669773fd416d7e68.ctex"]
 
 [params]
 

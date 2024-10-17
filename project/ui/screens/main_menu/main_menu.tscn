@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://b55ikiyqxxt1i"]
+[gd_scene load_steps=7 format=3 uid="uid://b55ikiyqxxt1i"]
 
 [ext_resource type="Script" path="res://ui/screens/main_menu/main_menu.gd" id="1_w75in"]
+[ext_resource type="Texture2D" uid="uid://dthmi4a3xbelb" path="res://ui/screens/main_menu/art/main_menu_paws.png" id="2_mei5d"]
+[ext_resource type="Texture2D" uid="uid://dghys0qxddrs" path="res://ui/screens/main_menu/art/main_menu_title.png" id="3_0misr"]
+[ext_resource type="Texture2D" uid="uid://4ui8db2cu3m" path="res://ui/screens/main_menu/art/main_menu_button_play.png" id="4_5vt13"]
+[ext_resource type="Texture2D" uid="uid://ufmi0as00iqt" path="res://ui/screens/main_menu/art/main_menu_button_quit.png" id="5_xlrcr"]
+[ext_resource type="Texture2D" uid="uid://cs0n0qqoxy1pj" path="res://ui/screens/main_menu/art/main_menu_button_settings.png" id="6_ut6yu"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -9,10 +14,13 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 script = ExtResource("1_w75in")
 
 [node name="StartButton" type="Button" parent="."]
 unique_name_in_owner = true
+visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -26,3 +34,54 @@ offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 text = "Start"
+
+[node name="Control" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -74.0
+offset_top = -75.0
+offset_right = -3.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2, 2)
+metadata/_edit_group_ = true
+
+[node name="UntitledArtwork-1" type="TextureRect" parent="Control"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_mei5d")
+stretch_mode = 3
+
+[node name="UntitledArtwork-2" type="TextureRect" parent="Control"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_0misr")
+stretch_mode = 3
+
+[node name="UntitledArtwork-3" type="TextureRect" parent="Control"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_5vt13")
+stretch_mode = 3
+
+[node name="UntitledArtwork-4" type="TextureRect" parent="Control"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("5_xlrcr")
+stretch_mode = 3
+
+[node name="UntitledArtwork-5" type="TextureRect" parent="Control"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("6_ut6yu")
+stretch_mode = 3

@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="DialogSequence" load_steps=13 format=3 uid="uid://bb5pfjv1p488a"]
+
+[ext_resource type="Script" path="res://ui/dialog/dialog_event.gd" id="1_nmkgw"]
+[ext_resource type="Resource" uid="uid://diliy5h3y7r5m" path="res://ui/dialog/resources/lucretia_character.tres" id="2_w8kxt"]
+[ext_resource type="Resource" uid="uid://c8kgjnmibaqvj" path="res://ui/dialog/resources/persian_cat_character.tres" id="3_i5b7l"]
+[ext_resource type="Script" path="res://ui/dialog/dialog_sequence.gd" id="4_y3lvk"]
+
+[sub_resource type="Resource" id="Resource_7f5yr"]
+script = ExtResource("1_nmkgw")
+character = ExtResource("2_w8kxt")
+text = "What a weird looking cow we have here."
+
+[sub_resource type="Resource" id="Resource_t5qmr"]
+script = ExtResource("1_nmkgw")
+character = ExtResource("3_i5b7l")
+text = "Your judgments are as mortal as you, they do not affect me."
+
+[sub_resource type="Resource" id="Resource_v6jn5"]
+script = ExtResource("1_nmkgw")
+character = ExtResource("3_i5b7l")
+text = "Your measly senses, dull and unrefined, can never grasp the true worth of our kind."
+
+[sub_resource type="Resource" id="Resource_ungxn"]
+script = ExtResource("1_nmkgw")
+character = ExtResource("3_i5b7l")
+text = "We, animals, are the embodiment of perfection."
+
+[sub_resource type="Resource" id="Resource_yktwx"]
+script = ExtResource("1_nmkgw")
+character = ExtResource("3_i5b7l")
+text = "We have walked a world far older and greater than yours."
+
+[sub_resource type="Resource" id="Resource_idym6"]
+script = ExtResource("1_nmkgw")
+character = ExtResource("3_i5b7l")
+text = "We were gifted by the gods."
+
+[sub_resource type="Resource" id="Resource_841o0"]
+script = ExtResource("1_nmkgw")
+character = ExtResource("3_i5b7l")
+text = "Ever shall you serve us, for it is your place to bow before our greatness."
+
+[sub_resource type="Resource" id="Resource_nskw2"]
+script = ExtResource("1_nmkgw")
+character = ExtResource("2_w8kxt")
+text = "Um, wow. You're crazy, you're done!"
+
+[resource]
+script = ExtResource("4_y3lvk")
+events = Array[ExtResource("1_nmkgw")]([SubResource("Resource_7f5yr"), SubResource("Resource_t5qmr"), SubResource("Resource_v6jn5"), SubResource("Resource_ungxn"), SubResource("Resource_yktwx"), SubResource("Resource_idym6"), SubResource("Resource_841o0"), SubResource("Resource_nskw2")])

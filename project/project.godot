@@ -21,6 +21,7 @@ Globals="*res://misc/Globals.cs"
 CharacterData="*res://autoloads/CharacterData.tscn"
 SceneManager="*res://autoloads/scene_manager.gd"
 SignalBus="*res://autoloads/SignalBus.gd"
+DialogManager="*res://autoloads/DialogManager.tscn"
 
 [display]
 

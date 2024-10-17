@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://oagof58yjgw4"]
+
+[ext_resource type="Texture2D" uid="uid://dwpjba3fka8ka" path="res://characters/npcs/german_shepard/german_shepard_portrait.png" id="1_ksxc8"]
+[ext_resource type="Script" path="res://ui/dialog/character.gd" id="2_hcb5v"]
+
+[resource]
+script = ExtResource("2_hcb5v")
+name = "German Shepherd"
+portrait = ExtResource("1_ksxc8")

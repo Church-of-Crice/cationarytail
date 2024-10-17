@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://dvxlvqwf5tor7"]
+
+[ext_resource type="Texture2D" uid="uid://3r7cdietfoju" path="res://characters/npcs/pug_dog/pug dog_portrait.png" id="1_atf0t"]
+[ext_resource type="Script" path="res://ui/dialog/character.gd" id="2_npcip"]
+
+[resource]
+script = ExtResource("2_npcip")
+name = "Pug Dog"
+portrait = ExtResource("1_atf0t")

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://diliy5h3y7r5m"]
+
+[ext_resource type="Script" path="res://ui/dialog/character.gd" id="1_opuux"]
+[ext_resource type="Texture2D" uid="uid://d4voxu6ctjgl" path="res://characters/npcs/cat_owner/art/owner_portrait.png" id="1_pwy0m"]
+
+[resource]
+script = ExtResource("1_opuux")
+name = "Lucretia"
+portrait = ExtResource("1_pwy0m")

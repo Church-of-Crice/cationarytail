@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://c3iur4l67uyh2"]
+[gd_scene load_steps=6 format=3 uid="uid://c3iur4l67uyh2"]
 
 [ext_resource type="Script" path="res://characters/player_character/PlayerCharacter.cs" id="1_tdqt1"]
 [ext_resource type="PackedScene" uid="uid://ff0pl457qtvi" path="res://characters/player_character/player_character_appearance/player_character_appearance.tscn" id="2_ro1wt"]
 [ext_resource type="Script" path="res://characters/player_character/horizontal_flipper.gd" id="3_ko3l0"]
-[ext_resource type="Script" path="res://characters/player_character/DialogArea.gd" id="4_m1ecc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d0dnk"]
 height = 22.0
@@ -28,7 +27,6 @@ script = ExtResource("3_ko3l0")
 [node name="DialogInteractionArea" type="Area2D" parent="."]
 collision_layer = 4
 collision_mask = 0
-script = ExtResource("4_m1ecc")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DialogInteractionArea"]
 shape = SubResource("RectangleShape2D_vmrq6")

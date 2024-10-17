@@ -1,13 +1,13 @@
-[gd_scene load_steps=15 format=3 uid="uid://bbx7cwbp3h2v2"]
+[gd_scene load_steps=15 format=3 uid="uid://bq2jvta2ae1b4"]
 
-[ext_resource type="Texture2D" uid="uid://dqepo38i37jrk" path="res://locations/animal_rescue/art/animal shelter.png" id="1_s044v"]
+[ext_resource type="Texture2D" uid="uid://dytiuen0u3y8q" path="res://locations/animal_rescue/art/animal shelter.png" id="1_s044v"]
 [ext_resource type="SpriteFrames" uid="uid://txq4sdir51xh" path="res://characters/npcs/german_shepard/german shepard more diarrhea.res" id="2_amlp8"]
 [ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="3_ywyqb"]
 [ext_resource type="Texture2D" uid="uid://buhydr0ohph0f" path="res://characters/npcs/long_dog/longDog.png" id="4_sd5hb"]
 [ext_resource type="Texture2D" uid="uid://b2dto3uagjkyx" path="res://characters/npcs/persian_cat/Persian Cat.png" id="5_luo3j"]
 [ext_resource type="Texture2D" uid="uid://dnu263ojg426r" path="res://characters/npcs/pug_dog/pug dog.png" id="6_hbmtj"]
-[ext_resource type="PackedScene" path="res://ui/overlays/dialog_overlay/DialogArea.tscn" id="7_3h1sa"]
-[ext_resource type="PackedScene" path="res://ui/overlays/dialog_overlay/DialogPlayer.tscn" id="8_h8n0x"]
+[ext_resource type="PackedScene" uid="uid://ckqymeml2cb8l" path="res://ui/overlays/dialog_overlay/DialogArea.tscn" id="7_3h1sa"]
+[ext_resource type="PackedScene" uid="uid://dn4g1ttslfdrf" path="res://ui/overlays/dialog_overlay/DialogPlayer.tscn" id="8_h8n0x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i8761"]
 size = Vector2(31, 23)

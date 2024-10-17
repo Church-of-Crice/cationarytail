@@ -1,0 +1,51 @@
+[gd_scene load_steps=9 format=3 uid="uid://b6r30epsyrhrg"]
+
+[ext_resource type="Texture2D" uid="uid://dytiuen0u3y8q" path="res://locations/animal_rescue/art/animal shelter.png" id="1_fgfwr"]
+[ext_resource type="Texture2D" uid="uid://cybq4tp15n2fj" path="res://locations/animal_rescue/art/shelter_clerk_world.png" id="2_1falq"]
+[ext_resource type="Texture2D" uid="uid://c00mw7n1sqlwu" path="res://locations/animal_rescue/art/desk.png" id="3_ivxnu"]
+[ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="4_toba7"]
+[ext_resource type="PackedScene" uid="uid://cjm1wa8lbybab" path="res://characters/npcs/german_shepard/german_shephard.tscn" id="5_vcwwu"]
+[ext_resource type="PackedScene" uid="uid://bb4geg1u4xjjp" path="res://characters/npcs/long_dog/long_dog.tscn" id="6_4bn0e"]
+[ext_resource type="PackedScene" uid="uid://dg3c4ngx1j6bk" path="res://characters/npcs/persian_cat/persian_cat.tscn" id="7_tvkdk"]
+[ext_resource type="PackedScene" uid="uid://ciq52ea2psb3d" path="res://characters/npcs/pug_dog/pug_dog.tscn" id="8_xrcul"]
+
+[node name="AnimalRescue" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(13, -1)
+
+[node name="AnimalShelter_" type="Sprite2D" parent="."]
+position = Vector2(13, -1)
+texture = ExtResource("1_fgfwr")
+
+[node name="ShelterClerkWorld" type="Sprite2D" parent="."]
+position = Vector2(-86, -27)
+texture = ExtResource("2_1falq")
+
+[node name="Desk" type="Sprite2D" parent="."]
+position = Vector2(-64, -2)
+texture = ExtResource("3_ivxnu")
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("4_toba7")]
+position = Vector2(-100, 28)
+
+[node name="GermanShephard" parent="." instance=ExtResource("5_vcwwu")]
+
+[node name="LongDog" parent="." instance=ExtResource("6_4bn0e")]
+
+[node name="PersianCat" parent="." instance=ExtResource("7_tvkdk")]
+
+[node name="PugDog" parent="." instance=ExtResource("8_xrcul")]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = -42.0
+offset_top = -63.0
+offset_right = -19.0
+offset_bottom = -13.0
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = -17.0
+offset_top = -23.0
+offset_right = 35.0
+text = "Owner"

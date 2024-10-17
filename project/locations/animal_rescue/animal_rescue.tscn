@@ -1,13 +1,13 @@
 [gd_scene load_steps=9 format=3 uid="uid://dgvmjpupptnko"]
 
-[ext_resource type="Texture2D" uid="uid://dytiuen0u3y8q" path="res://locations/animal_rescue/art/animal shelter..png" id="1_jc286"]
+[ext_resource type="Texture2D" uid="uid://dytiuen0u3y8q" path="res://locations/animal_rescue/art/animal shelter.png" id="1_jc286"]
 [ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="1_mdjag"]
-[ext_resource type="SpriteFrames" uid="uid://txq4sdir51xh" path="res://characters/npcs/german_shepard/german shepard more diarrhea.res" id="3_ryi3h"]
-[ext_resource type="Texture2D" uid="uid://buhydr0ohph0f" path="res://characters/npcs/long_dog/longDog.png" id="4_8ix7j"]
-[ext_resource type="Texture2D" uid="uid://b2dto3uagjkyx" path="res://characters/npcs/persian_cat/Persian Cat.png" id="5_rcah5"]
-[ext_resource type="Texture2D" uid="uid://dnu263ojg426r" path="res://characters/npcs/pug_dog/pug dog.png" id="6_t4ses"]
+[ext_resource type="PackedScene" uid="uid://cjm1wa8lbybab" path="res://characters/npcs/german_shepard/german_shephard.tscn" id="5_i1vl6"]
+[ext_resource type="PackedScene" uid="uid://bb4geg1u4xjjp" path="res://characters/npcs/long_dog/long_dog.tscn" id="6_qkjpx"]
+[ext_resource type="PackedScene" uid="uid://dg3c4ngx1j6bk" path="res://characters/npcs/persian_cat/persian_cat.tscn" id="7_5rebn"]
 [ext_resource type="Texture2D" uid="uid://cybq4tp15n2fj" path="res://locations/animal_rescue/art/shelter_clerk_world.png" id="7_hny44"]
 [ext_resource type="Texture2D" uid="uid://c00mw7n1sqlwu" path="res://locations/animal_rescue/art/desk.png" id="8_kpnvr"]
+[ext_resource type="PackedScene" uid="uid://ciq52ea2psb3d" path="res://characters/npcs/pug_dog/pug_dog.tscn" id="8_xb5q7"]
 
 [node name="AnimalRescue" type="Node2D"]
 
@@ -29,21 +29,13 @@ texture = ExtResource("8_kpnvr")
 [node name="PlayerCharacter" parent="." instance=ExtResource("1_mdjag")]
 position = Vector2(-100, 28)
 
-[node name="GermanShephard" type="AnimatedSprite2D" parent="."]
-position = Vector2(35, 17)
-sprite_frames = ExtResource("3_ryi3h")
+[node name="GermanShephard" parent="." instance=ExtResource("5_i1vl6")]
 
-[node name="LongDog" type="Sprite2D" parent="."]
-position = Vector2(131, -22)
-texture = ExtResource("4_8ix7j")
+[node name="LongDog" parent="." instance=ExtResource("6_qkjpx")]
 
-[node name="PersianCat" type="Sprite2D" parent="."]
-position = Vector2(150, 37)
-texture = ExtResource("5_rcah5")
+[node name="PersianCat" parent="." instance=ExtResource("7_5rebn")]
 
-[node name="PugDog" type="Sprite2D" parent="."]
-position = Vector2(100, 8)
-texture = ExtResource("6_t4ses")
+[node name="PugDog" parent="." instance=ExtResource("8_xb5q7")]
 
 [node name="ColorRect" type="ColorRect" parent="."]
 offset_left = -42.0

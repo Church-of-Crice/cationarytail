@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://b55ikiyqxxt1i"]
+[gd_scene load_steps=9 format=3 uid="uid://b55ikiyqxxt1i"]
 
 [ext_resource type="Script" path="res://ui/screens/main_menu/main_menu.gd" id="1_w75in"]
 [ext_resource type="Texture2D" uid="uid://dthmi4a3xbelb" path="res://ui/screens/main_menu/art/main_menu_paws.png" id="2_mei5d"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://4ui8db2cu3m" path="res://ui/screens/main_menu/art/main_menu_button_play.png" id="4_5vt13"]
 [ext_resource type="Texture2D" uid="uid://ufmi0as00iqt" path="res://ui/screens/main_menu/art/main_menu_button_quit.png" id="5_xlrcr"]
 [ext_resource type="Texture2D" uid="uid://cs0n0qqoxy1pj" path="res://ui/screens/main_menu/art/main_menu_button_settings.png" id="6_ut6yu"]
+[ext_resource type="Script" path="res://ui/screens/main_menu/PlayButton.cs" id="7_e0mi6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dq8kj"]
 atlas = ExtResource("4_5vt13")
@@ -82,6 +83,7 @@ offset_right = 159.0
 offset_bottom = 105.0
 scale = Vector2(2, 2)
 texture_normal = SubResource("AtlasTexture_dq8kj")
+script = ExtResource("7_e0mi6")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 visible = false

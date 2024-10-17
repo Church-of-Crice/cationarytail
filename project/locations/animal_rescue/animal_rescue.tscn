@@ -1,15 +1,14 @@
-[gd_scene load_steps=13 format=4 uid="uid://dgvmjpupptnko"]
+[gd_scene load_steps=12 format=4 uid="uid://dgvmjpupptnko"]
 
 [ext_resource type="Texture2D" uid="uid://c76afxxde4c3o" path="res://locations/animal_rescue/art/animal shelter_atlas.png" id="1_h46rp"]
 [ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="1_mdjag"]
-[ext_resource type="Texture2D" uid="uid://dqepo38i37jrk" path="res://locations/animal_rescue/art/animal shelter.png" id="2_74spk"]
 [ext_resource type="TileSet" uid="uid://cej2r4jp8fdt6" path="res://locations/animal_rescue/art/animal shelter_sprites.tres" id="2_gfjcx"]
 [ext_resource type="Texture2D" uid="uid://pkbq6gvrrbew" path="res://characters/npcs/shelter_clerk/art/shelter_clerk.png" id="3_01e37"]
-[ext_resource type="SpriteFrames" uid="uid://txq4sdir51xh" path="res://characters/npcs/german_shepard/german shepard more diarrhea.res" id="3_ryi3h"]
-[ext_resource type="Texture2D" uid="uid://buhydr0ohph0f" path="res://characters/npcs/long_dog/longDog.png" id="4_8ix7j"]
-[ext_resource type="Texture2D" uid="uid://b2dto3uagjkyx" path="res://characters/npcs/persian_cat/Persian Cat.png" id="5_rcah5"]
-[ext_resource type="Texture2D" uid="uid://dnu263ojg426r" path="res://characters/npcs/pug_dog/pug dog.png" id="6_t4ses"]
 [ext_resource type="Texture2D" uid="uid://bjtkn2vebgtnl" path="res://characters/npcs/cat_owner/art/lucretia_placeholder.png" id="10_0emp0"]
+[ext_resource type="PackedScene" uid="uid://dg3c4ngx1j6bk" path="res://characters/npcs/persian_cat/persian_cat.tscn" id="11_uu1wm"]
+[ext_resource type="PackedScene" uid="uid://cjm1wa8lbybab" path="res://characters/npcs/german_shepard/german_shephard.tscn" id="12_ts80i"]
+[ext_resource type="PackedScene" uid="uid://ciq52ea2psb3d" path="res://characters/npcs/pug_dog/pug_dog.tscn" id="13_a373y"]
+[ext_resource type="PackedScene" uid="uid://bb4geg1u4xjjp" path="res://characters/npcs/long_dog/long_dog.tscn" id="14_74pdf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8b28o"]
 texture = ExtResource("1_h46rp")
@@ -80,16 +79,24 @@ texture = ExtResource("1_h46rp")
 2:4/0 = 0
 3:4/0 = 0
 4:4/0 = 0
+4:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4, 8, 4, 8, 8, -8, 8)
 5:4/0 = 0
+5:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4, 8, 4, 8, 8, -8, 8)
 6:4/0 = 0
+6:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4, 4, 4, 4, 8, -8, 8)
 7:4/0 = 0
 8:4/0 = 0
+8:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4, 8, 4, 8, 8, -8, 8)
 9:4/0 = 0
+9:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4, 8, 4, 8, 8, -8, 8)
 10:4/0 = 0
+10:4/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4, 8, 4, 8, 8, -8, 8)
 0:5/0 = 0
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4, 8, 4, 8, 8, -8, 8)
 1:5/0 = 0
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4, 8, 4, 8, 8, -8, 8)
 2:5/0 = 0
-2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.91682, 8, -3.00521, -8, -1.94454, -8, -1.85616, 8)
+2:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4, -4, 4, -4, -8, -2.20971, -8, -1.85616, 8, -8, 8)
 3:5/0 = 0
 3:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, -8, -6.875, -8, -6.875, 8, -8, 8, -8, 8)
 4:5/0 = 0
@@ -103,14 +110,22 @@ texture = ExtResource("1_h46rp")
 1:6/0 = 0
 1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(6.89429, 8, 6.89429, -8, 8, -8, 8, 8)
 2:6/0 = 0
+2:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6.0988, -8, -6.18719)
 3:6/0 = 0
+3:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6.0988, -8, -6.18719)
 4:6/0 = 0
+4:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 4, -8, 4, -6, -8, -6)
 5:6/0 = 0
 6:6/0 = 0
+6:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6.0988, -8, -6.18719)
 7:6/0 = 0
+7:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6.0988, -8, -6.18719)
 8:6/0 = 0
+8:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6.0988, -8, -6.18719)
 9:6/0 = 0
+9:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6.0988, -8, -6.18719)
 10:6/0 = 0
+10:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -6.0988, -8, -6.18719)
 0:7/0 = 0
 0:7/0/physics_layer_0/polygon_0/points = PackedVector2Array(-3.18198, 8, -3.18198, -8, -1.94454, -8, -1.94454, 8)
 1:7/0 = 0
@@ -162,78 +177,44 @@ sources/0 = SubResource("TileSetAtlasSource_8b28o")
 [node name="AnimalRescue" type="Node2D"]
 
 [node name="AnimalShelterTileMapLayer" type="TileMapLayer" parent="."]
+z_index = -2
 tile_map_data = PackedByteArray("AAD2//r/AAAAAAAAAAD4//r/AAABAAAAAAD5//r/AAABAAAAAAD6//r/AAABAAAAAAD7//r/AAACAAAAAAD8//r/AAADAAAAAAD9//r/AAADAAAAAAD+//r/AAAEAAAAAAD///r/AAAFAAAAAAAAAPr/AAAFAAAAAAABAPr/AAAFAAAAAAACAPr/AAAFAAAAAAADAPr/AAAFAAAAAAAEAPr/AAAGAAAAAAD3//r/AAABAAAAAAAEAPv/AAAGAAAAAAD2//v/AAAHAAAAAAD3//v/AAAIAAAAAAD4//v/AAAJAAAAAAD5//v/AAAKAAAAAAD6//v/AAAAAAEAAAD7//v/AAABAAEAAAD8//v/AAACAAEAAAD9//v/AAADAAEAAAD+//v/AAAEAAEAAAD///v/AAAFAAEAAAAAAPv/AAAGAAEAAAABAPv/AAAHAAEAAAACAPv/AAAIAAEAAAADAPv/AAAJAAEAAAD2//z/AAAKAAEAAAD3//z/AAAAAAIAAAD4//z/AAABAAIAAAD5//z/AAACAAIAAAD6//z/AAADAAIAAAD7//z/AAAEAAIAAAD8//z/AAAFAAIAAAD9//z/AAAGAAIAAAD+//z/AAAHAAIAAAD///z/AAAIAAIAAAAAAPz/AAAJAAIAAAABAPz/AAAKAAIAAAACAPz/AAAAAAMAAAADAPz/AAABAAMAAAAEAPz/AAACAAMAAAAFAPz/AAADAAMAAAAGAPz/AAADAAMAAAAHAPz/AAADAAMAAAAIAPz/AAADAAMAAAAJAPz/AAAEAAMAAAD2//3/AAAFAAMAAAD3//3/AAAGAAMAAAD4//3/AAAHAAMAAAD5//3/AAAIAAMAAAD6//3/AAAJAAMAAAD7//3/AAAKAAMAAAD8//3/AAAAAAQAAAD9//3/AAABAAQAAAD+//3/AAACAAQAAAD///3/AAADAAQAAAAAAP3/AAAEAAQAAAABAP3/AAAFAAQAAAACAP3/AAAGAAQAAAADAP3/AAAHAAQAAAAEAP3/AAAIAAQAAAAFAP3/AAAJAAQAAAAGAP3/AAAKAAQAAAAHAP3/AAAAAAUAAAAIAP3/AAABAAUAAAAJAP3/AAACAAUAAAD2//7/AAADAAUAAAD3//7/AAAEAAUAAAD4//7/AAAFAAUAAAD5//7/AAAGAAUAAAD6//7/AAAHAAUAAAD7//7/AAAIAAUAAAD8//7/AAAJAAUAAAD9//7/AAAKAAUAAAD+//7/AAAAAAYAAAD///7/AAABAAYAAAAAAP7/AAACAAYAAAABAP7/AAADAAYAAAACAP7/AAAEAAYAAAADAP7/AAAFAAYAAAAEAP7/AAAGAAYAAAAFAP7/AAAHAAYAAAAGAP7/AAAIAAYAAAAHAP7/AAAJAAYAAAAIAP7/AAAKAAYAAAAJAP7/AAAAAAcAAAD2////AAABAAcAAAD2/wAAAAABAAcAAAD2/wEAAAABAAcAAAD2/wIAAAABAAcAAAD3////AAACAAcAAAD4/wAAAAACAAcAAAD4/wEAAAACAAcAAAD4/wIAAAACAAcAAAD3/wEAAAACAAcAAAD3/wAAAAACAAcAAAD3/wIAAAACAAcAAAD4////AAACAAcAAAD5////AAACAAcAAAD5/wAAAAACAAcAAAD5/wEAAAACAAcAAAD5/wIAAAACAAcAAAD6////AAACAAcAAAD6/wAAAAACAAcAAAD6/wEAAAACAAcAAAD6/wIAAAACAAcAAAD7////AAACAAcAAAD7/wAAAAACAAcAAAD7/wEAAAACAAcAAAD7/wIAAAACAAcAAAD8////AAACAAcAAAD8/wAAAAACAAcAAAD8/wEAAAACAAcAAAD8/wIAAAACAAcAAAD9////AAACAAcAAAD9/wAAAAACAAcAAAD9/wEAAAACAAcAAAD9/wIAAAACAAcAAAD+////AAACAAcAAAD+/wAAAAACAAcAAAD+/wEAAAACAAcAAAD+/wIAAAACAAcAAAD/////AAADAAcAAAD//wAAAAADAAcAAAD//wEAAAADAAcAAAD//wIAAAADAAcAAAAAAP//AAAEAAcAAAAAAAAAAAAEAAcAAAABAP//AAAEAAcAAAABAAAAAAAEAAcAAAACAP//AAAEAAcAAAACAAAAAAAEAAcAAAADAP//AAAEAAcAAAADAAAAAAAEAAcAAAAEAP//AAAEAAcAAAAEAAAAAAAEAAcAAAAFAP//AAAEAAcAAAAFAAAAAAAEAAcAAAAGAP//AAAEAAcAAAAGAAAAAAAEAAcAAAAHAP//AAAEAAcAAAAHAAAAAAAEAAcAAAAIAP//AAAEAAcAAAAIAAAAAAAEAAcAAAACAAEAAAAEAAcAAAADAAEAAAAEAAcAAAAEAAEAAAAEAAcAAAAFAAEAAAAEAAcAAAAGAAEAAAAEAAcAAAAHAAEAAAAEAAcAAAAIAAEAAAAEAAcAAAAJAP//AAAFAAcAAAAJAAAAAAAFAAcAAAAJAAEAAAAFAAcAAAAAAAEAAAAGAAcAAAABAAEAAAAHAAcAAAABAAIAAAAIAAcAAAACAAIAAAAJAAcAAAADAAIAAAAKAAcAAAAEAAIAAAAAAAgAAAAFAAIAAAABAAgAAAAGAAIAAAACAAgAAAAHAAIAAAADAAgAAAAIAAIAAAAKAAcAAAAJAAIAAAAEAAgAAAD2/wMAAAAFAAgAAAD4/wMAAAAGAAgAAAD5/wMAAAAGAAgAAAD6/wMAAAAGAAgAAAD7/wMAAAAGAAgAAAD8/wMAAAAGAAgAAAD9/wMAAAAGAAgAAAD+/wMAAAAGAAgAAAD//wMAAAAHAAgAAAD3/wMAAAACAAcAAAACAAMAAAAIAAgAAAADAAMAAAAJAAgAAAAEAAMAAAAKAAgAAAAFAAMAAAAAAAkAAAAGAAMAAAABAAkAAAAHAAMAAAACAAkAAAAIAAMAAAAJAAgAAAAJAAMAAAADAAkAAAA=")
 tile_set = SubResource("TileSet_pubg7")
+collision_visibility_mode = 1
 
 [node name="AnimalShelterBackgroundTileMapLayer" type="TileMapLayer" parent="."]
+z_index = -1
 tile_map_data = PackedByteArray("AAD2//v/AAAAAAAAAAD3//v/AAABAAAAAAD4//v/AAACAAAAAAD7//v/AAADAAAAAAA=")
 tile_set = ExtResource("2_gfjcx")
 
-[node name="Sheltrinatrix" type="Sprite2D" parent="."]
-position = Vector2(-84.5527, -54.2966)
-texture = ExtResource("3_01e37")
-
 [node name="AnimalShelterForegroundTileMapLayer" type="TileMapLayer" parent="."]
+z_index = 1
 tile_map_data = PackedByteArray("AAD2//7/AAAAAAMAAAD4//7/AAACAAMAAAD5//7/AAACAAMAAAD6//7/AAAEAAMAAAD8//7/AAAGAAMAAAD///7/AAAIAAMAAAD//wMAAAAFAAAAAAD//wIAAAAFAAAAAAD9/wMAAAAFAAAAAFA=")
 tile_set = ExtResource("2_gfjcx")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-8, -16)
 
-[node name="AnimalShelter" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(0, -1)
-texture = ExtResource("2_74spk")
-
-[node name="GermanShephard" type="AnimatedSprite2D" parent="."]
-position = Vector2(28.2881, 9.87735)
-sprite_frames = ExtResource("3_ryi3h")
-
 [node name="PlayerCharacter" parent="." instance=ExtResource("1_mdjag")]
-position = Vector2(-39.8959, 32.5962)
+position = Vector2(-100, 28)
 scale = Vector2(0.75, 0.75)
 
-[node name="LongDog" type="Sprite2D" parent="."]
-position = Vector2(102, 29)
-texture = ExtResource("4_8ix7j")
+[node name="Characters" type="Node" parent="."]
 
-[node name="PersianCat" type="Sprite2D" parent="."]
-position = Vector2(-16, -10)
-texture = ExtResource("5_rcah5")
+[node name="Sheltrinatrix" type="Sprite2D" parent="Characters"]
+position = Vector2(-84.5527, -54.2966)
+texture = ExtResource("3_01e37")
 
-[node name="ColorRect" type="ColorRect" parent="."]
-visible = false
-offset_left = -154.0
-offset_top = -21.0
-offset_right = -131.0
-offset_bottom = 29.0
+[node name="PersianCat" parent="Characters" instance=ExtResource("11_uu1wm")]
+position = Vector2(139.921, 37.9449)
 
-[node name="Label" type="Label" parent="ColorRect"]
-layout_mode = 0
-offset_left = -17.0
-offset_top = -23.0
-offset_right = 35.0
-text = "Lucretia"
+[node name="GermanShephard" parent="Characters" instance=ExtResource("12_ts80i")]
 
-[node name="ColorRect2" type="ColorRect" parent="."]
-visible = false
-offset_left = -96.0
-offset_top = -75.0
-offset_right = -73.0
-offset_bottom = -25.0
+[node name="PugDog" parent="Characters" instance=ExtResource("13_a373y")]
 
-[node name="Label" type="Label" parent="ColorRect2"]
-layout_mode = 0
-offset_left = -31.0
-offset_top = -27.0
-offset_right = 66.0
-offset_bottom = -4.0
-text = "Sheltrinatrix"
+[node name="LongDog" parent="Characters" instance=ExtResource("14_74pdf")]
+position = Vector2(119.031, -22)
 
-[node name="PugDog" type="Sprite2D" parent="."]
-position = Vector2(117, -23)
-texture = ExtResource("6_t4ses")
-
-[node name="Lucretia" type="Sprite2D" parent="."]
-position = Vector2(-140.646, 25.6777)
+[node name="Lucretia" type="Sprite2D" parent="Characters"]
+position = Vector2(-141, 8)
 texture = ExtResource("10_0emp0")

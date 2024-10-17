@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://b5joj5brha2x0"]
+[gd_scene load_steps=2 format=3 uid="uid://b5joj5brha2x0"]
+
+[ext_resource type="Texture2D" uid="uid://c43mfoscv261a" path="res://ui/components/borders/portrait_border_gold.png" id="1_713gq"]
 
 [node name="PortraitBorder" type="NinePatchRect"]
 anchors_preset = 15
@@ -6,3 +8,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("1_713gq")
+patch_margin_left = 15
+patch_margin_top = 15
+patch_margin_right = 15
+patch_margin_bottom = 15
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1

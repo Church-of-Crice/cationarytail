@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bk5kkpk27uvon"]
+
+[ext_resource type="Script" path="res://autoloads/dialog_manager.gd" id="1_g6yh8"]
+[ext_resource type="PackedScene" uid="uid://ba6i568if8a6y" path="res://ui/overlays/dialog_overlay/dialog_overlay.tscn" id="2_4i01x"]
+
+[node name="DialogManager" type="CanvasLayer"]
+script = ExtResource("1_g6yh8")
+
+[node name="DialogOverlay" parent="." instance=ExtResource("2_4i01x")]
+unique_name_in_owner = true

@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://bb4geg1u4xjjp"]
+
+[ext_resource type="Texture2D" uid="uid://buhydr0ohph0f" path="res://characters/npcs/long_dog/longDog.png" id="1_76mbo"]
+[ext_resource type="PackedScene" uid="uid://ckqymeml2cb8l" path="res://ui/overlays/dialog_overlay/DialogArea.tscn" id="2_ae4qg"]
+[ext_resource type="Resource" uid="uid://sm1xguxqhwrf" path="res://ui/dialog/resources/long_dog_character.tres" id="3_aymhr"]
+[ext_resource type="Resource" uid="uid://ehaydg8yxp5r" path="res://ui/dialog/resources/dialog_sequences/long_dog_dialog_sequence.tres" id="4_xyimn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sq05q"]
+size = Vector2(61, 16)
+
+[node name="LongDog" type="Sprite2D"]
+position = Vector2(131, -22)
+texture = ExtResource("1_76mbo")
+
+[node name="DialogArea" parent="." instance=ExtResource("2_ae4qg")]
+position = Vector2(1, 2)
+character = ExtResource("3_aymhr")
+dialog_sequence = ExtResource("4_xyimn")
+
+[node name="CollisionShape2D" parent="DialogArea" index="0"]
+position = Vector2(-0.5, -2)
+shape = SubResource("RectangleShape2D_sq05q")
+
+[editable path="DialogArea"]

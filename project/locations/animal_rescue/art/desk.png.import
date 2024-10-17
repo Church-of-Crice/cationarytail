@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dytiuen0u3y8q"
-path="res://.godot/imported/animal shelter.png-d0253797e8a96eb24e0ba417e4dddb17.ctex"
+uid="uid://c00mw7n1sqlwu"
+path="res://.godot/imported/desk.png-211971b6893c10f312316f721f4db67c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://locations/animal_rescue/art/animal shelter.png"
-dest_files=["res://.godot/imported/animal shelter.png-d0253797e8a96eb24e0ba417e4dddb17.ctex"]
+source_file="res://locations/animal_rescue/art/desk.png"
+dest_files=["res://.godot/imported/desk.png-211971b6893c10f312316f721f4db67c.ctex"]
 
 [params]
 

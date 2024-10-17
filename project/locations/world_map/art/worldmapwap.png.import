@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dytiuen0u3y8q"
-path="res://.godot/imported/animal shelter.png-d0253797e8a96eb24e0ba417e4dddb17.ctex"
+uid="uid://cmtjkxc3e0mkm"
+path="res://.godot/imported/worldmapwap.png-870d225adba30a15b0fcf04b128896c3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://locations/animal_rescue/art/animal shelter.png"
-dest_files=["res://.godot/imported/animal shelter.png-d0253797e8a96eb24e0ba417e4dddb17.ctex"]
+source_file="res://locations/world_map/art/worldmapwap.png"
+dest_files=["res://.godot/imported/worldmapwap.png-870d225adba30a15b0fcf04b128896c3.ctex"]
 
 [params]
 

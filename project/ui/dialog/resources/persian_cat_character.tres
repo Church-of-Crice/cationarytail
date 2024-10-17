@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://c8kgjnmibaqvj"]
+
+[ext_resource type="Texture2D" uid="uid://ba8t8vjug3l05" path="res://characters/npcs/persian_cat/Persian Cat_portrait.png" id="1_jplo3"]
+[ext_resource type="Script" path="res://ui/dialog/character.gd" id="2_q6ojq"]
+
+[resource]
+script = ExtResource("2_q6ojq")
+name = "Persian Cat"
+portrait = ExtResource("1_jplo3")

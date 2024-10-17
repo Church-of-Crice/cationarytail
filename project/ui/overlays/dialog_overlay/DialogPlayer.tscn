@@ -1,0 +1,81 @@
+[gd_scene load_steps=3 format=3 uid="uid://dn4g1ttslfdrf"]
+
+[sub_resource type="GDScript" id="GDScript_5w3jb"]
+script/source = "extends CanvasLayer
+
+
+@export_file(\"*json\") var scene_text_file: String
+
+var scene_text: Dictionary = {}
+var selected_text: Array = []
+var in_progress: bool = false
+@onready var background = $Background
+@onready var text_label = $TextLabel
+
+func _ready():
+	background.visible = true
+	scene_text = load_scene_text()
+	#SignalBus.connect(\"display_dialog\", Callable(self, \"on_display_dialog\"))
+
+func load_scene_text():
+	if FileAccess.file_exists(scene_text_file):
+		var file = FileAccess.open(scene_text_file, FileAccess.READ)
+		var test_json_conv = JSON.new()
+		test_json_conv.parse(file.get_as_text())
+		return test_json_conv.get_data()
+
+func show_text():
+	text_label.text = selected_text.pop_front()
+func next_line():
+	if selected_text.size() > 0:
+		show_text()
+	else:
+		finish()
+
+func finish():
+	text_label.text = \"\"
+	background.visible = false
+	in_progress = false
+	get_tree().paused = false
+func on_display_dialog(text_key):
+	if in_progress:
+		next_line()
+	else:
+		get_tree().paused = true
+		background.visible = true
+		in_progress = true
+		selected_text = scene_text[text_key].duplicate()
+		show_text()
+"
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_t5cbx"]
+
+[node name="DialogPlayer" type="CanvasLayer"]
+process_mode = 2
+script = SubResource("GDScript_5w3jb")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = 1.0
+offset_top = 163.0
+offset_right = 555.0
+offset_bottom = 201.0
+texture = SubResource("CanvasTexture_t5cbx")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextLabel" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = -0.331
+anchor_top = 0.933
+anchor_right = -0.331
+anchor_bottom = 0.933
+offset_left = 122.92
+offset_top = -0.940002
+offset_right = 675.92
+offset_bottom = 36.06
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+autowrap_mode = 3

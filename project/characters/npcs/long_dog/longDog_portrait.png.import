@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbsinc6hu6myk"
-path="res://.godot/imported/charactercreationshadow.png-acdb59d58b0d38c7934bc1805305c1fd.ctex"
+uid="uid://cms7hyrdg2am8"
+path="res://.godot/imported/longDog_portrait.png-531336134b601b15ab604c5cf9d8e5db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ui/screens/character_creation/art/charactercreationshadow.png"
-dest_files=["res://.godot/imported/charactercreationshadow.png-acdb59d58b0d38c7934bc1805305c1fd.ctex"]
+source_file="res://characters/npcs/long_dog/longDog_portrait.png"
+dest_files=["res://.godot/imported/longDog_portrait.png-531336134b601b15ab604c5cf9d8e5db.ctex"]
 
 [params]
 

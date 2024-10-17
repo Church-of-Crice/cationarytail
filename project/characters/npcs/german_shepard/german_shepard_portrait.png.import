@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dytiuen0u3y8q"
-path="res://.godot/imported/animal shelter.png-d0253797e8a96eb24e0ba417e4dddb17.ctex"
+uid="uid://dwpjba3fka8ka"
+path="res://.godot/imported/german_shepard_portrait.png-db7b5c05c6c2056e8d5dce65ddfdd9a1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://locations/animal_rescue/art/animal shelter.png"
-dest_files=["res://.godot/imported/animal shelter.png-d0253797e8a96eb24e0ba417e4dddb17.ctex"]
+source_file="res://characters/npcs/german_shepard/german_shepard_portrait.png"
+dest_files=["res://.godot/imported/german_shepard_portrait.png-db7b5c05c6c2056e8d5dce65ddfdd9a1.ctex"]
 
 [params]
 

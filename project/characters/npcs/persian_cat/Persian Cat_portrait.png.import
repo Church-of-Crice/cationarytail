@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dytiuen0u3y8q"
-path="res://.godot/imported/animal shelter.png-d0253797e8a96eb24e0ba417e4dddb17.ctex"
+uid="uid://ba8t8vjug3l05"
+path="res://.godot/imported/Persian Cat_portrait.png-bc43876f69bc7f78e0d3b60d5d6ab945.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://locations/animal_rescue/art/animal shelter.png"
-dest_files=["res://.godot/imported/animal shelter.png-d0253797e8a96eb24e0ba417e4dddb17.ctex"]
+source_file="res://characters/npcs/persian_cat/Persian Cat_portrait.png"
+dest_files=["res://.godot/imported/Persian Cat_portrait.png-bc43876f69bc7f78e0d3b60d5d6ab945.ctex"]
 
 [params]
 

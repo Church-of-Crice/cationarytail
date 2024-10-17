@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="DialogSequence" load_steps=9 format=3 uid="uid://ehaydg8yxp5r"]
+
+[ext_resource type="Script" path="res://ui/dialog/dialog_event.gd" id="1_nw2fp"]
+[ext_resource type="Resource" uid="uid://diliy5h3y7r5m" path="res://ui/dialog/resources/lucretia_character.tres" id="2_4o7uy"]
+[ext_resource type="Script" path="res://ui/dialog/dialog_sequence.gd" id="2_67bpj"]
+[ext_resource type="Resource" uid="uid://sm1xguxqhwrf" path="res://ui/dialog/resources/long_dog_character.tres" id="3_x867p"]
+
+[sub_resource type="Resource" id="Resource_tpgtj"]
+script = ExtResource("1_nw2fp")
+character = ExtResource("2_4o7uy")
+text = "Uhm, this one is like, a really weird shape."
+
+[sub_resource type="Resource" id="Resource_y47ge"]
+script = ExtResource("1_nw2fp")
+character = ExtResource("2_4o7uy")
+text = "My skin just crawled, no thank you."
+
+[sub_resource type="Resource" id="Resource_c6gym"]
+script = ExtResource("1_nw2fp")
+character = ExtResource("3_x867p")
+text = "I can crawl under your skin"
+
+[sub_resource type="Resource" id="Resource_t3d1a"]
+script = ExtResource("1_nw2fp")
+character = ExtResource("2_4o7uy")
+text = "WEIRDO!"
+
+[resource]
+script = ExtResource("2_67bpj")
+events = Array[ExtResource("1_nw2fp")]([SubResource("Resource_tpgtj"), SubResource("Resource_y47ge"), SubResource("Resource_c6gym"), SubResource("Resource_t3d1a")])

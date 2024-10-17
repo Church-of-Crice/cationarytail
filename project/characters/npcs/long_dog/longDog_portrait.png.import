@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dytiuen0u3y8q"
-path="res://.godot/imported/animal shelter..png-a78c7aaac1b518110b580cc2e97c957b.ctex"
+uid="uid://cms7hyrdg2am8"
+path="res://.godot/imported/longDog_portrait.png-531336134b601b15ab604c5cf9d8e5db.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://locations/animal_rescue/art/animal shelter..png"
-dest_files=["res://.godot/imported/animal shelter..png-a78c7aaac1b518110b580cc2e97c957b.ctex"]
+source_file="res://characters/npcs/long_dog/longDog_portrait.png"
+dest_files=["res://.godot/imported/longDog_portrait.png-531336134b601b15ab604c5cf9d8e5db.ctex"]
 
 [params]
 

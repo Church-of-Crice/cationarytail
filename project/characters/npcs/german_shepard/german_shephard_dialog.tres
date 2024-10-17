@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="DialogSequence" load_steps=9 format=3 uid="uid://bib0ropmopbi7"]
+
+[ext_resource type="Script" path="res://ui/dialog/dialog_event.gd" id="1_fwlq5"]
+[ext_resource type="Resource" uid="uid://diliy5h3y7r5m" path="res://ui/dialog/resources/lucretia_character.tres" id="2_lcs6f"]
+[ext_resource type="Resource" uid="uid://oagof58yjgw4" path="res://ui/dialog/resources/german_shepherd_character.tres" id="3_mxlwv"]
+[ext_resource type="Script" path="res://ui/dialog/dialog_sequence.gd" id="4_kl6j3"]
+
+[sub_resource type="Resource" id="Resource_4n0bd"]
+script = ExtResource("1_fwlq5")
+character = ExtResource("2_lcs6f")
+text = "Ew, why is this one so dirty!?"
+
+[sub_resource type="Resource" id="Resource_o5biv"]
+script = ExtResource("1_fwlq5")
+character = ExtResource("3_mxlwv")
+text = "YOUR VAGINA IS DIRTY, BITCH!"
+
+[sub_resource type="Resource" id="Resource_oyoey"]
+script = ExtResource("1_fwlq5")
+character = ExtResource("3_mxlwv")
+text = "I COULD SMELL THAT STANK WHEN YOU TURNED THE BLOCK!"
+
+[sub_resource type="Resource" id="Resource_kjgd6"]
+script = ExtResource("1_fwlq5")
+character = ExtResource("2_lcs6f")
+text = "That was foul! Canceled!"
+
+[resource]
+script = ExtResource("4_kl6j3")
+events = Array[ExtResource("1_fwlq5")]([SubResource("Resource_4n0bd"), SubResource("Resource_o5biv"), SubResource("Resource_oyoey"), SubResource("Resource_kjgd6")])

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://sm1xguxqhwrf"]
+
+[ext_resource type="Script" path="res://ui/dialog/character.gd" id="1_eldd4"]
+[ext_resource type="Texture2D" uid="uid://cms7hyrdg2am8" path="res://characters/npcs/long_dog/longDog_portrait.png" id="1_heq7v"]
+
+[resource]
+script = ExtResource("1_eldd4")
+name = "Long Dog"
+portrait = ExtResource("1_heq7v")

@@ -1,0 +1,30 @@
+[gd_resource type="Resource" script_class="DialogSequence" load_steps=9 format=3 uid="uid://dfai4t3fkvw8y"]
+
+[ext_resource type="Resource" uid="uid://diliy5h3y7r5m" path="res://ui/dialog/resources/lucretia_character.tres" id="1_sttr7"]
+[ext_resource type="Script" path="res://ui/dialog/dialog_event.gd" id="2_bpslx"]
+[ext_resource type="Resource" uid="uid://dvxlvqwf5tor7" path="res://characters/npcs/pug_dog/pug_dog_character.tres" id="3_8xyh5"]
+[ext_resource type="Script" path="res://ui/dialog/dialog_sequence.gd" id="4_g50n1"]
+
+[sub_resource type="Resource" id="Resource_kxvdv"]
+script = ExtResource("2_bpslx")
+character = ExtResource("1_sttr7")
+text = "Gross, look at the sag on this one, what are you, my grandma's tits!?"
+
+[sub_resource type="Resource" id="Resource_oo275"]
+script = ExtResource("2_bpslx")
+character = ExtResource("3_8xyh5")
+text = "POP A FUCKING XANNY, WHORE!"
+
+[sub_resource type="Resource" id="Resource_t6oyk"]
+script = ExtResource("2_bpslx")
+character = ExtResource("3_8xyh5")
+text = "GET THE FUCK OUT OF MY FACE!"
+
+[sub_resource type="Resource" id="Resource_51q1v"]
+script = ExtResource("2_bpslx")
+character = ExtResource("1_sttr7")
+text = "Excuse me?! What’s a Xanny?"
+
+[resource]
+script = ExtResource("4_g50n1")
+events = Array[ExtResource("2_bpslx")]([SubResource("Resource_kxvdv"), SubResource("Resource_oo275"), SubResource("Resource_t6oyk"), SubResource("Resource_51q1v")])

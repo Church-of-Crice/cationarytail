@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://ba6i568if8a6y"]
+[gd_scene load_steps=7 format=3 uid="uid://ba6i568if8a6y"]
 
+[ext_resource type="Script" path="res://ui/overlays/dialog_overlay/dialog_overlay.gd" id="1_2ynsf"]
 [ext_resource type="PackedScene" uid="uid://5fv1pmkx6v8l" path="res://ui/components/borders/thick_border.tscn" id="2_4uorj"]
 [ext_resource type="PackedScene" uid="uid://b5joj5brha2x0" path="res://ui/components/borders/portrait_border.tscn" id="2_s7pfq"]
 [ext_resource type="Texture2D" uid="uid://c0ypdj0l2xrk4" path="res://characters/npcs/shelter_clerk/art/shelter_clerk_portrait.png" id="3_gc2nr"]
@@ -9,9 +10,7 @@
 font = ExtResource("3_h2emu")
 font_size = 8
 
-[node name="DialogOverlay" type="CanvasLayer"]
-
-[node name="DialogOverlayRoot" type="Control" parent="."]
+[node name="DialogOverlayRoot" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,8 +18,9 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 mouse_filter = 2
+script = ExtResource("1_2ynsf")
 
-[node name="DialogBottomDock" type="Control" parent="DialogOverlayRoot"]
+[node name="DialogBottomDock" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
@@ -29,7 +29,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="DialogPanelContainer" type="PanelContainer" parent="DialogOverlayRoot/DialogBottomDock"]
+[node name="DialogPanelContainer" type="PanelContainer" parent="DialogBottomDock"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -42,17 +42,18 @@ offset_bottom = -8.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="DialogBorder" parent="DialogOverlayRoot/DialogBottomDock/DialogPanelContainer" instance=ExtResource("2_4uorj")]
+[node name="DialogBorder" parent="DialogBottomDock/DialogPanelContainer" instance=ExtResource("2_4uorj")]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="DialogOverlayRoot/DialogBottomDock/DialogPanelContainer"]
+[node name="MarginContainer" type="MarginContainer" parent="DialogBottomDock/DialogPanelContainer"]
 layout_mode = 2
 theme_override_constants/margin_left = 15
 theme_override_constants/margin_top = 6
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="Label" type="Label" parent="DialogOverlayRoot/DialogBottomDock/DialogPanelContainer/MarginContainer"]
+[node name="DialogText" type="Label" parent="DialogBottomDock/DialogPanelContainer/MarginContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(224, 25)
 layout_mode = 2
 size_flags_vertical = 0
@@ -60,7 +61,7 @@ text = "Sure! We have some animals available in the back."
 label_settings = SubResource("LabelSettings_5wga7")
 autowrap_mode = 3
 
-[node name="PortraitPanelContainer" type="PanelContainer" parent="DialogOverlayRoot/DialogBottomDock"]
+[node name="PortraitPanelContainer" type="PanelContainer" parent="DialogBottomDock"]
 layout_mode = 1
 anchors_preset = 2
 anchor_top = 1.0
@@ -71,14 +72,17 @@ offset_right = 73.0
 offset_bottom = -5.0
 grow_vertical = 0
 
-[node name="ColorRect" type="ColorRect" parent="DialogOverlayRoot/DialogBottomDock/PortraitPanelContainer"]
+[node name="ColorRect" type="ColorRect" parent="DialogBottomDock/PortraitPanelContainer"]
 visible = false
 layout_mode = 2
 
-[node name="CharacterPortrait" type="TextureRect" parent="DialogOverlayRoot/DialogBottomDock/PortraitPanelContainer"]
+[node name="CharacterPortrait" type="TextureRect" parent="DialogBottomDock/PortraitPanelContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 texture = ExtResource("3_gc2nr")
 stretch_mode = 4
 
-[node name="PortraitBorder" parent="DialogOverlayRoot/DialogBottomDock/PortraitPanelContainer" instance=ExtResource("2_s7pfq")]
+[node name="PortraitBorder" parent="DialogBottomDock/PortraitPanelContainer" instance=ExtResource("2_s7pfq")]
 layout_mode = 2
+
+[node name="DialogOverlay" type="CanvasLayer" parent="."]

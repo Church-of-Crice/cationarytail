@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://ctqci31vcb5k0"
+path="res://.godot/imported/world_map_mockup.aseprite-089870c4e6f9db18db1117b125632f95.res"
+
+[deps]
+
+source_file="res://locations/world_map/art/world_map_mockup.aseprite"
+dest_files=["res://.godot/imported/world_map_mockup.aseprite-089870c4e6f9db18db1117b125632f95.res"]
+
+[params]
+

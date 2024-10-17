@@ -186,11 +186,11 @@ position = Vector2(0, -1)
 texture = ExtResource("2_74spk")
 
 [node name="GermanShephard" type="AnimatedSprite2D" parent="."]
-position = Vector2(-135.054, 3.51339)
+position = Vector2(28.2881, 9.87735)
 sprite_frames = ExtResource("3_ryi3h")
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("1_mdjag")]
-position = Vector2(-100, 28)
+position = Vector2(-39.8959, 32.5962)
 scale = Vector2(0.75, 0.75)
 
 [node name="LongDog" type="Sprite2D" parent="."]
@@ -235,5 +235,5 @@ position = Vector2(117, -23)
 texture = ExtResource("6_t4ses")
 
 [node name="Lucretia" type="Sprite2D" parent="."]
-position = Vector2(-141, 8)
+position = Vector2(-140.646, 25.6777)
 texture = ExtResource("10_0emp0")

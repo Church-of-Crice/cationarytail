@@ -1,7 +1,7 @@
 extends Control
 
 
-@onready var start_button: Button = %StartButton
+@onready var start_button: TextureButton = %PlayButton
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

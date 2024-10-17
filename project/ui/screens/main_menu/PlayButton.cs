@@ -29,10 +29,6 @@ public partial class PlayButton : TextureButton
 
         // Preload the hover sound file
         _hoverSound = (AudioStream)GD.Load("res://assets/audio/effects/pyrite7-32248.mp3");
-        if (_hoverSound == null)
-        {
-            throw new NullReferenceException("Hover audio file not found.");
-        }
         _hoverAudioPlayer.Stream = _hoverSound;
 
         // Connect signals

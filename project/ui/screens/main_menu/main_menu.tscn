@@ -27,6 +27,10 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = 8.0
+offset_right = -1.0
+offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -94,7 +98,24 @@ size_flags_vertical = 4
 texture = ExtResource("6_ut6yu")
 stretch_mode = 3
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="QuitButton" type="TextureButton" parent="."]
+unique_name_in_owner = true
+z_as_relative = false
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -76.0
+offset_top = 41.0
+offset_right = -5.0
+offset_bottom = 114.0
+grow_horizontal = 0
+texture_normal = ExtResource("5_xlrcr")
+ignore_texture_size = true
+stretch_mode = 1
+script = ExtResource("7_e0mi6")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control2"]
 stream = ExtResource("9_8ls5d")
 
 [node name="Control2" type="Control" parent="."]

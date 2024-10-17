@@ -44,5 +44,5 @@ func _physics_process(delta: float) -> void:
 		if sitTimer >= 100:
 			play("sit")
 		else:
-			play("walk", 0.0)
+			stop()
 			sitTimer += 1

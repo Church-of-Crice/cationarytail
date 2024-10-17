@@ -1,0 +1,35 @@
+[gd_scene load_steps=3 format=3 uid="uid://dmmwbefodfjgd"]
+
+[ext_resource type="Script" path="res://ui/overlays/dialog_overlay/DialogPlayer.gd" id="1_807v5"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_t5cbx"]
+
+[node name="DialogPlayer" type="CanvasLayer"]
+process_mode = 2
+script = ExtResource("1_807v5")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_left = 1.0
+offset_top = 163.0
+offset_right = 555.0
+offset_bottom = 201.0
+texture = SubResource("CanvasTexture_t5cbx")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextLabel" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = -0.331
+anchor_top = 0.933
+anchor_right = -0.331
+anchor_bottom = 0.933
+offset_left = 122.92
+offset_top = -0.940002
+offset_right = 675.92
+offset_bottom = 36.06
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+autowrap_mode = 3

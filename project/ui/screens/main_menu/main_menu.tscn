@@ -97,6 +97,7 @@ script = ExtResource("7_5tvrk")
 
 [node name="QuitButton" type="TextureButton" parent="."]
 unique_name_in_owner = true
+layout_mode = 0
 offset_left = 139.0
 offset_top = 115.0
 offset_right = 160.0
@@ -124,4 +125,3 @@ script = ExtResource("7_5tvrk")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("9_8ls5d")
-autoplay = true

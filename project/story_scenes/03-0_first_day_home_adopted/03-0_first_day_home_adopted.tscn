@@ -1,0 +1,101 @@
+[gd_scene load_steps=16 format=3 uid="uid://clceinkcx81eu"]
+
+[ext_resource type="Script" path="res://story_scenes/03-0_first_day_home_adopted/03-0_first_day_home_adopted.gd" id="1_j84mx"]
+[ext_resource type="Resource" uid="uid://cxuywrgb8kiyx" path="res://story_scenes/03-0_first_day_home_adopted/03-0_first_day_home_adopted_start_dialog.tres" id="2_o3n4k"]
+[ext_resource type="Script" path="res://ui/dialog/dialog_event.gd" id="2_pesit"]
+[ext_resource type="Resource" uid="uid://diliy5h3y7r5m" path="res://ui/dialog/resources/lucretia_character.tres" id="3_6bqe0"]
+[ext_resource type="Script" path="res://ui/dialog/dialog_sequence.gd" id="4_f26a6"]
+[ext_resource type="PackedScene" uid="uid://dibsuh2sssqtc" path="res://locations/home_of_adopter/home_of_adopter.tscn" id="5_t1udm"]
+[ext_resource type="PackedScene" uid="uid://bty6hmjgyr0cn" path="res://characters/npcs/cat_owner/cat_owner.tscn" id="6_v8a8s"]
+[ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="7_e8hkw"]
+[ext_resource type="Script" path="res://ui/overlays/pick_name_overlay/pick_name_overlay.gd" id="9_atotg"]
+
+[sub_resource type="Resource" id="Resource_awsdn"]
+script = ExtResource("2_pesit")
+character = ExtResource("3_6bqe0")
+text = "OMG! This name is so cute!"
+
+[sub_resource type="Resource" id="Resource_3t6jf"]
+script = ExtResource("2_pesit")
+character = ExtResource("3_6bqe0")
+text = "I’m sure to get a brand to sponsor me within a week."
+
+[sub_resource type="Resource" id="Resource_m7h6x"]
+script = ExtResource("4_f26a6")
+events = Array[ExtResource("2_pesit")]([SubResource("Resource_awsdn"), SubResource("Resource_3t6jf")])
+
+[sub_resource type="Gradient" id="Gradient_ws0uu"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_sqfw1"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_i4i51"]
+width = 16
+height = 16
+color_ramp = SubResource("Gradient_ws0uu")
+noise = SubResource("FastNoiseLite_sqfw1")
+
+[node name="CatGetsInTrouble" type="Node2D"]
+script = ExtResource("1_j84mx")
+start_dialog_sequence = ExtResource("2_o3n4k")
+after_choosing_name_dialog = SubResource("Resource_m7h6x")
+
+[node name="HomeOfAdopter" parent="." instance=ExtResource("5_t1udm")]
+
+[node name="Lucretia" parent="HomeOfAdopter" instance=ExtResource("6_v8a8s")]
+position = Vector2(0, 100)
+
+[node name="CatCarrier" type="Node2D" parent="HomeOfAdopter/Lucretia"]
+position = Vector2(15, -19)
+
+[node name="Sprite2D" type="Sprite2D" parent="HomeOfAdopter/Lucretia/CatCarrier"]
+texture = SubResource("NoiseTexture2D_i4i51")
+
+[node name="PlayerCharacter" parent="HomeOfAdopter" instance=ExtResource("7_e8hkw")]
+position = Vector2(-14, 3)
+
+[node name="PickNameOverlay" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+script = ExtResource("9_atotg")
+
+[node name="Control" type="Control" parent="PickNameOverlay"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="PickNameOverlay/Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PickNameOverlay/Control/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PickNameOverlay/Control/PanelContainer/MarginContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PickNameOverlay/Control/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Pick a name"
+
+[node name="LineEdit" type="LineEdit" parent="PickNameOverlay/Control/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "kitty"
+placeholder_text = "name"
+max_length = 8

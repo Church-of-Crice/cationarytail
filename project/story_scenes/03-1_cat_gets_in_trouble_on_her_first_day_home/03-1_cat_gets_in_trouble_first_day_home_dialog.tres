@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="DialogSequence" load_steps=6 format=3 uid="uid://dowffnvvcy3w1"]
+
+[ext_resource type="Script" path="res://ui/dialog/dialog_event.gd" id="1_a10o1"]
+[ext_resource type="Resource" uid="uid://diliy5h3y7r5m" path="res://ui/dialog/resources/lucretia_character.tres" id="2_t6mjg"]
+[ext_resource type="Script" path="res://ui/dialog/dialog_sequence.gd" id="3_urdes"]
+
+[sub_resource type="Resource" id="Resource_psthq"]
+script = ExtResource("1_a10o1")
+character = ExtResource("2_t6mjg")
+text = "I can’t believe that I haven’t gotten sponsored yet!"
+
+[sub_resource type="Resource" id="Resource_gjh4n"]
+script = ExtResource("1_a10o1")
+character = ExtResource("2_t6mjg")
+text = "How am I supposed to make money without a sponsorship?"
+
+[resource]
+script = ExtResource("3_urdes")
+events = Array[ExtResource("1_a10o1")]([SubResource("Resource_psthq"), SubResource("Resource_gjh4n")])

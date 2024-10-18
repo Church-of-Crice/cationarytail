@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ugp78oy67u5s"
-path="res://.godot/imported/narrow_window_interior.png-7e63b2ac2b6b57836e3779f6ee6a4726.ctex"
+uid="uid://l0k2j1s8b48p"
+path="res://.godot/imported/wide window interior.png-c69d16c62b38148c50cda4c2491bf385.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://locations/home_of_adopter/art/narrow_window_interior.png"
-dest_files=["res://.godot/imported/narrow_window_interior.png-7e63b2ac2b6b57836e3779f6ee6a4726.ctex"]
+source_file="res://locations/home_of_adopter/art/wide window interior.png"
+dest_files=["res://.godot/imported/wide window interior.png-c69d16c62b38148c50cda4c2491bf385.ctex"]
 
 [params]
 

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://bmfhym4uv1ui8"]
+
+[ext_resource type="Script" path="res://test/scenes/test_thought_text/test_thought_text.gd" id="1_p7phs"]
+[ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="1_rfexq"]
+
+[node name="TestThoughtText" type="Node2D"]
+script = ExtResource("1_p7phs")
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("1_rfexq")]

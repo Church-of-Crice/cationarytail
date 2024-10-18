@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://cd2tv5vw8jr5g"]
+
+[ext_resource type="Texture2D" uid="uid://db6xysul4elby" path="res://characters/npcs/dr_frankenstein_the_vet/art/dr_frankenstein_vet_portrait.png" id="1_04nf6"]
+[ext_resource type="Script" path="res://ui/dialog/character.gd" id="2_m2f2k"]
+
+[resource]
+script = ExtResource("2_m2f2k")
+name = "Vet"
+portrait = ExtResource("1_04nf6")

@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dibsuh2sssqtc" path="res://locations/home_of_adopter/home_of_adopter.tscn" id="5_t1udm"]
 [ext_resource type="PackedScene" uid="uid://bty6hmjgyr0cn" path="res://characters/npcs/cat_owner/cat_owner.tscn" id="6_v8a8s"]
 [ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="7_e8hkw"]
-[ext_resource type="Script" path="res://ui/overlays/pick_name_overlay/pick_name_overlay.gd" id="9_atotg"]
+[ext_resource type="PackedScene" uid="uid://dj8ctaptvvn7t" path="res://ui/overlays/pick_name_overlay/pick_name_overlay.tscn" id="9_kil05"]
 
 [sub_resource type="Resource" id="Resource_awsdn"]
 script = ExtResource("2_pesit")
@@ -53,49 +53,5 @@ texture = SubResource("NoiseTexture2D_i4i51")
 [node name="PlayerCharacter" parent="HomeOfAdopter" instance=ExtResource("7_e8hkw")]
 position = Vector2(-14, 3)
 
-[node name="PickNameOverlay" type="CanvasLayer" parent="."]
+[node name="PickNameOverlay" parent="." instance=ExtResource("9_kil05")]
 unique_name_in_owner = true
-script = ExtResource("9_atotg")
-
-[node name="Control" type="Control" parent="PickNameOverlay"]
-layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-
-[node name="PanelContainer" type="PanelContainer" parent="PickNameOverlay/Control"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -20.0
-offset_right = 20.0
-offset_bottom = 20.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="PickNameOverlay/Control/PanelContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 20
-theme_override_constants/margin_right = 20
-theme_override_constants/margin_bottom = 20
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PickNameOverlay/Control/PanelContainer/MarginContainer"]
-layout_mode = 2
-
-[node name="Label" type="Label" parent="PickNameOverlay/Control/PanelContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "Pick a name"
-
-[node name="LineEdit" type="LineEdit" parent="PickNameOverlay/Control/PanelContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-text = "kitty"
-placeholder_text = "name"
-max_length = 8

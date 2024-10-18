@@ -14,7 +14,7 @@ public partial class PlayerCharacter : CharacterBody2D
 		thoughtBubble = GetNode("ThoughtBubble");
 		//GlobalPosition = Globals.Instance.Spawn;
 		//Globals.Instance.Spawn = Vector2.Zero;
-		think_text("Meow", 2);
+		//think_text("Meow", 2);
 	}
 	
 	public void think_text(String text, float time = 2.0f)

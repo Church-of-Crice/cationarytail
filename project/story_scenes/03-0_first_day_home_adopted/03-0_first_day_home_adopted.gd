@@ -5,7 +5,7 @@ extends Node2D
 
 var next_scene: PackedScene = SceneManager._03_1_CAT_GETS_IN_TROUBLE_FIRST_DAY_HOME
 
-@onready var pick_name_overlay: CanvasLayer = %PickNameOverlay
+@onready var pick_name_overlay: PickNameOverlay = %PickNameOverlay
 
 func _ready() -> void:
 	# Add opening animation.
@@ -21,7 +21,7 @@ func start_opening_dialog():
 
 func pick_name():
 	pick_name_overlay.show()
-	await get_tree().create_timer(1).timeout
+	await pick_name_overlay.done
 	pick_name_overlay.hide()
 
 func continue_scene():

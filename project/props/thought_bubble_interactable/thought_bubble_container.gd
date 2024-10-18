@@ -18,6 +18,7 @@ class_name ThoughtBubbleContainer extends VBoxContainer
 @onready var timer: Timer = Timer.new()
 
 func _ready() -> void:
+	visible = false
 	label.text = text
 	add_child(timer)
 	timer.one_shot = true

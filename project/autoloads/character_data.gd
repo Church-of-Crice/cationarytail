@@ -8,6 +8,7 @@ enum DeathType {
 	STEAM_ROLLER,
 }
 
+var player_name: String
 var ways_died: Dictionary = {}
 
 var appearance: CharacterAppearanceData = CharacterAppearanceData.new()

@@ -1,12 +1,14 @@
-extends CanvasLayer
+class_name PickNameOverlay extends CanvasLayer
 
+signal done
 
-# Called when the node enters the scene tree for the first time.
+@onready var done_button: Button = %DoneButton
+@onready var line_edit: LineEdit = %LineEdit
+
 func _ready() -> void:
 	visible = false
-	pass # Replace with function body.
+	done_button.pressed.connect(_on_done_button_pressed)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_done_button_pressed():
+	CharacterData.player_name = line_edit.text
+	done.emit()

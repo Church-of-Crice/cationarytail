@@ -22,6 +22,7 @@ CharacterData="*res://autoloads/CharacterData.tscn"
 SceneManager="*res://autoloads/scene_manager.gd"
 SignalBus="*res://autoloads/SignalBus.gd"
 DialogManager="*res://autoloads/DialogManager.tscn"
+SceneTransitionManager="*res://ui/scene_transitions/scene_transition_manager.tscn"
 
 [display]
 

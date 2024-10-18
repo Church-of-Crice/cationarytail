@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bnxjm5u30ifnr"
+path="res://.godot/imported/animal shelter_atlas.aseprite-c094c372df085495d12f548203d8f93f.res"
+
+[deps]
+
+source_file="res://locations/animal_rescue/art/animal shelter_atlas.aseprite"
+dest_files=["res://.godot/imported/animal shelter_atlas.aseprite-c094c372df085495d12f548203d8f93f.res"]
+
+[params]
+

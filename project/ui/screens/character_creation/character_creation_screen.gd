@@ -39,4 +39,4 @@ func _on_eyes_right_button_pressed():
 	player_character_appearance.set_eyes_to_next()
 
 func _on_start_button_pressed():
-	get_tree().change_scene_to_packed(SceneManager.ANIMAL_RESCUE)
+	SceneTransitionManager.change_scene_with_transition(SceneManager._02_THE_CAT_GETS_ADOPTED, SceneManager.FADE_TRANSITION)

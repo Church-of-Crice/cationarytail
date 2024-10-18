@@ -36,6 +36,8 @@ func _unhandled_input(event: InputEvent) -> void:
 			get_viewport().set_input_as_handled()
 
 func _on_start_dialog_sequence(sequence: DialogSequence):
+	if not sequence:
+		return
 	start_dialog(sequence)
 
 func finish_dialog():

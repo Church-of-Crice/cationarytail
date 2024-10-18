@@ -4,4 +4,4 @@ func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 
 func _on_body_entered(body: CharacterBody2D):
-	SceneTransitionManager.change_scene_with_transition(SceneManager._03_CAT_GETS_IN_TROUBLE_FIRST_DAY_HOME, SceneManager.FADE_TRANSITION)
+	SceneTransitionManager.change_scene_with_transition(SceneManager._03_0_FIRST_DAY_HOME_ADOPTED, SceneManager.FADE_TRANSITION)

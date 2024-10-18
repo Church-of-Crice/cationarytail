@@ -1,0 +1,55 @@
+[gd_resource type="Resource" script_class="DialogSequence" load_steps=14 format=3 uid="uid://8npuck0m32n1"]
+
+[ext_resource type="Script" path="res://ui/dialog/dialog_event.gd" id="1_nau0y"]
+[ext_resource type="Resource" uid="uid://cd2tv5vw8jr5g" path="res://ui/dialog/resources/vet_dr_frank.tres" id="2_0eu7b"]
+[ext_resource type="Resource" uid="uid://diliy5h3y7r5m" path="res://ui/dialog/resources/lucretia_character.tres" id="3_yejqe"]
+[ext_resource type="Script" path="res://ui/dialog/dialog_sequence.gd" id="4_i4bxo"]
+
+[sub_resource type="Resource" id="Resource_y7ect"]
+script = ExtResource("1_nau0y")
+character = ExtResource("2_0eu7b")
+text = "What brings you in today?"
+
+[sub_resource type="Resource" id="Resource_41wfm"]
+script = ExtResource("1_nau0y")
+character = ExtResource("3_yejqe")
+text = "She’s sick! I dunno, just make her better. And fast!"
+
+[sub_resource type="Resource" id="Resource_ej1iy"]
+script = ExtResource("1_nau0y")
+character = ExtResource("3_yejqe")
+text = "I don’t have all day to be stuck here in this dreary place. "
+
+[sub_resource type="Resource" id="Resource_hyf3v"]
+script = ExtResource("1_nau0y")
+character = ExtResource("2_0eu7b")
+text = "Well.. let me see what I can do…."
+
+[sub_resource type="Resource" id="Resource_p80ix"]
+script = ExtResource("1_nau0y")
+character = ExtResource("2_0eu7b")
+text = "Hmm. Based on the symptoms it could very well be a foreign object."
+
+[sub_resource type="Resource" id="Resource_7dssj"]
+script = ExtResource("1_nau0y")
+character = ExtResource("2_0eu7b")
+text = "But I can’t seem to feel anything by palpitating."
+
+[sub_resource type="Resource" id="Resource_lawsg"]
+script = ExtResource("1_nau0y")
+character = ExtResource("2_0eu7b")
+text = "I’m gonna have to perform exploratory surgery just in case it’s a blockage."
+
+[sub_resource type="Resource" id="Resource_1g7s0"]
+script = ExtResource("1_nau0y")
+character = ExtResource("2_0eu7b")
+text = "These kinds of things can very well kill a cat, y’know?"
+
+[sub_resource type="Resource" id="Resource_1w8x8"]
+script = ExtResource("1_nau0y")
+character = ExtResource("3_yejqe")
+text = "You’re joking!? What kind of bill is that gonna run me?"
+
+[resource]
+script = ExtResource("4_i4bxo")
+events = Array[ExtResource("1_nau0y")]([SubResource("Resource_y7ect"), SubResource("Resource_41wfm"), SubResource("Resource_ej1iy"), SubResource("Resource_hyf3v"), SubResource("Resource_p80ix"), SubResource("Resource_7dssj"), SubResource("Resource_lawsg"), SubResource("Resource_1g7s0"), SubResource("Resource_1w8x8")])

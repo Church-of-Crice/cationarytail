@@ -1,15 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://ddn3g4ame7r70"]
+[gd_scene load_steps=8 format=3 uid="uid://ddn3g4ame7r70"]
 
 [ext_resource type="PackedScene" uid="uid://b6a7wy52lf8wv" path="res://locations/vet_office/vet_office.tscn" id="1_og2v4"]
-[ext_resource type="Script" path="res://story_scenes/04_cat_must_make_a_trip_to_the_vet/04_cat_must_make_a_trip_to_the_vet.gd" id="1_sxukx"]
+[ext_resource type="Script" path="res://story_scenes/04-0_cat_must_make_a_trip_to_the_vet/04_cat_must_make_a_trip_to_the_vet.gd" id="1_sxukx"]
 [ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="1_xhisw"]
-[ext_resource type="Resource" uid="uid://ta2if8jex7rq" path="res://story_scenes/04_cat_must_make_a_trip_to_the_vet/resources/04_cat_must_make_a_trip_to_the_vet_start_dialog.tres" id="2_eqktk"]
+[ext_resource type="Resource" uid="uid://ta2if8jex7rq" path="res://story_scenes/04-0_cat_must_make_a_trip_to_the_vet/resources/04_cat_must_make_a_trip_to_the_vet_start_dialog.tres" id="2_eqktk"]
 [ext_resource type="PackedScene" uid="uid://bty6hmjgyr0cn" path="res://characters/npcs/cat_owner/cat_owner.tscn" id="2_wuwcc"]
 [ext_resource type="PackedScene" uid="uid://bfbjea81jtr2u" path="res://characters/npcs/dr_frankenstein_the_vet/dr_frankenstein_the_vet.tscn" id="3_a4sb3"]
+[ext_resource type="PackedScene" uid="uid://bhpufm708ly3v" path="res://story_scenes/04-1_cat_must_make_a_trip_to_the_vet/04-1_cat_must_make_a_trip_to_the_vet.tscn" id="3_gnm11"]
 
 [node name="CatFirstTripToVet" type="Node2D"]
 script = ExtResource("1_sxukx")
 start_dialog_sequence = ExtResource("2_eqktk")
+next_scene = ExtResource("3_gnm11")
 
 [node name="VetOffice" parent="." instance=ExtResource("1_og2v4")]
 

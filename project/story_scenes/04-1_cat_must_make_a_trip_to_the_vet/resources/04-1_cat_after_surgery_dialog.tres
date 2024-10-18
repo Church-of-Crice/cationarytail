@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://ui/dialog/dialog_event.gd" id="1_drc18"]
 [ext_resource type="Script" path="res://ui/dialog/dialog_sequence.gd" id="2_bp8hj"]
-[ext_resource type="Resource" uid="uid://cd2tv5vw8jr5g" path="res://ui/dialog/resources/vet_dr_frank.tres" id="2_h0uj4"]
+[ext_resource type="Resource" path="res://ui/dialog/resources/vet_dr_frank.tres" id="2_h0uj4"]
 [ext_resource type="Resource" uid="uid://diliy5h3y7r5m" path="res://ui/dialog/resources/lucretia_character.tres" id="3_16n2t"]
 
 [sub_resource type="Resource" id="Resource_jtsfa"]

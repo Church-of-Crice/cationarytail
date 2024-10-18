@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://c3qvovw3xy4g0"]
+[gd_scene load_steps=19 format=3 uid="uid://c3qvovw3xy4g0"]
 
 [ext_resource type="PackedScene" uid="uid://dibsuh2sssqtc" path="res://locations/home_of_adopter/home_of_adopter.tscn" id="1_a7m4p"]
 [ext_resource type="Script" path="res://story_scenes/03_cat_gets_in_trouble_on_her_first_day_home/03_cat_gets_in_trouble_first_day_home.gd" id="1_wpbpm"]
@@ -7,6 +7,9 @@
 [ext_resource type="PackedScene" uid="uid://bty6hmjgyr0cn" path="res://characters/npcs/cat_owner/cat_owner.tscn" id="2_xn5ls"]
 [ext_resource type="Resource" uid="uid://diliy5h3y7r5m" path="res://ui/dialog/resources/lucretia_character.tres" id="3_4ioap"]
 [ext_resource type="Script" path="res://ui/dialog/dialog_sequence.gd" id="4_dq076"]
+[ext_resource type="Texture2D" uid="uid://cfkce2ocb4h17" path="res://props/googly_eyes.png" id="8_27yxc"]
+[ext_resource type="Script" path="res://story_scenes/03_cat_gets_in_trouble_on_her_first_day_home/googley_eyes.gd" id="8_m283a"]
+[ext_resource type="Script" path="res://ui/dialog/character.gd" id="9_06f2d"]
 
 [sub_resource type="Resource" id="Resource_vytvy"]
 script = ExtResource("2_no4vn")
@@ -22,6 +25,24 @@ text = "How am I supposed to make money without a sponsorship?"
 script = ExtResource("4_dq076")
 events = Array[ExtResource("2_no4vn")]([SubResource("Resource_vytvy"), SubResource("Resource_upe18")])
 
+[sub_resource type="ImageTexture" id="ImageTexture_qxu2q"]
+
+[sub_resource type="Resource" id="Resource_3tf0x"]
+script = ExtResource("9_06f2d")
+name = ""
+portrait = SubResource("ImageTexture_qxu2q")
+
+[sub_resource type="Resource" id="Resource_8kihs"]
+script = ExtResource("2_no4vn")
+character = SubResource("Resource_3tf0x")
+text = "I’m feeling a bit shaky."
+
+[sub_resource type="Resource" id="Resource_rfoym"]
+script = ExtResource("4_dq076")
+events = Array[ExtResource("2_no4vn")]([SubResource("Resource_8kihs")])
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jrrag"]
+
 [node name="CatGetsInTrouble" type="Node2D"]
 script = ExtResource("1_wpbpm")
 start_dialog_sequence = SubResource("Resource_7d0hm")
@@ -32,3 +53,16 @@ start_dialog_sequence = SubResource("Resource_7d0hm")
 
 [node name="PlayerCharacter" parent="HomeOfAdopter" instance=ExtResource("2_5ekid")]
 position = Vector2(-14, 3)
+
+[node name="GoogleyEyes" type="Area2D" parent="HomeOfAdopter"]
+position = Vector2(-76, 34)
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("8_m283a")
+dialog_sequence = SubResource("Resource_rfoym")
+
+[node name="Sprite2D" type="Sprite2D" parent="HomeOfAdopter/GoogleyEyes"]
+texture = ExtResource("8_27yxc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HomeOfAdopter/GoogleyEyes"]
+shape = SubResource("CircleShape2D_jrrag")

@@ -10,8 +10,8 @@ public partial class PlayerCharacter : CharacterBody2D
 
 	public override void _Ready()
 	{
-		GlobalPosition = Globals.Instance.Spawn;
-		Globals.Instance.Spawn = Vector2.Zero;
+		//GlobalPosition = Globals.Instance.Spawn;
+		//Globals.Instance.Spawn = Vector2.Zero;
 	}
 
 	public override void _PhysicsProcess(double delta)

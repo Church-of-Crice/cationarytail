@@ -72,6 +72,8 @@ move_down={
 
 2d_physics/layer_1="World (Default)"
 2d_physics/layer_2="Player"
+2d_physics/layer_3="dialog_interactables"
+2d_physics/layer_4="thought_bubble_interactables"
 
 [physics]
 

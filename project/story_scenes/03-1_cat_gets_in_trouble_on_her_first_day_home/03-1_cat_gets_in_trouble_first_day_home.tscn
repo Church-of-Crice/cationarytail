@@ -1,0 +1,76 @@
+[gd_scene load_steps=16 format=3 uid="uid://c3qvovw3xy4g0"]
+
+[ext_resource type="Script" path="res://story_scenes/03-1_cat_gets_in_trouble_on_her_first_day_home/03_cat_gets_in_trouble_first_day_home.gd" id="1_y4r5o"]
+[ext_resource type="Resource" uid="uid://dowffnvvcy3w1" path="res://story_scenes/03-1_cat_gets_in_trouble_on_her_first_day_home/03-1_cat_gets_in_trouble_first_day_home_dialog.tres" id="2_1nr3e"]
+[ext_resource type="Script" path="res://ui/dialog/dialog_event.gd" id="3_e35xm"]
+[ext_resource type="Resource" uid="uid://diliy5h3y7r5m" path="res://ui/dialog/resources/lucretia_character.tres" id="4_27nrc"]
+[ext_resource type="Script" path="res://ui/dialog/dialog_sequence.gd" id="5_0opsn"]
+[ext_resource type="PackedScene" uid="uid://dibsuh2sssqtc" path="res://locations/home_of_adopter/home_of_adopter.tscn" id="5_5vls6"]
+[ext_resource type="PackedScene" uid="uid://bty6hmjgyr0cn" path="res://characters/npcs/cat_owner/cat_owner.tscn" id="6_0rytt"]
+[ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="7_sjmkd"]
+[ext_resource type="PackedScene" uid="uid://br748lkashfh6" path="res://props/thought_bubble_interactable/thought_bubble_interactable.tscn" id="8_leaub"]
+[ext_resource type="Texture2D" uid="uid://cfkce2ocb4h17" path="res://props/googly_eyes.png" id="9_jrqdy"]
+
+[sub_resource type="Resource" id="Resource_mpyo7"]
+script = ExtResource("3_e35xm")
+character = ExtResource("4_27nrc")
+text = "OMG! What did you do?"
+
+[sub_resource type="Resource" id="Resource_a2lv5"]
+script = ExtResource("3_e35xm")
+character = ExtResource("4_27nrc")
+text = "You stupid cat!"
+
+[sub_resource type="Resource" id="Resource_di2j4"]
+script = ExtResource("5_0opsn")
+events = Array[ExtResource("3_e35xm")]([SubResource("Resource_mpyo7"), SubResource("Resource_a2lv5")])
+
+[sub_resource type="Resource" id="Resource_utr68"]
+script = ExtResource("3_e35xm")
+character = ExtResource("4_27nrc")
+text = "Maybe you getting sick can get me some donations from my followers."
+
+[sub_resource type="Resource" id="Resource_je4sw"]
+script = ExtResource("5_0opsn")
+events = Array[ExtResource("3_e35xm")]([SubResource("Resource_utr68")])
+
+[node name="CatGetsInTrouble" type="Node2D"]
+script = ExtResource("1_y4r5o")
+start_dialog_sequence = ExtResource("2_1nr3e")
+dialog_after_cat_gets_sick = SubResource("Resource_di2j4")
+dialog_leaving_house = SubResource("Resource_je4sw")
+
+[node name="HomeOfAdopter" parent="." instance=ExtResource("5_5vls6")]
+
+[node name="CatOwner" parent="HomeOfAdopter" instance=ExtResource("6_0rytt")]
+
+[node name="PlayerCharacter" parent="HomeOfAdopter" instance=ExtResource("7_sjmkd")]
+position = Vector2(-42, 13)
+
+[node name="Jewelry" parent="HomeOfAdopter" instance=ExtResource("8_leaub")]
+position = Vector2(-97, 37)
+description = "Jewelry"
+thought_text = "Oh wow, real gold!"
+
+[node name="Chocolate" parent="HomeOfAdopter" instance=ExtResource("8_leaub")]
+position = Vector2(85, 2)
+thought_text = "Not as good as catnip."
+
+[node name="Coffee" parent="HomeOfAdopter" instance=ExtResource("8_leaub")]
+position = Vector2(27, 34)
+thought_text = "Needs more milk."
+
+[node name="Plant" parent="HomeOfAdopter" instance=ExtResource("8_leaub")]
+position = Vector2(17, 61)
+thought_text = "A vegan diet isn’t for me."
+
+[node name="PowerCable" parent="HomeOfAdopter" instance=ExtResource("8_leaub")]
+position = Vector2(-2, 52)
+thought_text = "That was shocking."
+
+[node name="GoogleyEyes" parent="HomeOfAdopter" instance=ExtResource("8_leaub")]
+unique_name_in_owner = true
+position = Vector2(78, 52)
+description = "Googley Eyes"
+thought_text = "I’m feeling a bit shaky."
+texture = ExtResource("9_jrqdy")

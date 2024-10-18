@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ugp78oy67u5s"
-path="res://.godot/imported/narrow_window_interior.png-7e63b2ac2b6b57836e3779f6ee6a4726.ctex"
+uid="uid://ch7qqivlimkd2"
+path="res://.godot/imported/thought bubble_bottom.png-1abf83961c2e9b1cc93411f5c6a9e327.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://locations/home_of_adopter/art/narrow_window_interior.png"
-dest_files=["res://.godot/imported/narrow_window_interior.png-7e63b2ac2b6b57836e3779f6ee6a4726.ctex"]
+source_file="res://assets/art/thought bubble_bottom.png"
+dest_files=["res://.godot/imported/thought bubble_bottom.png-1abf83961c2e9b1cc93411f5c6a9e327.ctex"]
 
 [params]
 

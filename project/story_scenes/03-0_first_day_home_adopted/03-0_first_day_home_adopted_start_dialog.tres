@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="DialogSequence" load_steps=8 format=3 uid="uid://cxuywrgb8kiyx"]
+
+[ext_resource type="Script" path="res://ui/dialog/dialog_event.gd" id="1_sg050"]
+[ext_resource type="Resource" uid="uid://diliy5h3y7r5m" path="res://ui/dialog/resources/lucretia_character.tres" id="2_fyvuh"]
+[ext_resource type="Script" path="res://ui/dialog/dialog_sequence.gd" id="3_mrcyc"]
+
+[sub_resource type="Resource" id="Resource_t6wvo"]
+script = ExtResource("1_sg050")
+character = ExtResource("2_fyvuh")
+text = "Welcome to your new home!"
+
+[sub_resource type="Resource" id="Resource_d4n2y"]
+script = ExtResource("1_sg050")
+character = ExtResource("2_fyvuh")
+text = "You look so cute here! The pictures are gonna be bomb!"
+
+[sub_resource type="Resource" id="Resource_vui4i"]
+script = ExtResource("1_sg050")
+character = ExtResource("2_fyvuh")
+text = "I guess I need to come up with a name for you though."
+
+[sub_resource type="Resource" id="Resource_n4gsh"]
+script = ExtResource("1_sg050")
+character = ExtResource("2_fyvuh")
+text = "Hmm, what name would get the most likes?"
+
+[resource]
+script = ExtResource("3_mrcyc")
+events = Array[ExtResource("1_sg050")]([SubResource("Resource_t6wvo"), SubResource("Resource_d4n2y"), SubResource("Resource_vui4i"), SubResource("Resource_n4gsh")])

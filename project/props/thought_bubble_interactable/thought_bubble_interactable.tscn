@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://br748lkashfh6"]
+
+[ext_resource type="Script" path="res://story_scenes/03-1_cat_gets_in_trouble_on_her_first_day_home/googley_eyes.gd" id="1_vljec"]
+
+[sub_resource type="Gradient" id="Gradient_msdmx"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_mnxfe"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_veygw"]
+width = 16
+height = 16
+color_ramp = SubResource("Gradient_msdmx")
+noise = SubResource("FastNoiseLite_mnxfe")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jrrag"]
+
+[node name="ThoughtBubbleInteractable" type="Area2D"]
+position = Vector2(-76, 34)
+collision_layer = 0
+collision_mask = 8
+script = ExtResource("1_vljec")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = SubResource("NoiseTexture2D_veygw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_jrrag")

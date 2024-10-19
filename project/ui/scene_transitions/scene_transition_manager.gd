@@ -31,6 +31,14 @@ func _on_fade_out(new_scene: PackedScene, transition_instance: Transition):
 
 func _on_fade_out_position(source: Node2D, target: Node2D, transition_instance: Transition):
   change_position(source, target)
+
+  if source.has_node("Camera2D"):
+    var camera = source.get_node("Camera2D")
+    camera.position_smoothing_enabled = false
+    camera.global_position = source.global_position
+    await get_tree().process_frame
+    camera.position_smoothing_enabled = true
+
   transition_instance.fade_in()
 
 func _on_fade_in(transition_instance: Transition):

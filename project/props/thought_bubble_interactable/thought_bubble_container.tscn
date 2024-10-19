@@ -52,6 +52,11 @@ label_settings = SubResource("LabelSettings_bqtrl")
 horizontal_alignment = 1
 autowrap_mode = 3
 
+[node name="ThoughtImage" type="TextureRect" parent="MarginContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+stretch_mode = 3
+
 [node name="ThoughtBubble" type="TextureRect" parent="MarginContainer"]
 layout_mode = 2
 

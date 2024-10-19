@@ -5,7 +5,12 @@ signal player_died(death_type: DeathType)
 enum DeathType {
 	IDLE,
 	RABIES,
-	STEAM_ROLLER,
+	FLATTENED,
+	PREGNANCY,
+	COYOTE,
+	BLENDER,
+	DRYER,
+	POUND_EUTHENIZED
 }
 
 var player_name: String

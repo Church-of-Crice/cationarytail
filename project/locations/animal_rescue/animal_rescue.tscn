@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://dgvmjpupptnko"]
+[gd_scene load_steps=9 format=4 uid="uid://dgvmjpupptnko"]
 
 [ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="1_mdjag"]
 [ext_resource type="TileSet" uid="uid://bcgv3j66veqt" path="res://locations/vet_office/tilemaps/vet_office_temp.tres" id="1_sbbk1"]

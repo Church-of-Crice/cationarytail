@@ -97,6 +97,7 @@ act_quit={
 2d_physics/layer_2="Player"
 2d_physics/layer_3="dialog_interactables"
 2d_physics/layer_4="thought_bubble_interactables"
+2d_physics/layer_5="deadly_interaction_detection"
 
 [physics]
 

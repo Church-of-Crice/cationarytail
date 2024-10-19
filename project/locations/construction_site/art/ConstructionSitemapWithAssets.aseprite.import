@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bffxj6cr2jrj0"
+path="res://.godot/imported/ConstructionSitemapWithAssets.aseprite-5b7133bd8c2d327bbe6def4bfd25b59e.res"
+
+[deps]
+
+source_file="res://locations/construction_site/art/ConstructionSitemapWithAssets.aseprite"
+dest_files=["res://.godot/imported/ConstructionSitemapWithAssets.aseprite-5b7133bd8c2d327bbe6def4bfd25b59e.res"]
+
+[params]
+

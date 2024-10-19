@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://ctenkwi0742lm"
+path="res://.godot/imported/lake_tileset.aseprite-2308cd0189c7480a48964b2e5cbe6f64.res"
+
+[deps]
+
+source_file="res://locations/pond/art/lake_tileset.aseprite"
+dest_files=["res://.godot/imported/lake_tileset.aseprite-2308cd0189c7480a48964b2e5cbe6f64.res"]
+
+[params]
+

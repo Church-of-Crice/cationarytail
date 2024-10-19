@@ -1,0 +1,30 @@
+[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://c1q7o6eq38mof"]
+
+[ext_resource type="Texture2D" uid="uid://btacl5bhrs4hb" path="res://locations/pond/art/lake_tileset.png" id="1_kbkh0"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jnxwg"]
+texture = ExtResource("1_kbkh0")
+texture_region_size = Vector2i(32, 32)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+3:1/0 = 0
+4:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+3:2/0 = 0
+4:2/0 = 0
+0:3/0 = 0
+1:3/0 = 0
+2:3/0 = 0
+3:3/0 = 0
+
+[resource]
+tile_size = Vector2i(32, 32)
+sources/1 = SubResource("TileSetAtlasSource_jnxwg")

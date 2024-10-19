@@ -8,7 +8,7 @@
 [ext_resource type="Script" path="res://ui/dialog/dialog_sequence.gd" id="4_c7byf"]
 [ext_resource type="PackedScene" uid="uid://bty6hmjgyr0cn" path="res://characters/npcs/cat_owner/cat_owner.tscn" id="4_tx1a6"]
 [ext_resource type="PackedScene" uid="uid://81h1ottsp85g" path="res://utility/teleporter.tscn" id="8_yurvh"]
-[ext_resource type="PackedScene" uid="uid://dr7usaaig21t8" path="res://story_scenes/05-1_world_scene/05-1_world_scene.tscn" id="9_ktc4x"]
+[ext_resource type="PackedScene" uid="uid://fks7rwjturoy" path="res://game_world/game_world.tscn" id="9_50ipu"]
 
 [sub_resource type="Resource" id="Resource_bwsxc"]
 script = ExtResource("2_ikxk1")
@@ -53,4 +53,4 @@ text = "EXIT"
 
 [node name="Teleporter" parent="." instance=ExtResource("8_yurvh")]
 position = Vector2(2, 75)
-destination = ExtResource("9_ktc4x")
+destination = ExtResource("9_50ipu")

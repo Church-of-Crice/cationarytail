@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://fks7rwjturoy"]
+[gd_scene load_steps=12 format=3 uid="uid://fks7rwjturoy"]
 
 [ext_resource type="Script" path="res://game_world/game_world.gd" id="1_s5lep"]
 [ext_resource type="PackedScene" uid="uid://l8yumgsqntlj" path="res://locations/world_map/world_map.tscn" id="2_o52o3"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dgwhkxs1f25vm" path="res://locations/pond/pond.tscn" id="8_60fn2"]
 [ext_resource type="PackedScene" uid="uid://cyasofva442mf" path="res://locations/the_pound/the_pound.tscn" id="9_c3ajq"]
 [ext_resource type="PackedScene" uid="uid://b6a7wy52lf8wv" path="res://locations/vet_office/vet_office.tscn" id="10_c8bur"]
+[ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="11_qpo1q"]
 
 [node name="GameWorld" type="Node2D"]
 script = ExtResource("1_s5lep")
@@ -32,10 +33,13 @@ position = Vector2(-3160, -550)
 position = Vector2(-2490, -551)
 
 [node name="Pond" parent="." instance=ExtResource("8_60fn2")]
-position = Vector2(-1919, -548)
+position = Vector2(72, -8)
 
 [node name="ThePound" parent="." instance=ExtResource("9_c3ajq")]
 position = Vector2(-3178, -138)
 
 [node name="VetOffice" parent="." instance=ExtResource("10_c8bur")]
 position = Vector2(-2542, -184)
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("11_qpo1q")]
+position = Vector2(-142, -825)

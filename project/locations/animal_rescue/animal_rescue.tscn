@@ -1,14 +1,13 @@
-[gd_scene load_steps=10 format=4 uid="uid://dgvmjpupptnko"]
+[gd_scene load_steps=9 format=4 uid="uid://dgvmjpupptnko"]
 
 [ext_resource type="TileSet" uid="uid://dhlpsc8vg8f5c" path="res://locations/home_of_adopter/tilesets/home_adopter_tilemaplayer.tres" id="1_aljra"]
-[ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="1_mdjag"]
 [ext_resource type="TileSet" uid="uid://clau51sw0a3qg" path="res://locations/animal_rescue/art/animal shelter_sprites.tres" id="2_gfjcx"]
 [ext_resource type="Texture2D" uid="uid://pkbq6gvrrbew" path="res://characters/npcs/shelter_clerk/art/shelter_clerk.png" id="3_01e37"]
 [ext_resource type="PackedScene" uid="uid://bty6hmjgyr0cn" path="res://characters/npcs/cat_owner/cat_owner.tscn" id="9_gg3b1"]
-[ext_resource type="PackedScene" path="res://characters/npcs/persian_cat/persian_cat.tscn" id="11_uu1wm"]
-[ext_resource type="PackedScene" path="res://characters/npcs/german_shepard/german_shephard.tscn" id="12_ts80i"]
-[ext_resource type="PackedScene" path="res://characters/npcs/pug_dog/pug_dog.tscn" id="13_a373y"]
-[ext_resource type="PackedScene" path="res://characters/npcs/long_dog/long_dog.tscn" id="14_74pdf"]
+[ext_resource type="PackedScene" uid="uid://dg3c4ngx1j6bk" path="res://characters/npcs/persian_cat/persian_cat.tscn" id="11_uu1wm"]
+[ext_resource type="PackedScene" uid="uid://cjm1wa8lbybab" path="res://characters/npcs/german_shepard/german_shephard.tscn" id="12_ts80i"]
+[ext_resource type="PackedScene" uid="uid://ciq52ea2psb3d" path="res://characters/npcs/pug_dog/pug_dog.tscn" id="13_a373y"]
+[ext_resource type="PackedScene" uid="uid://bb4geg1u4xjjp" path="res://characters/npcs/long_dog/long_dog.tscn" id="14_74pdf"]
 
 [node name="AnimalRescue" type="Node2D"]
 
@@ -27,13 +26,6 @@ tile_set = ExtResource("2_gfjcx")
 z_index = 1
 tile_map_data = PackedByteArray("AAD2//7/AAAAAAMAAAD4//7/AAACAAMAAAD5//7/AAACAAMAAAD6//7/AAAEAAMAAAD8//7/AAAGAAMAAAD///7/AAAIAAMAAAD//wMAAAAFAAAAAAD//wIAAAAFAAAAAAD9/wMAAAAFAAAAAFA=")
 tile_set = ExtResource("2_gfjcx")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-8, -16)
-
-[node name="PlayerCharacter" parent="." instance=ExtResource("1_mdjag")]
-position = Vector2(-100, 28)
-scale = Vector2(0.75, 0.75)
 
 [node name="Characters" type="Node2D" parent="."]
 

@@ -4,8 +4,8 @@
 [ext_resource type="Resource" uid="uid://chir1nn2tinpb" path="res://story_scenes/04-1_cat_must_make_a_trip_to_the_vet/resources/04-1_cat_after_surgery_dialog.tres" id="2_j5y3f"]
 [ext_resource type="PackedScene" uid="uid://b6a7wy52lf8wv" path="res://locations/vet_office/vet_office.tscn" id="3_cgw75"]
 [ext_resource type="Resource" uid="uid://cv5kj2ofhv48" path="res://story_scenes/04-1_cat_must_make_a_trip_to_the_vet/resources/04_cat_must_make_a_trip_to_the_vet_end_dialog.tres" id="3_cqef5"]
+[ext_resource type="PackedScene" uid="uid://dvaiyelyx08yj" path="res://story_scenes/05_owner_is_mad_after_vet_and_cat_is_set_free/05_owner_is_mad_after_vet_and_cat_is_set_free.tscn" id="4_4vkjp"]
 [ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="4_gksay"]
-[ext_resource type="PackedScene" uid="uid://fks7rwjturoy" path="res://game_world/game_world.tscn" id="4_w8xmm"]
 [ext_resource type="PackedScene" uid="uid://bty6hmjgyr0cn" path="res://characters/npcs/cat_owner/cat_owner.tscn" id="5_c8psw"]
 [ext_resource type="PackedScene" uid="uid://bfbjea81jtr2u" path="res://characters/npcs/dr_frankenstein_the_vet/dr_frankenstein_the_vet.tscn" id="6_amk8n"]
 
@@ -13,7 +13,7 @@
 script = ExtResource("1_aocxq")
 start_dialog_sequence = ExtResource("2_j5y3f")
 end_dialog_sequence = ExtResource("3_cqef5")
-next_scene = ExtResource("4_w8xmm")
+next_scene = ExtResource("4_4vkjp")
 
 [node name="VetOffice" parent="." instance=ExtResource("3_cgw75")]
 

@@ -7,10 +7,9 @@ var marker: Marker2D
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var parent_scene = get_tree().current_scene
-	var start_scene = parent_scene.get_node("AnimalRescue")
 	var vet_office = parent_scene.get_node("VetOffice")
 	
-	player = start_scene.get_node("PlayerCharacter")
+	player = parent_scene.get_node("PlayerCharacter")
 	marker = vet_office.get_node("Marker")
 	
 	#for child in get_children():

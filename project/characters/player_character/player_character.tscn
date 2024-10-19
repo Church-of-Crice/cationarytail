@@ -7,7 +7,8 @@
 [ext_resource type="Script" path="res://characters/player_character/thought_bubble_interacor.gd" id="5_tlyxu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d0dnk"]
-height = 22.0
+radius = 5.49429
+height = 17.4665
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vmrq6"]
 size = Vector2(18, 20)
@@ -20,7 +21,10 @@ script = ExtResource("1_tdqt1")
 [node name="PlayerCharacterAppearance" parent="." instance=ExtResource("2_ro1wt")]
 unique_name_in_owner = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionDetectionShape" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(1, 4)
+rotation = 1.5708
 shape = SubResource("CapsuleShape2D_d0dnk")
 
 [node name="HorizontalFlipper" type="Node" parent="."]
@@ -32,6 +36,7 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DialogInteractionArea"]
 shape = SubResource("RectangleShape2D_vmrq6")
+debug_color = Color(0.334957, 0.597671, 0.493724, 0.42)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
@@ -56,3 +61,4 @@ script = ExtResource("5_tlyxu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ThoughtBubbleInteracor"]
 shape = SubResource("RectangleShape2D_vmrq6")
+debug_color = Color(0.61189, 0.420016, 0.865545, 0.42)

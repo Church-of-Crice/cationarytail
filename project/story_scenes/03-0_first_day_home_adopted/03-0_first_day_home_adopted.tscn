@@ -35,20 +35,41 @@ color_ramp = SubResource("Gradient_ws0uu")
 noise = SubResource("FastNoiseLite_sqfw1")
 
 [node name="CatGetsInTrouble" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_j84mx")
 start_dialog_sequence = ExtResource("2_o3n4k")
 after_choosing_name_dialog = SubResource("Resource_m7h6x")
 
 [node name="HomeOfAdopter" parent="." instance=ExtResource("5_t1udm")]
+y_sort_enabled = true
 
 [node name="Lucretia" parent="HomeOfAdopter" instance=ExtResource("6_v8a8s")]
-position = Vector2(0, 100)
+position = Vector2(-4, 46)
 
 [node name="CatCarrier" type="Node2D" parent="HomeOfAdopter/Lucretia"]
 position = Vector2(15, -19)
 
 [node name="Sprite2D" type="Sprite2D" parent="HomeOfAdopter/Lucretia/CatCarrier"]
 texture = SubResource("NoiseTexture2D_i4i51")
+metadata/_aseprite_wizard_interface_config_ = {
+"animation_section": true,
+"layer_section": true,
+"output_section": true,
+"pending_changes": {
+"i_mode": -1,
+"keep_anim_length": false,
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": true,
+"player": "",
+"set_vis_track": true,
+"slice": "",
+"source": "res://assets/animated art/carrier.aseprite"
+},
+"slice_section": true
+}
 
 [node name="PlayerCharacter" parent="HomeOfAdopter" instance=ExtResource("7_e8hkw")]
 position = Vector2(-14, 3)

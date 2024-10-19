@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bb4geg1u4xjjp"]
+[gd_scene load_steps=7 format=3 uid="uid://bb4geg1u4xjjp"]
 
 [ext_resource type="Texture2D" uid="uid://buhydr0ohph0f" path="res://characters/npcs/long_dog/longDog.png" id="1_76mbo"]
 [ext_resource type="PackedScene" uid="uid://ckqymeml2cb8l" path="res://ui/overlays/dialog_overlay/DialogArea.tscn" id="2_ae4qg"]
@@ -8,11 +8,15 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sq05q"]
 size = Vector2(61, 16)
 
-[node name="LongDog" type="Sprite2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fm2dd"]
+radius = 2.0
+height = 48.0
+
+[node name="LongDog" type="CharacterBody2D"]
 position = Vector2(131, -22)
-texture = ExtResource("1_76mbo")
 
 [node name="DialogArea" parent="." instance=ExtResource("2_ae4qg")]
+visible = false
 position = Vector2(1, 2)
 character = ExtResource("3_aymhr")
 dialog_sequence = ExtResource("4_xyimn")
@@ -20,5 +24,16 @@ dialog_sequence = ExtResource("4_xyimn")
 [node name="CollisionShape2D" parent="DialogArea" index="0"]
 position = Vector2(-0.5, -2)
 shape = SubResource("RectangleShape2D_sq05q")
+debug_color = Color(0.745656, 0.371489, 0.712888, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture = ExtResource("1_76mbo")
+flip_h = true
+
+[node name="CollisionDetectionShape" type="CollisionShape2D" parent="."]
+position = Vector2(2, 4)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_fm2dd")
 
 [editable path="DialogArea"]

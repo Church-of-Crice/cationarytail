@@ -1,17 +1,12 @@
-[gd_scene format=3 uid="uid://c2v14girw0rtg"]
+[gd_scene load_steps=2 format=3 uid="uid://c2v14girw0rtg"]
+
+[ext_resource type="Texture2D" uid="uid://pkbq6gvrrbew" path="res://characters/npcs/shelter_clerk/art/shelter_clerk.png" id="1_ummm1"]
 
 [node name="ShelterClerk" type="Node2D"]
+y_sort_enabled = true
 
-[node name="Label" type="Label" parent="."]
-offset_left = -31.0
-offset_top = -103.0
-offset_right = 27.0
-offset_bottom = -54.0
-text = "Shelter
-Worker"
-
-[node name="ShelterWorker" type="ColorRect" parent="."]
-offset_left = -11.0
-offset_top = -53.0
-offset_right = 12.0
-offset_bottom = -3.0
+[node name="Sheltrinatrix" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, 25)
+texture = ExtResource("1_ummm1")
+offset = Vector2(0, -25)

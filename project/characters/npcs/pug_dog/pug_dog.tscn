@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://ciq52ea2psb3d"]
+[gd_scene load_steps=14 format=3 uid="uid://ciq52ea2psb3d"]
 
 [ext_resource type="Texture2D" uid="uid://dnu263ojg426r" path="res://characters/npcs/pug_dog/pug dog.png" id="1_d8k1q"]
 [ext_resource type="PackedScene" uid="uid://ckqymeml2cb8l" path="res://ui/overlays/dialog_overlay/DialogArea.tscn" id="2_dickc"]
@@ -34,9 +34,12 @@ events = Array[ExtResource("5_3wfff")]([SubResource("Resource_kxvdv"), SubResour
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7qgea"]
 size = Vector2(37, 26)
 
-[node name="PugDog" type="Sprite2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_khxwu"]
+radius = 6.0
+height = 24.0
+
+[node name="PugDog" type="CharacterBody2D"]
 position = Vector2(100, 8)
-texture = ExtResource("1_d8k1q")
 
 [node name="DialogArea" parent="." instance=ExtResource("2_dickc")]
 position = Vector2(1, 2)
@@ -46,5 +49,16 @@ dialog_sequence = SubResource("Resource_khubi")
 [node name="CollisionShape2D" parent="DialogArea" index="0"]
 position = Vector2(-1.5, -1)
 shape = SubResource("RectangleShape2D_7qgea")
+debug_color = Color(0.728328, 0.375991, 0.745657, 0.42)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture = ExtResource("1_d8k1q")
+
+[node name="CollisionDetectionShape" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(2, 8)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_khxwu")
 
 [editable path="DialogArea"]

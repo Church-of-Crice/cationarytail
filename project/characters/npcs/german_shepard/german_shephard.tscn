@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://cjm1wa8lbybab"]
+[gd_scene load_steps=7 format=3 uid="uid://cjm1wa8lbybab"]
 
 [ext_resource type="SpriteFrames" uid="uid://txq4sdir51xh" path="res://characters/npcs/german_shepard/german shepard more diarrhea.res" id="1_ud5yd"]
 [ext_resource type="PackedScene" uid="uid://ckqymeml2cb8l" path="res://ui/overlays/dialog_overlay/DialogArea.tscn" id="2_4nx03"]
@@ -8,9 +8,12 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_5o2mi"]
 radius = 22.0
 
-[node name="GermanShephard" type="AnimatedSprite2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v4w8x"]
+radius = 6.0
+height = 34.0
+
+[node name="GermanShephard" type="CharacterBody2D"]
 position = Vector2(35, 17)
-sprite_frames = ExtResource("1_ud5yd")
 
 [node name="DialogArea" parent="." instance=ExtResource("2_4nx03")]
 position = Vector2(1, 2)
@@ -19,5 +22,17 @@ dialog_sequence = ExtResource("4_78pt4")
 
 [node name="CollisionShape2D" parent="DialogArea" index="0"]
 shape = SubResource("CircleShape2D_5o2mi")
+debug_color = Color(0.701226, 0.409666, 0.709341, 0.42)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+y_sort_enabled = true
+sprite_frames = ExtResource("1_ud5yd")
+animation = &"more_poo"
+
+[node name="CollisionDetectionShape" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(0, 11)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_v4w8x")
 
 [editable path="DialogArea"]

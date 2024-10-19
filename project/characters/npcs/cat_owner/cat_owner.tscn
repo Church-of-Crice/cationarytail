@@ -1,9 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://bty6hmjgyr0cn"]
+[gd_scene load_steps=3 format=3 uid="uid://bty6hmjgyr0cn"]
 
 [ext_resource type="Texture2D" uid="uid://bjtkn2vebgtnl" path="res://characters/npcs/cat_owner/art/lucretia_placeholder.png" id="1_sqxur"]
 
-[node name="CatOwner" type="Node2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cxxmk"]
+
+[node name="CatOwner" type="CharacterBody2D"]
+y_sort_enabled = true
+collision_layer = 3
+collision_mask = 3
 
 [node name="Lucretia" type="Sprite2D" parent="."]
-position = Vector2(0, -33)
+y_sort_enabled = true
+position = Vector2(1, 24)
 texture = ExtResource("1_sqxur")
+offset = Vector2(-1, -24)
+
+[node name="CollisionDetectionShape" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(2, 22)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_cxxmk")

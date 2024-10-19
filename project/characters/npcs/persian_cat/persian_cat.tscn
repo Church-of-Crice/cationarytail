@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dg3c4ngx1j6bk"]
+[gd_scene load_steps=7 format=3 uid="uid://dg3c4ngx1j6bk"]
 
 [ext_resource type="Texture2D" uid="uid://b2dto3uagjkyx" path="res://characters/npcs/persian_cat/Persian Cat.png" id="1_vfyd5"]
 [ext_resource type="PackedScene" uid="uid://ckqymeml2cb8l" path="res://ui/overlays/dialog_overlay/DialogArea.tscn" id="2_p3hdr"]
@@ -8,8 +8,17 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f43l7"]
 size = Vector2(32, 28)
 
-[node name="PersianCat" type="Sprite2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a7guf"]
+radius = 5.0
+height = 20.0
+
+[node name="PersianCat" type="CharacterBody2D"]
 position = Vector2(150, 37)
+collision_layer = 3
+collision_mask = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
 texture = ExtResource("1_vfyd5")
 
 [node name="DialogArea" parent="." instance=ExtResource("2_p3hdr")]
@@ -20,5 +29,11 @@ dialog_sequence = ExtResource("4_rod77")
 [node name="CollisionShape2D" parent="DialogArea" index="0"]
 position = Vector2(-2, 0)
 shape = SubResource("RectangleShape2D_f43l7")
+debug_color = Color(0.730479, 0.396804, 0.673502, 0.42)
+
+[node name="CollisionDetectionShape" type="CollisionShape2D" parent="."]
+position = Vector2(1, 7)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_a7guf")
 
 [editable path="DialogArea"]

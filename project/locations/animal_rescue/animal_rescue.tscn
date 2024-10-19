@@ -5,10 +5,10 @@
 [ext_resource type="TileSet" uid="uid://clau51sw0a3qg" path="res://locations/animal_rescue/art/animal shelter_sprites.tres" id="2_gfjcx"]
 [ext_resource type="Texture2D" uid="uid://pkbq6gvrrbew" path="res://characters/npcs/shelter_clerk/art/shelter_clerk.png" id="3_01e37"]
 [ext_resource type="PackedScene" uid="uid://bty6hmjgyr0cn" path="res://characters/npcs/cat_owner/cat_owner.tscn" id="9_gg3b1"]
-[ext_resource type="PackedScene" uid="uid://dg3c4ngx1j6bk" path="res://characters/npcs/persian_cat/persian_cat.tscn" id="11_uu1wm"]
-[ext_resource type="PackedScene" uid="uid://cjm1wa8lbybab" path="res://characters/npcs/german_shepard/german_shephard.tscn" id="12_ts80i"]
-[ext_resource type="PackedScene" uid="uid://ciq52ea2psb3d" path="res://characters/npcs/pug_dog/pug_dog.tscn" id="13_a373y"]
-[ext_resource type="PackedScene" uid="uid://bb4geg1u4xjjp" path="res://characters/npcs/long_dog/long_dog.tscn" id="14_74pdf"]
+[ext_resource type="PackedScene" path="res://characters/npcs/persian_cat/persian_cat.tscn" id="11_uu1wm"]
+[ext_resource type="PackedScene" path="res://characters/npcs/german_shepard/german_shephard.tscn" id="12_ts80i"]
+[ext_resource type="PackedScene" path="res://characters/npcs/pug_dog/pug_dog.tscn" id="13_a373y"]
+[ext_resource type="PackedScene" path="res://characters/npcs/long_dog/long_dog.tscn" id="14_74pdf"]
 
 [node name="AnimalRescue" type="Node2D"]
 

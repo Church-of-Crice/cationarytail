@@ -1,0 +1,50 @@
+[gd_resource type="Resource" script_class="DialogSequence" load_steps=13 format=3 uid="uid://chir1nn2tinpb"]
+
+[ext_resource type="Script" path="res://ui/dialog/dialog_event.gd" id="1_drc18"]
+[ext_resource type="Script" path="res://ui/dialog/dialog_sequence.gd" id="2_bp8hj"]
+[ext_resource type="Resource" path="res://ui/dialog/resources/vet_dr_frank.tres" id="2_h0uj4"]
+[ext_resource type="Resource" uid="uid://diliy5h3y7r5m" path="res://ui/dialog/resources/lucretia_character.tres" id="3_16n2t"]
+
+[sub_resource type="Resource" id="Resource_jtsfa"]
+script = ExtResource("1_drc18")
+character = ExtResource("2_h0uj4")
+text = "Well I have great news Miss!"
+
+[sub_resource type="Resource" id="Resource_0yhgt"]
+script = ExtResource("1_drc18")
+character = ExtResource("2_h0uj4")
+text = "So sorry for the wait. But I located the source of all our troubles…"
+
+[sub_resource type="Resource" id="Resource_h61ra"]
+script = ExtResource("1_drc18")
+character = ExtResource("2_h0uj4")
+text = "a singular googly eye."
+
+[sub_resource type="Resource" id="Resource_bwplx"]
+script = ExtResource("1_drc18")
+character = ExtResource("2_h0uj4")
+text = "What a fuss she made over such a tiny thing. But she should be spick and span now!"
+
+[sub_resource type="Resource" id="Resource_a6q1y"]
+script = ExtResource("1_drc18")
+character = ExtResource("2_h0uj4")
+text = "Just do be careful in the future leaving objects such as this lying around, she seems like an extra curious kitty! "
+
+[sub_resource type="Resource" id="Resource_03ruw"]
+script = ExtResource("1_drc18")
+character = ExtResource("3_16n2t")
+text = "Don’t worry, I’ll give her a stern scolding back at home."
+
+[sub_resource type="Resource" id="Resource_nibed"]
+script = ExtResource("1_drc18")
+character = ExtResource("3_16n2t")
+text = "I can assure you we WON’T be coming back. I’ll make sure of it."
+
+[sub_resource type="Resource" id="Resource_l5hn8"]
+script = ExtResource("1_drc18")
+character = ExtResource("2_h0uj4")
+text = "Oh well I sure hope not! Run along now. "
+
+[resource]
+script = ExtResource("2_bp8hj")
+events = Array[ExtResource("1_drc18")]([SubResource("Resource_jtsfa"), SubResource("Resource_0yhgt"), SubResource("Resource_h61ra"), SubResource("Resource_bwplx"), SubResource("Resource_a6q1y"), SubResource("Resource_03ruw"), SubResource("Resource_nibed"), SubResource("Resource_l5hn8")])

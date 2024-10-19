@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://765r1e1m0xr1"]
+
+[ext_resource type="FontFile" uid="uid://bxj58cpi05nxr" path="res://ui/fonts/Retro Gaming.ttf" id="1_agbdr"]
+[ext_resource type="Script" path="res://props/thought_bubble_interactable/thought_bubble_container.gd" id="1_c1037"]
+[ext_resource type="Texture2D" uid="uid://tffyj3705bse" path="res://assets/art/thought bubble_empty.png" id="2_5rr1x"]
+[ext_resource type="Texture2D" uid="uid://ch7qqivlimkd2" path="res://assets/art/thought bubble_bottom.png" id="3_qfenp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_bqtrl"]
+line_spacing = -3.0
+font = ExtResource("1_agbdr")
+font_size = 8
+font_color = Color(0, 0, 0, 1)
+
+[node name="HBoxContainer" type="VBoxContainer"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -67.0
+offset_top = -36.0
+grow_horizontal = 0
+grow_vertical = 0
+script = ExtResource("1_c1037")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_5rr1x")
+patch_margin_left = 6
+patch_margin_top = 11
+patch_margin_right = 5
+patch_margin_bottom = 16
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 5
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "I'm feeling woozy"
+label_settings = SubResource("LabelSettings_bqtrl")
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="ThoughtBubble" type="TextureRect" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="ThoughtBubbleBottom" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 8
+texture = ExtResource("3_qfenp")
+stretch_mode = 2

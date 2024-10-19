@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dr7usaaig21t8"]
+
+[ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="6_dy23m"]
+[ext_resource type="PackedScene" uid="uid://l8yumgsqntlj" path="res://locations/world_map/world_map.tscn" id="9_ykes7"]
+
+[node name="WorldStoryScene" type="Node2D"]
+
+[node name="WorldMap" parent="." instance=ExtResource("9_ykes7")]
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("6_dy23m")]
+position = Vector2(-140, -830)

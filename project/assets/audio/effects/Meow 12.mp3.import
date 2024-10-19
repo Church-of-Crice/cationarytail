@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b4srde531f2me"
+path="res://.godot/imported/Meow 12.mp3-d6e10713cea54f9713d954bacec5ed5f.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/effects/Meow 12.mp3"
+dest_files=["res://.godot/imported/Meow 12.mp3-d6e10713cea54f9713d954bacec5ed5f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

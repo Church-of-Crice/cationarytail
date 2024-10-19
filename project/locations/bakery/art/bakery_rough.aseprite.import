@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://c03gtrrgtlxsa"
+path="res://.godot/imported/bakery_rough.aseprite-3ac16bca87299f5190eac6307273b914.res"
+
+[deps]
+
+source_file="res://locations/bakery/art/bakery_rough.aseprite"
+dest_files=["res://.godot/imported/bakery_rough.aseprite-3ac16bca87299f5190eac6307273b914.res"]
+
+[params]
+

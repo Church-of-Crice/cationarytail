@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://bfrva5cwe1sx2"
+path="res://.godot/imported/steam_roller.aseprite-e0ae4c85e943c0419676245b13671d6b.res"
+
+[deps]
+
+source_file="res://locations/construction_site/art/steam_roller.aseprite"
+dest_files=["res://.godot/imported/steam_roller.aseprite-e0ae4c85e943c0419676245b13671d6b.res"]
+
+[params]
+

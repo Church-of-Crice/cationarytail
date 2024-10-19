@@ -43,6 +43,7 @@ end_dialog_sequence = SubResource("Resource_dbce3")
 [node name="PlayerCharacter" parent="HomeOfAdopter" instance=ExtResource("3_oef1c")]
 
 [node name="CatOwner" parent="HomeOfAdopter" instance=ExtResource("4_tx1a6")]
+position = Vector2(30, -4)
 
 [node name="Label" type="Label" parent="."]
 offset_left = -18.0

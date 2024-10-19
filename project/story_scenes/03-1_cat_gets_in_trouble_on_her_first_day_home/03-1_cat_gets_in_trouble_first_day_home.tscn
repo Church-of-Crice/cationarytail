@@ -41,35 +41,43 @@ dialog_after_cat_gets_sick = SubResource("Resource_di2j4")
 dialog_leaving_house = SubResource("Resource_je4sw")
 
 [node name="HomeOfAdopter" parent="." instance=ExtResource("5_5vls6")]
+y_sort_enabled = true
 
 [node name="CatOwner" parent="HomeOfAdopter" instance=ExtResource("6_0rytt")]
 
 [node name="PlayerCharacter" parent="HomeOfAdopter" instance=ExtResource("7_sjmkd")]
+y_sort_enabled = true
 position = Vector2(-42, 13)
 
 [node name="Jewelry" parent="HomeOfAdopter" instance=ExtResource("8_leaub")]
+z_index = -1
 position = Vector2(-97, 37)
 description = "Jewelry"
 thought_text = "Oh wow, real gold!"
 
 [node name="Chocolate" parent="HomeOfAdopter" instance=ExtResource("8_leaub")]
+z_index = -1
 position = Vector2(85, 2)
 thought_text = "Not as good as catnip."
 
 [node name="Coffee" parent="HomeOfAdopter" instance=ExtResource("8_leaub")]
+z_index = -1
 position = Vector2(27, 34)
 thought_text = "Needs more milk."
 
 [node name="Plant" parent="HomeOfAdopter" instance=ExtResource("8_leaub")]
+z_index = -1
 position = Vector2(17, 61)
 thought_text = "A vegan diet isn’t for me."
 
 [node name="PowerCable" parent="HomeOfAdopter" instance=ExtResource("8_leaub")]
+z_index = -1
 position = Vector2(-2, 52)
 thought_text = "That was shocking."
 
 [node name="GoogleyEyes" parent="HomeOfAdopter" instance=ExtResource("8_leaub")]
 unique_name_in_owner = true
+z_index = -1
 position = Vector2(78, 52)
 description = "Googley Eyes"
 thought_text = "I’m feeling a bit shaky."

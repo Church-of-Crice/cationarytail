@@ -9,7 +9,7 @@ func _ready() -> void:
   var vet_office = parent_scene.get_node("VetOffice")
 
   player = parent_scene.get_node("PlayerCharacter")
-  marker = vet_office.get_node("Marker")
+  marker = vet_office.get_node("Marker2D")
 
 func _input(event: InputEvent) -> void:
   if event is InputEventKey and event.pressed:

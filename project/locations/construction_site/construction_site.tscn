@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://bikag17g5v2ao"]
+[gd_scene load_steps=2 format=3 uid="uid://bikag17g5v2ao"]
+
+[ext_resource type="Texture2D" uid="uid://gxnoapcyjg37" path="res://locations/construction_site/art/ConstructionSitemapWithAssets.png" id="1_o4nmo"]
 
 [node name="ConstructionSite" type="Node2D"]
+
+[node name="ConstructionSitemapWithAssets" type="Sprite2D" parent="."]
+texture = ExtResource("1_o4nmo")

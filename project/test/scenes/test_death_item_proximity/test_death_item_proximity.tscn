@@ -1,0 +1,73 @@
+[gd_scene load_steps=16 format=3 uid="uid://c7ig7ldxopipr"]
+
+[ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="1_ft7er"]
+[ext_resource type="PackedScene" uid="uid://c2b5trrmnpydo" path="res://props/deadly_interactables/deadly_interactable.tscn" id="2_eapa1"]
+[ext_resource type="Texture2D" uid="uid://o4mo2w2ftx1v" path="res://addons/gut/images/yellow.png" id="3_0iu4c"]
+[ext_resource type="Texture2D" uid="uid://bvrnfjkcmpr8s" path="res://addons/gut/images/green.png" id="5_5nu1a"]
+[ext_resource type="Texture2D" uid="uid://ba2sgost7my3x" path="res://addons/gut/images/red.png" id="6_6rdk2"]
+[ext_resource type="Texture2D" uid="uid://cr6tvdv0ve6cv" path="res://addons/gut/gui/play.png" id="7_xkee2"]
+[ext_resource type="Texture2D" uid="uid://6wra5rxmfsrl" path="res://addons/gut/gui/arrow.png" id="8_djj8q"]
+[ext_resource type="Texture2D" uid="uid://dkcdt8k0kfkwd" path="res://assets/art/calico_head_mount.png" id="9_yflys"]
+[ext_resource type="Texture2D" uid="uid://birpsuwqvviru" path="res://assets/art/cherry_board_mount.png" id="10_qnp7r"]
+[ext_resource type="Texture2D" uid="uid://55xb21dmddtc" path="res://assets/art/calico_body_rug.png" id="11_bumn4"]
+[ext_resource type="Texture2D" uid="uid://buvuriua04igf" path="res://assets/art/blue_eye_rug.png" id="12_ijydg"]
+[ext_resource type="Texture2D" uid="uid://weghr4577aaa" path="res://assets/art/hickory_board_mount.png" id="13_0ijjp"]
+[ext_resource type="Texture2D" uid="uid://bf7g1s3qmr1oy" path="res://assets/art/mahogany_board_mount.png" id="14_xygtg"]
+[ext_resource type="Texture2D" uid="uid://ble28jinhr1pm" path="res://assets/art/orange_head_mount.png" id="15_qeedq"]
+[ext_resource type="Texture2D" uid="uid://crfmd2dstmldu" path="res://assets/art/orange_body_rug.png" id="16_vqrvo"]
+
+[node name="Test-deathItemProximity" type="Node2D"]
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("1_ft7er")]
+
+[node name="DeadlyInteractable" parent="." instance=ExtResource("2_eapa1")]
+texture = ExtResource("3_0iu4c")
+detectable_range = 20.0
+
+[node name="Green" type="Sprite2D" parent="."]
+position = Vector2(24, -74)
+texture = ExtResource("5_5nu1a")
+
+[node name="Red" type="Sprite2D" parent="."]
+position = Vector2(48, -93)
+texture = ExtResource("6_6rdk2")
+
+[node name="Play" type="Sprite2D" parent="."]
+position = Vector2(95, -84)
+texture = ExtResource("7_xkee2")
+
+[node name="Arrow" type="Sprite2D" parent="."]
+position = Vector2(124, -62)
+texture = ExtResource("8_djj8q")
+
+[node name="CalicoHeadMount" type="Sprite2D" parent="."]
+position = Vector2(-16, -71)
+texture = ExtResource("9_yflys")
+
+[node name="CherryBoardMount" type="Sprite2D" parent="."]
+position = Vector2(111, -2)
+texture = ExtResource("10_qnp7r")
+
+[node name="CalicoBodyRug" type="Sprite2D" parent="."]
+position = Vector2(149, -34)
+texture = ExtResource("11_bumn4")
+
+[node name="BlueEyeRug" type="Sprite2D" parent="."]
+position = Vector2(124, -106)
+texture = ExtResource("12_ijydg")
+
+[node name="HickoryBoardMount" type="Sprite2D" parent="."]
+position = Vector2(68, -15)
+texture = ExtResource("13_0ijjp")
+
+[node name="MahoganyBoardMount" type="Sprite2D" parent="."]
+position = Vector2(103, -43)
+texture = ExtResource("14_xygtg")
+
+[node name="OrangeHeadMount" type="Sprite2D" parent="."]
+position = Vector2(88, -125)
+texture = ExtResource("15_qeedq")
+
+[node name="OrangeBodyRug" type="Sprite2D" parent="."]
+position = Vector2(31, -123)
+texture = ExtResource("16_vqrvo")

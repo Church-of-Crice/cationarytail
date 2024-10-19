@@ -19,8 +19,7 @@ var player_area: Area2D
 func _ready():
 	area_entered.connect(_on_area_entered)
 	area_exited.connect(_on_area_exited)
-	if texture:
-		sprite_2d.texture = texture
+	sprite_2d.texture = texture
 
 func _unhandled_input(event):
 		if area_active and event.is_action_pressed("ui_accept"):

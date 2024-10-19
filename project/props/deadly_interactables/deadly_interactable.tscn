@@ -1,0 +1,44 @@
+[gd_scene load_steps=8 format=3 uid="uid://c2b5trrmnpydo"]
+
+[ext_resource type="Script" path="res://props/deadly_interactables/deadly_interactable.gd" id="1_5a2vv"]
+[ext_resource type="PackedScene" uid="uid://br748lkashfh6" path="res://props/thought_bubble_interactable/thought_bubble_interactable.tscn" id="2_ejq6q"]
+[ext_resource type="Script" path="res://test/scenes/test_death_item_proximity/detectable_deadly_area_2d.gd" id="3_smk1v"]
+
+[sub_resource type="Gradient" id="Gradient_q26y0"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_8q1qw"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_rl16f"]
+width = 16
+height = 16
+color_ramp = SubResource("Gradient_q26y0")
+noise = SubResource("FastNoiseLite_8q1qw")
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rt8xg"]
+radius = 60.0
+
+[node name="DeadlyInteractable" type="Node2D"]
+position = Vector2(58, -52)
+script = ExtResource("1_5a2vv")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+texture = SubResource("NoiseTexture2D_rl16f")
+
+[node name="ThoughtBubbleInteractable" parent="." instance=ExtResource("2_ejq6q")]
+unique_name_in_owner = true
+position = Vector2(0, 0)
+
+[node name="DetectableDeadlyArea2D" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 16
+script = ExtResource("3_smk1v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectableDeadlyArea2D"]
+unique_name_in_owner = true
+shape = SubResource("CircleShape2D_rt8xg")
+
+[node name="DeadlyThoughtIntervalTimer" type="Timer" parent="DetectableDeadlyArea2D"]
+unique_name_in_owner = true

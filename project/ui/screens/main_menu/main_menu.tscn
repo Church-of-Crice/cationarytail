@@ -33,20 +33,25 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_w75in")
 
+[node name="MainMenuBackground2" type="Sprite2D" parent="."]
+position = Vector2(160, 90)
+texture = ExtResource("2_fn5qa")
+
 [node name="MainMenuBackground" type="Sprite2D" parent="."]
-position = Vector2(160, 91)
+position = Vector2(160, 103)
 texture = ExtResource("2_fn5qa")
 
 [node name="Control" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 0.478
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -71.0
-offset_top = -77.0
-offset_bottom = -4.0
+anchor_bottom = 0.478
+offset_left = -117.0
+offset_top = -43.04
+offset_right = -46.0
+offset_bottom = 29.96
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
@@ -89,7 +94,17 @@ size_flags_vertical = 4
 texture = ExtResource("6_ut6yu")
 stretch_mode = 3
 
-[node name="PlayButton" type="TextureButton" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_8ls5d")
+
+[node name="Control2" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 94.0
+offset_top = -40.0
+offset_right = 134.0
+metadata/_edit_group_ = true
+
+[node name="PlayButton" type="TextureButton" parent="Control2"]
 unique_name_in_owner = true
 layout_mode = 2
 offset_left = 140.0
@@ -100,7 +115,7 @@ scale = Vector2(2, 2)
 texture_normal = SubResource("AtlasTexture_dq8kj")
 script = ExtResource("7_5tvrk")
 
-[node name="QuitButton" type="TextureButton" parent="."]
+[node name="QuitButton" type="TextureButton" parent="Control2"]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 139.0
@@ -111,7 +126,7 @@ scale = Vector2(2, 2)
 texture_normal = SubResource("AtlasTexture_d17c1")
 script = ExtResource("7_5tvrk")
 
-[node name="SettingsButton" type="TextureButton" parent="."]
+[node name="SettingsButton" type="TextureButton" parent="Control2"]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 7
@@ -119,14 +134,12 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -37.0
-offset_top = -43.0
-offset_bottom = -33.0
+offset_left = 103.0
+offset_top = 97.0
+offset_right = 140.0
+offset_bottom = 107.0
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(2, 2)
 texture_normal = SubResource("AtlasTexture_hnn1k")
 script = ExtResource("7_5tvrk")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("9_8ls5d")

@@ -1,8 +1,7 @@
 [gd_scene load_steps=9 format=4 uid="uid://dgvmjpupptnko"]
 
-[ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="1_mdjag"]
 [ext_resource type="TileSet" uid="uid://bcgv3j66veqt" path="res://locations/vet_office/tilemaps/vet_office_temp.tres" id="1_sbbk1"]
-[ext_resource type="TileSet" uid="uid://bamb5hd4t7xy8" path="res://locations/animal_rescue/tilemaps/animal shelter_sprites.tres" id="2_6ea0m"]
+[ext_resource type="TileSet" uid="uid://b1rkehngfg7yw" path="res://locations/animal_rescue/tilemaps/animal shelter_sprites.tres" id="2_6ea0m"]
 [ext_resource type="PackedScene" uid="uid://c2v14girw0rtg" path="res://characters/npcs/shelter_clerk/shelter_clerk.tscn" id="4_4emik"]
 [ext_resource type="PackedScene" uid="uid://bty6hmjgyr0cn" path="res://characters/npcs/cat_owner/cat_owner.tscn" id="9_gg3b1"]
 [ext_resource type="PackedScene" uid="uid://dg3c4ngx1j6bk" path="res://characters/npcs/persian_cat/persian_cat.tscn" id="11_uu1wm"]
@@ -27,13 +26,6 @@ tile_set = ExtResource("2_6ea0m")
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAD2//7/AAAAAAMAAAD4//7/AAACAAMAAAD5//7/AAACAAMAAAD6//7/AAAEAAMAAAD8//7/AAAGAAMAAAD///7/AAAIAAMAAAD//wMAAAAFAAAAAAD//wIAAAAFAAAAAAD9/wMAAAAFAAAAAFACAAMAAQAAAAEAAAADAAMAAQABAAEAAAAEAAMAAQACAAEAAAAFAAMAAQADAAEAAAAGAAMAAQAEAAEAAAAHAAMAAQAFAAEAAAAIAAMAAQAGAAEAAAAJAAMAAQAHAAEAAAACAAIAAQAAAAAAAAADAAIAAQABAAAAAAAEAAIAAQACAAAAAAAFAAIAAQADAAAAAAAGAAIAAQAEAAAAAAAHAAIAAQAFAAAAAAAIAAIAAQAGAAAAAAAJAAIAAQAHAAAAAAA=")
 tile_set = ExtResource("2_6ea0m")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-8, -16)
-
-[node name="PlayerCharacter" parent="." instance=ExtResource("1_mdjag")]
-y_sort_enabled = true
-position = Vector2(-100, 28)
 
 [node name="Characters" type="Node2D" parent="."]
 y_sort_enabled = true

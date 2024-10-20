@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="DialogSequence" load_steps=13 format=3 uid="uid://bb5pfjv1p488a"]
+[gd_resource type="Resource" script_class="DialogSequence" load_steps=13 format=3 uid="uid://cjri3trn0vkpw"]
 
 [ext_resource type="Script" path="res://ui/dialog/dialog_event.gd" id="1_nmkgw"]
 [ext_resource type="Resource" uid="uid://diliy5h3y7r5m" path="res://ui/dialog/resources/lucretia_character.tres" id="2_w8kxt"]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bw5nylbpo7frv"
-path="res://.godot/imported/Shining_Gate_open.png-d4a6f3d19e38ca5549dfefd45c35fded.ctex"
+uid="uid://deng1h1rj6w4d"
+path="res://.godot/imported/Pyro the dactyl-pterodactyl.png-3c7bc84379d282430368980026ec1afb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://story_scenes/23_true_death/assets/Shining_Gate_open.png"
-dest_files=["res://.godot/imported/Shining_Gate_open.png-d4a6f3d19e38ca5549dfefd45c35fded.ctex"]
+source_file="res://test/scenes/test_pterodactyl_death/Pyro the dactyl-pterodactyl.png"
+dest_files=["res://.godot/imported/Pyro the dactyl-pterodactyl.png-3c7bc84379d282430368980026ec1afb.ctex"]
 
 [params]
 

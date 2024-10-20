@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bw5nylbpo7frv"
-path="res://.godot/imported/Shining_Gate_open.png-d4a6f3d19e38ca5549dfefd45c35fded.ctex"
+uid="uid://otb272hfjihm"
+path="res://.godot/imported/cat selector-sheet.png-07f870c0497ec0c81f3afedac9ef2fb3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://story_scenes/23_true_death/assets/Shining_Gate_open.png"
-dest_files=["res://.godot/imported/Shining_Gate_open.png-d4a6f3d19e38ca5549dfefd45c35fded.ctex"]
+source_file="res://ui/components/character creation editor component/cat selector-sheet.png"
+dest_files=["res://.godot/imported/cat selector-sheet.png-07f870c0497ec0c81f3afedac9ef2fb3.ctex"]
 
 [params]
 

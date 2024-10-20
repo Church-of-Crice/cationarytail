@@ -1,14 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://bg5cs57ay7ftj"]
+[gd_scene load_steps=16 format=3 uid="uid://bg5cs57ay7ftj"]
 
 [ext_resource type="PackedScene" uid="uid://ff0pl457qtvi" path="res://characters/player_character/player_character_appearance/player_character_appearance.tscn" id="1_imksy"]
 [ext_resource type="Script" path="res://ui/screens/character_creation/character_creation_screen.gd" id="1_ljgtx"]
-[ext_resource type="Texture2D" uid="uid://dds1rvno21ter" path="res://ui/screens/character_creation/art/charactercreationarrows.png" id="2_hx4sp"]
 [ext_resource type="Texture2D" uid="uid://8ny152xv0mv7" path="res://ui/screens/character_creation/art/character creation background - tileable.png" id="3_crjwi"]
 [ext_resource type="Texture2D" uid="uid://dtw0r5iluamob" path="res://ui/screens/character_creation/charactercreationshadow.png" id="4_lxrm0"]
 [ext_resource type="Texture2D" uid="uid://ydbgsk7pfedy" path="res://ui/components/buttons/button art/Catbox.png" id="4_uot0r"]
 [ext_resource type="Shader" path="res://ui/screens/character_creation/character_creation_screen_bg.gdshader" id="5_mkx4i"]
 [ext_resource type="Texture2D" uid="uid://c1gq2dkyb6rl7" path="res://ui/components/buttons/button art/catsave.png" id="7_cym0j"]
-[ext_resource type="Texture2D" uid="uid://cbycyr5j8s5d" path="res://ui/components/character creation editor component/cat selector.png" id="8_v2deb"]
+[ext_resource type="Script" path="res://ui/screens/character_creation/animated_texture_button.gd" id="9_sdb21"]
+[ext_resource type="Texture2D" uid="uid://otb272hfjihm" path="res://ui/components/character creation editor component/cat selector-sheet.png" id="10_01v0t"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_urj62"]
 shader = ExtResource("5_mkx4i")
@@ -17,19 +17,22 @@ shader_parameter/pixel_snap = true
 shader_parameter/scale = 6.0
 shader_parameter/my_texture = ExtResource("3_crjwi")
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p547l"]
+
 [sub_resource type="ViewportTexture" id="ViewportTexture_lsags"]
 viewport_path = NodePath("PanelContainer/SubViewport")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_k5on1"]
-atlas = ExtResource("2_hx4sp")
-region = Rect2(0, 9, 11, 14)
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6s03"]
+atlas = ExtResource("10_01v0t")
+region = Rect2(81, 0, 81, 59)
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cadme"]
-load_path = "res://.godot/imported/charactercreationarrows.png-50d8604fb5a8ee0054976ee2fcd4463f.ctex"
+[sub_resource type="AtlasTexture" id="AtlasTexture_0htx3"]
+atlas = ExtResource("10_01v0t")
+region = Rect2(0, 0, 81, 59)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_3kjwt"]
-atlas = SubResource("CompressedTexture2D_cadme")
-region = Rect2(21, 9, 11, 14)
+[sub_resource type="AtlasTexture" id="AtlasTexture_n022w"]
+atlas = ExtResource("10_01v0t")
+region = Rect2(0, 59, 12, 14)
 
 [node name="CharacterCreationScreen" type="Control"]
 layout_mode = 3
@@ -62,6 +65,7 @@ offset_right = 27.0
 offset_bottom = 27.0
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_p547l")
 
 [node name="Catbox" type="Sprite2D" parent="PanelContainer"]
 position = Vector2(26, 27)
@@ -85,16 +89,106 @@ unique_name_in_owner = true
 position = Vector2(16, 16)
 data = null
 
-[node name="Catsave" type="Sprite2D" parent="PanelContainer"]
-position = Vector2(132, 79)
-texture = ExtResource("7_cym0j")
+[node name="Panel" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 12.0
+offset_top = 61.0
+offset_right = 92.0
+offset_bottom = 120.0
 
-[node name="CatSelector" type="Sprite2D" parent="PanelContainer"]
-position = Vector2(-80, 24)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("8_v2deb")
+[node name="CatSelectorPanelBG" type="TextureRect" parent="Panel"]
+layout_mode = 0
+offset_right = 81.0
+offset_bottom = 59.0
+texture = SubResource("AtlasTexture_f6s03")
 
-[node name="StartButton" type="Button" parent="."]
+[node name="CatSelectorPanelMaster" type="TextureRect" parent="Panel"]
+visible = false
+layout_mode = 0
+offset_right = 81.0
+offset_bottom = 59.0
+texture = SubResource("AtlasTexture_0htx3")
+
+[node name="CharacterOptionsVBox" type="VBoxContainer" parent="Panel"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 7.0
+offset_right = 76.0
+offset_bottom = 53.0
+theme_override_constants/separation = 2
+alignment = 1
+
+[node name="CharacterOptionRow" type="HBoxContainer" parent="Panel/CharacterOptionsVBox"]
+layout_mode = 2
+size_flags_horizontal = 8
+alignment = 1
+
+[node name="CoatArrowsHBoxContainer" type="HBoxContainer" parent="Panel/CharacterOptionsVBox/CharacterOptionRow"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 2
+
+[node name="CoatLeftButton" type="TextureButton" parent="Panel/CharacterOptionsVBox/CharacterOptionRow/CoatArrowsHBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_n022w")
+script = ExtResource("9_sdb21")
+
+[node name="CoatRightButton" type="TextureButton" parent="Panel/CharacterOptionsVBox/CharacterOptionRow/CoatArrowsHBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_n022w")
+flip_h = true
+script = ExtResource("9_sdb21")
+
+[node name="CharacterOptionRow2" type="HBoxContainer" parent="Panel/CharacterOptionsVBox"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="CollarArrowsHBoxContainer" type="HBoxContainer" parent="Panel/CharacterOptionsVBox/CharacterOptionRow2"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = 2
+
+[node name="CollarLeftButton" type="TextureButton" parent="Panel/CharacterOptionsVBox/CharacterOptionRow2/CollarArrowsHBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_n022w")
+script = ExtResource("9_sdb21")
+
+[node name="CollarRightButton" type="TextureButton" parent="Panel/CharacterOptionsVBox/CharacterOptionRow2/CollarArrowsHBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_n022w")
+flip_h = true
+script = ExtResource("9_sdb21")
+
+[node name="CharacterOptionRow3" type="HBoxContainer" parent="Panel/CharacterOptionsVBox"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="EyesArrowsHBoxContainer" type="HBoxContainer" parent="Panel/CharacterOptionsVBox/CharacterOptionRow3"]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_constants/separation = 2
+
+[node name="EyesLeftButton" type="TextureButton" parent="Panel/CharacterOptionsVBox/CharacterOptionRow3/EyesArrowsHBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_n022w")
+script = ExtResource("9_sdb21")
+
+[node name="EyesRightButton" type="TextureButton" parent="Panel/CharacterOptionsVBox/CharacterOptionRow3/EyesArrowsHBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+texture_normal = SubResource("AtlasTexture_n022w")
+flip_h = true
+script = ExtResource("9_sdb21")
+
+[node name="StartButton" type="TextureButton" parent="."]
 unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 3
@@ -102,101 +196,12 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -72.0
-offset_top = -53.0
-offset_right = -26.0
-offset_bottom = -22.0
+offset_left = -110.0
+offset_top = -67.0
+offset_right = -10.0
 grow_horizontal = 0
 grow_vertical = 0
-text = "Start"
+texture_normal = ExtResource("7_cym0j")
+script = ExtResource("9_sdb21")
 
-[node name="CharacterOptionsPanel" type="PanelContainer" parent="."]
-layout_mode = 1
-anchors_preset = 4
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -54.0
-offset_right = 96.0
-offset_bottom = 54.0
-grow_vertical = 2
-
-[node name="MarginContainer" type="MarginContainer" parent="CharacterOptionsPanel"]
-layout_mode = 2
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="CharacterOptionsVBox" type="VBoxContainer" parent="CharacterOptionsPanel/MarginContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="CharacterOptionRow" type="HBoxContainer" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox"]
-layout_mode = 2
-alignment = 1
-
-[node name="CharacterOptionLabel" type="Label" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox/CharacterOptionRow"]
-layout_mode = 2
-size_flags_horizontal = 2
-text = "Coat"
-
-[node name="ArrowsHBoxContainer" type="HBoxContainer" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox/CharacterOptionRow"]
-layout_mode = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-
-[node name="CoatLeftButton" type="TextureButton" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox/CharacterOptionRow/ArrowsHBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-texture_normal = SubResource("AtlasTexture_k5on1")
-
-[node name="CoatRightButton" type="TextureButton" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox/CharacterOptionRow/ArrowsHBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-texture_normal = SubResource("AtlasTexture_3kjwt")
-
-[node name="CharacterOptionRow2" type="HBoxContainer" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox"]
-layout_mode = 2
-
-[node name="CharacterOptionLabel" type="Label" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox/CharacterOptionRow2"]
-layout_mode = 2
-size_flags_horizontal = 2
-text = "Collar"
-
-[node name="ArrowsHBoxContainer" type="HBoxContainer" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox/CharacterOptionRow2"]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-
-[node name="CollarLeftButton" type="TextureButton" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox/CharacterOptionRow2/ArrowsHBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-texture_normal = SubResource("AtlasTexture_k5on1")
-
-[node name="CollarRightButton" type="TextureButton" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox/CharacterOptionRow2/ArrowsHBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-texture_normal = SubResource("AtlasTexture_3kjwt")
-
-[node name="CharacterOptionRow3" type="HBoxContainer" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox"]
-layout_mode = 2
-
-[node name="CharacterOptionLabel" type="Label" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox/CharacterOptionRow3"]
-layout_mode = 2
-size_flags_horizontal = 2
-text = "Eyes"
-
-[node name="ArrowsHBoxContainer" type="HBoxContainer" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox/CharacterOptionRow3"]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-
-[node name="EyesLeftButton" type="TextureButton" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox/CharacterOptionRow3/ArrowsHBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-texture_normal = SubResource("AtlasTexture_k5on1")
-
-[node name="EyesRightButton" type="TextureButton" parent="CharacterOptionsPanel/MarginContainer/CharacterOptionsVBox/CharacterOptionRow3/ArrowsHBoxContainer"]
-unique_name_in_owner = true
-layout_mode = 2
-texture_normal = SubResource("AtlasTexture_3kjwt")
+[node name="ButtonAnimations" type="Node" parent="."]

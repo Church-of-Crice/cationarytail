@@ -23,6 +23,7 @@ SceneManager="*res://autoloads/scene_manager.gd"
 SignalBus="*res://autoloads/SignalBus.gd"
 DialogManager="*res://autoloads/DialogManager.tscn"
 SceneTransitionManager="*res://ui/scene_transitions/scene_transition_manager.tscn"
+UiSound="*res://autoloads/ui_sound.tscn"
 
 [display]
 
@@ -40,6 +41,10 @@ project/assembly_name="godot-project-template"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/gut/plugin.cfg")
+
+[global_group]
+
+Player=""
 
 [input]
 

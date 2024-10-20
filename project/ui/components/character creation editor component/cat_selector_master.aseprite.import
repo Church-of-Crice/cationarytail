@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://i5fvvgh5d5xl"
+path="res://.godot/imported/cat_selector_master.aseprite-2694bfd6e59db28d24ee0c6fc5d319f8.res"
+
+[deps]
+
+source_file="res://ui/components/character creation editor component/cat_selector_master.aseprite"
+dest_files=["res://.godot/imported/cat_selector_master.aseprite-2694bfd6e59db28d24ee0c6fc5d319f8.res"]
+
+[params]
+

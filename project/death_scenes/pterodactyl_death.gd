@@ -5,6 +5,7 @@ extends BaseDeathHandler
 @export var animation_player: AnimationPlayer
 
 @export var pterodactyl_sound: AudioStream
+@export var pterodactyl_sound_attack: AudioStream
 @export var player_held_locatoin_offset: Vector2 = Vector2(0, 10)
 
 var audio_player: AudioStreamPlayer
@@ -12,6 +13,7 @@ var timer: Timer
 var started_interaction: bool = false
 
 @onready var pterodactyl: Sprite2D = %Pterodactyl
+@onready var animated_sprite_2d: AnimatedSprite2D = %AnimatedSprite2D
 
 # Initialise any dependencies.
 func _ready() -> void:
@@ -51,8 +53,12 @@ func on_interact() -> void:
 		var player = get_tree().get_first_node_in_group("Player")
 		player.Disable()
 		timer.start()
+		audio_player.stream = pterodactyl_sound
+		audio_player.play()
 
 func on_death_start() -> void:
+	audio_player.stop()
+	audio_player.stream = pterodactyl_sound_attack
 	audio_player.play()
 	animation_player.play("pterodactyl_swoop")
 	await animation_player.animation_finished
@@ -66,7 +72,7 @@ func grab_player():
 	var player = get_tree().get_first_node_in_group("Player")
 	var player_parent = player.get_parent()
 	#var tween = get
-	player.global_position = pterodactyl.global_position + player_held_locatoin_offset
+	player.global_position = animated_sprite_2d.global_position + player_held_locatoin_offset
 	player.reparent(pterodactyl)
 	player.show_behind_parent = true
 	await animation_player.animation_finished

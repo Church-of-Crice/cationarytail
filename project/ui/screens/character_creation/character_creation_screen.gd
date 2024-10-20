@@ -7,10 +7,9 @@ extends Control
 @onready var eyes_left_button: TextureButton = %EyesLeftButton
 @onready var eyes_right_button: TextureButton = %EyesRightButton
 
-@onready var start_button: Button = %StartButton
+@onready var start_button: TextureButton = %StartButton
 
 @onready var player_character_appearance: CharacterAppearance = %PlayerCharacterAppearance
-@onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
 
 func _ready() -> void:
 	
@@ -23,23 +22,29 @@ func _ready() -> void:
 	start_button.pressed.connect(_on_start_button_pressed)
 
 func _on_coat_left_button_pressed():
+	UiSound.button_pressed.emit()
 	player_character_appearance.set_body_to_previous()
 
 func _on_coat_right_button_pressed():
+	UiSound.button_pressed.emit()
 	player_character_appearance.set_body_to_next()
 
 func _on_collar_left_button_pressed():
+	UiSound.button_pressed.emit()
 	player_character_appearance.set_collar_to_previous()
 
 func _on_collar_right_button_pressed():
+	UiSound.button_pressed.emit()
 	player_character_appearance.set_collar_to_next()
 
 func _on_eyes_left_button_pressed():
+	UiSound.button_pressed.emit()
 	player_character_appearance.set_eyes_to_previous()
 
 func _on_eyes_right_button_pressed():
+	UiSound.button_pressed.emit()
 	player_character_appearance.set_eyes_to_next()
 
 func _on_start_button_pressed():
-	#audio_stream_player.play()
+	UiSound.button_pressed.emit()
 	SceneTransitionManager.change_scene_with_transition(SceneManager._02_THE_CAT_GETS_ADOPTED, SceneManager.FADE_TRANSITION)

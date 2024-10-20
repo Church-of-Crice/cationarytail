@@ -22,10 +22,16 @@ func _ready():
 	sprite_2d.texture = texture
 
 func _unhandled_input(event):
-		if area_active and event.is_action_pressed("ui_accept"):
-			player_area.think_text(thought_text)
-			get_viewport().set_input_as_handled()
-			interacted.emit()
+	if area_active and event.is_action_pressed("ui_accept"):
+		player_area.think_text(thought_text)
+		get_viewport().set_input_as_handled()
+		interacted.emit()
+
+func disable():
+	if area_entered.is_connected(_on_area_entered):
+		area_entered.disconnect(_on_area_entered)
+	if area_exited.is_connected(_on_area_exited):
+		area_exited.disconnect(_on_area_exited)
 
 func _on_area_entered(area: Area2D) -> void:
 	area_active = true

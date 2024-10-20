@@ -39,8 +39,8 @@ func _ready():
 	death_end.connect(_on_death_end)
 	detectable_deadly_area_2d.deadly_world_sprite = texture
 	collision_shape_2d.shape.radius = detectable_range
-	show_thought_time
-	thought_interval
+	detectable_deadly_area_2d.show_for = show_thought_time
+	detectable_deadly_area_2d.interval_time = thought_interval
 	if texture:
 		sprite_2d.texture = texture
 
@@ -50,6 +50,7 @@ func _setup_thought_bubble():
 	thought_bubble_interactable.thought_text = thought_text
 
 func _on_interact():
+	
 	if CharacterData.has_already_died_by(death_type):
 		# TODO: Tell the player.
 		print("Player has already died by %s" % death_type)
@@ -60,11 +61,12 @@ func _on_interact():
 # Handle all of the generic death actions.
 func _on_death_end():
 	_add_death()
-	_respawn()
+	#_respawn()
 
 func _add_death() -> void:
 	CharacterData.player_died.emit(death_type)
+	thought_bubble_interactable.disable()
 
-func _respawn() -> void:
-	# TODO: Call respawn.
-	pass
+#func _respawn() -> void:
+	#CharacterData.player_died
+	##GameWorld.respawn()

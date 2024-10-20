@@ -1,41 +1,40 @@
-[gd_scene load_steps=18 format=3 uid="uid://fu2dhtfprl2l"]
+[gd_scene load_steps=17 format=3 uid="uid://p4jp7674dlbn"]
 
-[ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="1_fmht0"]
-[ext_resource type="PackedScene" uid="uid://c2b5trrmnpydo" path="res://props/deadly_interactables/deadly_interactable.tscn" id="2_7tvan"]
-[ext_resource type="Texture2D" uid="uid://xofxv3fh5gjq" path="res://assets/art/flower_bush.png" id="3_7ehsq"]
-[ext_resource type="Script" path="res://death_scenes/pterodactyl_death.gd" id="4_ah4lw"]
-[ext_resource type="Texture2D" uid="uid://deng1h1rj6w4d" path="res://test/scenes/test_pterodactyl_death/Pyro the dactyl-pterodactyl.png" id="5_eg0dx"]
+[ext_resource type="PackedScene" uid="uid://c2b5trrmnpydo" path="res://props/deadly_interactables/deadly_interactable.tscn" id="2_8qxgl"]
+[ext_resource type="Texture2D" uid="uid://xofxv3fh5gjq" path="res://assets/art/flower_bush.png" id="3_sp0fs"]
+[ext_resource type="Script" path="res://death_scenes/pterodactyl_death.gd" id="4_t6msx"]
+[ext_resource type="Texture2D" uid="uid://deng1h1rj6w4d" path="res://test/scenes/test_pterodactyl_death/Pyro the dactyl-pterodactyl.png" id="5_gn63d"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sh1am"]
-atlas = ExtResource("5_eg0dx")
+atlas = ExtResource("5_gn63d")
 region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uet8v"]
-atlas = ExtResource("5_eg0dx")
+atlas = ExtResource("5_gn63d")
 region = Rect2(0, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x0ldp"]
-atlas = ExtResource("5_eg0dx")
+atlas = ExtResource("5_gn63d")
 region = Rect2(64, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_42wk5"]
-atlas = ExtResource("5_eg0dx")
+atlas = ExtResource("5_gn63d")
 region = Rect2(128, 64, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_r8uas"]
-atlas = ExtResource("5_eg0dx")
+atlas = ExtResource("5_gn63d")
 region = Rect2(0, 128, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n3k7a"]
-atlas = ExtResource("5_eg0dx")
+atlas = ExtResource("5_gn63d")
 region = Rect2(64, 128, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iv1d2"]
-atlas = ExtResource("5_eg0dx")
+atlas = ExtResource("5_gn63d")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ts04p"]
-atlas = ExtResource("5_eg0dx")
+atlas = ExtResource("5_gn63d")
 region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5brmb"]
@@ -169,15 +168,12 @@ _data = {
 
 [node name="TestPterodactylDeath" type="Node2D"]
 
-[node name="PlayerCharacter" parent="." instance=ExtResource("1_fmht0")]
-
-[node name="DeadlyInteractable" parent="." instance=ExtResource("2_7tvan")]
+[node name="DeadlyInteractable" parent="." instance=ExtResource("2_8qxgl")]
 thought_text = "Might as well stop and smell the flowers"
-texture = ExtResource("3_7ehsq")
-detectable_range = 20.0
+texture = ExtResource("3_sp0fs")
 
 [node name="PterodactylDeath" type="Node2D" parent="DeadlyInteractable" node_paths=PackedStringArray("animation_player")]
-script = ExtResource("4_ah4lw")
+script = ExtResource("4_t6msx")
 seconds_until_death = 3
 animation_player = NodePath("../../AnimationPlayer")
 

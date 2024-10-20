@@ -1,7 +1,7 @@
 [remap]
 
-importer="aseprite_wizard.plugin.noop"
-type="PackedDataContainer"
+importer="aseprite_wizard.plugin"
+type="SpriteFrames"
 uid="uid://rnh5qe58j1m5"
 path="res://.godot/imported/Pyro the dactyl-pterodactyl.aseprite-8b2d829b7dee4325f32413b444de5856.res"
 
@@ -12,3 +12,7 @@ dest_files=["res://.godot/imported/Pyro the dactyl-pterodactyl.aseprite-8b2d829b
 
 [params]
 
+split_layers=false
+exclude_layers_pattern=""
+only_visible_layers=true
+sheet_type="Packed"

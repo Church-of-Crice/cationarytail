@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://l8yumgsqntlj"]
+[gd_scene load_steps=9 format=4 uid="uid://l8yumgsqntlj"]
 
 [ext_resource type="Texture2D" uid="uid://cwfprp5q53a5t" path="res://assets/art/water tiles wap 3.png" id="2_xwx8x"]
 [ext_resource type="Texture2D" uid="uid://cmtjkxc3e0mkm" path="res://locations/world_map/art/worldmapwap.png" id="3_luitk"]
 [ext_resource type="PackedScene" uid="uid://dgwhkxs1f25vm" path="res://locations/pond/pond.tscn" id="3_nu1p2"]
 [ext_resource type="Texture2D" uid="uid://bv3wsanbkui4s" path="res://assets/art/Tiles.png" id="4_bdln6"]
 [ext_resource type="PackedScene" uid="uid://bikag17g5v2ao" path="res://locations/construction_site/construction_site.tscn" id="5_troec"]
+[ext_resource type="PackedScene" uid="uid://p4jp7674dlbn" path="res://death_scenes/pterodactyl_death.tscn" id="6_nqu1n"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_utvld"]
 texture = ExtResource("4_bdln6")
@@ -66,3 +67,6 @@ tile_set = SubResource("TileSet_htd3o")
 
 [node name="ConstructionSite" parent="." instance=ExtResource("5_troec")]
 position = Vector2(324, 803)
+
+[node name="TestPterodactylDeath" parent="." instance=ExtResource("6_nqu1n")]
+position = Vector2(-151, -764)

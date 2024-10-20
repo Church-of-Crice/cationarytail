@@ -1,16 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://bc12727t1eydw"]
+[gd_scene load_steps=2 format=3 uid="uid://bc12727t1eydw"]
 
-[ext_resource type="Script" path="res://door_exit_area.gd" id="1_52pal"]
 [ext_resource type="AudioStream" uid="uid://d2erlbu2g32lv" path="res://assets/audio/effects/Door&Transition.mp3" id="2_8bnr7"]
 
-[node name="DoorExitArea" type="Area2D"]
-collision_layer = 0
-collision_mask = 2
-script = ExtResource("1_52pal")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-
-[node name="DoorExitPlayer" type="AudioStreamPlayer2D" parent="."]
+[node name="DoorExitSoundTeleporter" type="AudioStreamPlayer2D"]
 stream = ExtResource("2_8bnr7")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]

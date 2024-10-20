@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="3_oef1c"]
 [ext_resource type="Script" path="res://ui/dialog/dialog_sequence.gd" id="4_c7byf"]
 [ext_resource type="PackedScene" uid="uid://bty6hmjgyr0cn" path="res://characters/npcs/cat_owner/cat_owner.tscn" id="4_tx1a6"]
+[ext_resource type="Script" path="res://locations/home_of_adopter/home_of_adopter.gd" id="6_ngpov"]
 [ext_resource type="PackedScene" uid="uid://81h1ottsp85g" path="res://utility/teleporter.tscn" id="8_yurvh"]
 [ext_resource type="PackedScene" uid="uid://fks7rwjturoy" path="res://game_world/game_world.tscn" id="9_50ipu"]
 [ext_resource type="PackedScene" uid="uid://bc12727t1eydw" path="res://ui/components/door_exit/door_exit_area.tscn" id="10_8ehlg"]
@@ -34,14 +35,13 @@ text = "Get out of my sight! I can’t EVEN right now."
 script = ExtResource("4_c7byf")
 events = Array[ExtResource("2_ikxk1")]([SubResource("Resource_i75y5")])
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_hua4i"]
-
 [node name="OwnerIsMadAfterVet" type="Node2D"]
 script = ExtResource("1_xutie")
 start_dialog_sequence = SubResource("Resource_a0x12")
 end_dialog_sequence = SubResource("Resource_dbce3")
 
 [node name="HomeOfAdopter" parent="." instance=ExtResource("2_i6f6d")]
+script = ExtResource("6_ngpov")
 
 [node name="PlayerCharacter" parent="HomeOfAdopter" instance=ExtResource("3_oef1c")]
 
@@ -59,12 +59,6 @@ text = "EXIT"
 position = Vector2(2, 75)
 destination = ExtResource("9_50ipu")
 
-[node name="DoorExitArea" parent="." instance=ExtResource("10_8ehlg")]
-collision_layer = 0
-collision_mask = 2
+[node name="DoorExitSoundTeleporter" parent="." instance=ExtResource("10_8ehlg")]
 
-[node name="CollisionShape2D" parent="DoorExitArea" index="0"]
-position = Vector2(2, 75)
-shape = SubResource("CircleShape2D_hua4i")
-
-[editable path="DoorExitArea"]
+[connection signal="body_entered" from="Teleporter" to="HomeOfAdopter" method="_on_teleporter_body_entered"]

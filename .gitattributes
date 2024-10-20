@@ -1,1 +1,19 @@
-* text=true
+* text=auto
+
+*.import eol=lf
+*.cs eol=lf
+*.gd eol=lf
+*.cfg eol=lf
+*.csv eol=lf
+*.md eol=lf
+*.json eol=lf
+*.yml eol=lf
+*.sln eol=lf
+*.csproj eol=lf
+
+# Prevent Git from treating binary files as text
+*.png binary
+*.aseprite binary
+*.wav binary
+*.mp3 binary
+*.ogg binary

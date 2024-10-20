@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://craywmkri4x7q"
+path="res://.godot/imported/Dialogue Progress.wav-0a3632c136158e04a70a49e39798cc82.sample"
+
+[deps]
+
+source_file="res://assets/audio/effects/Dialogue Progress.wav"
+dest_files=["res://.godot/imported/Dialogue Progress.wav-0a3632c136158e04a70a49e39798cc82.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

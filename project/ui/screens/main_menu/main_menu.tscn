@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b55ikiyqxxt1i"]
+[gd_scene load_steps=14 format=3 uid="uid://b55ikiyqxxt1i"]
 
 [ext_resource type="Script" path="res://ui/screens/main_menu/main_menu.gd" id="1_w75in"]
 [ext_resource type="Texture2D" uid="uid://by7elko5v310p" path="res://locations/main menu background/main menu background better sky.png" id="2_4getw"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://cs0n0qqoxy1pj" path="res://ui/screens/main_menu/art/main_menu_button_settings.png" id="6_ut6yu"]
 [ext_resource type="Script" path="res://ui/screens/main_menu/MenuButton.cs" id="7_5tvrk"]
 [ext_resource type="AudioStream" uid="uid://dsyx58iyreac6" path="res://assets/audio/effects/pyrite7-32248.mp3" id="9_8ls5d"]
+[ext_resource type="AudioStream" uid="uid://mf1756f3yk4d" path="res://sounds/button click sound.mp3" id="10_00bu4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dq8kj"]
 atlas = ExtResource("4_5vt13")
@@ -114,6 +115,7 @@ offset_bottom = 103.0
 scale = Vector2(2, 2)
 texture_normal = SubResource("AtlasTexture_dq8kj")
 script = ExtResource("7_5tvrk")
+_sound = ExtResource("10_00bu4")
 
 [node name="QuitButton" type="TextureButton" parent="Control2"]
 unique_name_in_owner = true

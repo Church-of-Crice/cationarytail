@@ -10,8 +10,10 @@ extends Control
 @onready var start_button: Button = %StartButton
 
 @onready var player_character_appearance: CharacterAppearance = %PlayerCharacterAppearance
+@onready var audio_stream_player: AudioStreamPlayer = %AudioStreamPlayer
 
 func _ready() -> void:
+	
 	coat_left_button.pressed.connect(_on_coat_left_button_pressed)
 	coat_right_button.pressed.connect(_on_coat_right_button_pressed)
 	collar_left_button.pressed.connect(_on_collar_left_button_pressed)
@@ -39,4 +41,5 @@ func _on_eyes_right_button_pressed():
 	player_character_appearance.set_eyes_to_next()
 
 func _on_start_button_pressed():
+	#audio_stream_player.play()
 	SceneTransitionManager.change_scene_with_transition(SceneManager._02_THE_CAT_GETS_ADOPTED, SceneManager.FADE_TRANSITION)

@@ -3,15 +3,11 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ccb7b2g3qq1vu"
-path="res://.godot/imported/Shining_Gate_closed.png-0ed1e4124f45ced90940956d139d4e6b.ctex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://story_scenes/23_true_death/assets/Shining_Gate_closed.png"
-dest_files=["res://.godot/imported/Shining_Gate_closed.png-0ed1e4124f45ced90940956d139d4e6b.ctex"]
 
 [params]
 

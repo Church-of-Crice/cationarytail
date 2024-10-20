@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://c3qvovw3xy4g0"]
+[gd_scene load_steps=21 format=3 uid="uid://c3qvovw3xy4g0"]
 
 [ext_resource type="Script" path="res://story_scenes/03-1_cat_gets_in_trouble_on_her_first_day_home/03_cat_gets_in_trouble_first_day_home.gd" id="1_y4r5o"]
 [ext_resource type="Resource" uid="uid://dowffnvvcy3w1" path="res://story_scenes/03-1_cat_gets_in_trouble_on_her_first_day_home/03-1_cat_gets_in_trouble_first_day_home_dialog.tres" id="2_1nr3e"]
@@ -10,6 +10,11 @@
 [ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="7_sjmkd"]
 [ext_resource type="PackedScene" uid="uid://br748lkashfh6" path="res://props/thought_bubble_interactable/thought_bubble_interactable.tscn" id="8_leaub"]
 [ext_resource type="Texture2D" uid="uid://cfkce2ocb4h17" path="res://props/googly_eyes.png" id="9_jrqdy"]
+[ext_resource type="Texture2D" uid="uid://cl7aox0crokt7" path="res://assets/art/gold ring.png" id="10_q5en8"]
+[ext_resource type="Texture2D" uid="uid://bcgr5go7p5274" path="res://assets/art/cosmic chocolate brownie.png" id="11_jblhc"]
+[ext_resource type="Texture2D" uid="uid://beetxyg8a81pq" path="res://assets/art/cup of coffee .png" id="12_8o72i"]
+[ext_resource type="Texture2D" uid="uid://b0ip83035amuu" path="res://assets/art/plant.png" id="13_lidnd"]
+[ext_resource type="Texture2D" uid="uid://1o73woeiuu8f" path="res://assets/art/outlet.png" id="14_dynn2"]
 
 [sub_resource type="Resource" id="Resource_mpyo7"]
 script = ExtResource("3_e35xm")
@@ -54,26 +59,31 @@ z_index = -1
 position = Vector2(-97, 37)
 description = "Jewelry"
 thought_text = "Oh wow, real gold!"
+texture = ExtResource("10_q5en8")
 
 [node name="Chocolate" parent="HomeOfAdopter" instance=ExtResource("8_leaub")]
 z_index = -1
 position = Vector2(85, 2)
 thought_text = "Not as good as catnip."
+texture = ExtResource("11_jblhc")
 
 [node name="Coffee" parent="HomeOfAdopter" instance=ExtResource("8_leaub")]
 z_index = -1
 position = Vector2(27, 34)
 thought_text = "Needs more milk."
+texture = ExtResource("12_8o72i")
 
 [node name="Plant" parent="HomeOfAdopter" instance=ExtResource("8_leaub")]
 z_index = -1
 position = Vector2(17, 61)
 thought_text = "A vegan diet isn’t for me."
+texture = ExtResource("13_lidnd")
 
 [node name="PowerCable" parent="HomeOfAdopter" instance=ExtResource("8_leaub")]
 z_index = -1
 position = Vector2(-2, 52)
 thought_text = "That was shocking."
+texture = ExtResource("14_dynn2")
 
 [node name="GoogleyEyes" parent="HomeOfAdopter" instance=ExtResource("8_leaub")]
 unique_name_in_owner = true

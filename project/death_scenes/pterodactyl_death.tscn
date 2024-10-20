@@ -1,9 +1,16 @@
-[gd_scene load_steps=17 format=3 uid="uid://p4jp7674dlbn"]
+[gd_scene load_steps=21 format=3 uid="uid://p4jp7674dlbn"]
 
 [ext_resource type="PackedScene" uid="uid://c2b5trrmnpydo" path="res://props/deadly_interactables/deadly_interactable.tscn" id="2_8qxgl"]
 [ext_resource type="Texture2D" uid="uid://xofxv3fh5gjq" path="res://assets/art/flower_bush.png" id="3_sp0fs"]
+[ext_resource type="AudioStream" uid="uid://c702ya8w0ggjn" path="res://death_scenes/pteradactyl/long_screech.wav" id="4_2oxuj"]
+[ext_resource type="AudioStream" uid="uid://cg4m0fwc16o34" path="res://death_scenes/pteradactyl/repeated_screeching.wav" id="4_retbh"]
 [ext_resource type="Script" path="res://death_scenes/pterodactyl_death.gd" id="4_t6msx"]
 [ext_resource type="Texture2D" uid="uid://deng1h1rj6w4d" path="res://test/scenes/test_pterodactyl_death/Pyro the dactyl-pterodactyl.png" id="5_gn63d"]
+[ext_resource type="AudioStream" uid="uid://bw3q04rqg41hc" path="res://death_scenes/pteradactyl/pteradactyl_whack.wav" id="6_4ga7n"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ac32x"]
+radius = 2.0
+height = 15.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sh1am"]
 atlas = ExtResource("5_gn63d")
@@ -159,6 +166,21 @@ tracks/3/keys = {
 "method": &"grab_player"
 }]
 }
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("PteradactylWhack")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6_4ga7n")
+}],
+"times": PackedFloat32Array(1)
+}
+tracks/4/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_q7f7v"]
 _data = {
@@ -166,16 +188,26 @@ _data = {
 "pterodactyl_swoop": SubResource("Animation_gfntp")
 }
 
-[node name="TestPterodactylDeath" type="Node2D"]
+[node name="PterodactylDeathScene" type="Node2D"]
 
 [node name="DeadlyInteractable" parent="." instance=ExtResource("2_8qxgl")]
 thought_text = "Might as well stop and smell the flowers"
 texture = ExtResource("3_sp0fs")
 
+[node name="StaticBody2D" type="StaticBody2D" parent="DeadlyInteractable"]
+position = Vector2(0, 3)
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeadlyInteractable/StaticBody2D"]
+rotation = 1.57079
+shape = SubResource("CapsuleShape2D_ac32x")
+
 [node name="PterodactylDeath" type="Node2D" parent="DeadlyInteractable" node_paths=PackedStringArray("animation_player")]
 script = ExtResource("4_t6msx")
 seconds_until_death = 3
 animation_player = NodePath("../../AnimationPlayer")
+pterodactyl_sound = ExtResource("4_retbh")
+pterodactyl_sound_attack = ExtResource("4_2oxuj")
 
 [node name="Pterodactyl" type="Sprite2D" parent="."]
 unique_name_in_owner = true
@@ -183,7 +215,9 @@ visible = false
 position = Vector2(115, -100)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Pterodactyl"]
+unique_name_in_owner = true
 texture_filter = 1
+position = Vector2(-57, 64)
 sprite_frames = SubResource("SpriteFrames_5brmb")
 animation = &"swoop"
 metadata/_aseprite_wizard_interface_config_ = {
@@ -207,3 +241,6 @@ metadata/_aseprite_wizard_source_file_hash_ = "a1549adc2f3d0184e66824132b922d7a"
 libraries = {
 "": SubResource("AnimationLibrary_q7f7v")
 }
+
+[node name="PteradactylWhack" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true

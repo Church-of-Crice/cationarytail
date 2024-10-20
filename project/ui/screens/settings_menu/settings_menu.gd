@@ -7,5 +7,5 @@ func _ready() -> void:
 	back_button.pressed.connect(_on_back_button_pressed)
 
 func _on_back_button_pressed() -> void:
-	get_tree().change_scene_to_packed.call_deferred(SceneManager.CHARACTER_CREATION_SCREEN)
+	get_tree().change_scene_to_packed.call_deferred(SceneManager.MAIN_MENU)
 	pass

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ct14tgb01cfpu"]
+
+[ext_resource type="Script" path="res://autoloads/ui_sound.gd" id="1_pv5d5"]
+[ext_resource type="AudioStream" uid="uid://mf1756f3yk4d" path="res://sounds/button click sound.mp3" id="2_ox6bb"]
+
+[node name="UiSound" type="Node"]
+script = ExtResource("1_pv5d5")
+ui_button_press_01 = ExtResource("2_ox6bb")
+
+[node name="PressedAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true

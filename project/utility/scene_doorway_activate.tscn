@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://bo6h85vqf2a1y"]
+
+[ext_resource type="Script" path="res://utility/scene_doorway_activate.gd" id="1_kpovs"]
+[ext_resource type="Texture2D" uid="uid://c3qj4f8hi5r6i" path="res://ui/components/door_arrow/indication arrow.png" id="2_i4qgg"]
+[ext_resource type="AudioStream" uid="uid://d2erlbu2g32lv" path="res://assets/audio/effects/Door&Transition.mp3" id="3_may76"]
+[ext_resource type="Script" path="res://utility/door_exit_sound.gd" id="4_a1p8n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tn54j"]
+radius = 12.0
+
+[node name="SceneDoorway" type="Area2D"]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_kpovs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_tn54j")
+
+[node name="ArrowIndicator" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+z_index = 10
+texture = ExtResource("2_i4qgg")
+
+[node name="DoorExitSound" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_may76")
+script = ExtResource("4_a1p8n")

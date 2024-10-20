@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://dj8ctaptvvn7t"]
+[gd_scene load_steps=3 format=3 uid="uid://dj8ctaptvvn7t"]
 
 [ext_resource type="Script" path="res://ui/overlays/pick_name_overlay/pick_name_overlay.gd" id="1_yjs63"]
+[ext_resource type="AudioStream" uid="uid://mf1756f3yk4d" path="res://sounds/button click sound.mp3" id="2_74e1c"]
 
 [node name="PickNameOverlay" type="CanvasLayer"]
 script = ExtResource("1_yjs63")
@@ -53,3 +54,7 @@ max_length = 8
 unique_name_in_owner = true
 layout_mode = 2
 text = "done"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_74e1c")

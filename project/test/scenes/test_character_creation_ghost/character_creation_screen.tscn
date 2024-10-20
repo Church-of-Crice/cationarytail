@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://u2gfdxcjgeoa"]
+[gd_scene load_steps=17 format=3 uid="uid://u2gfdxcjgeoa"]
 
 [ext_resource type="Script" path="res://ui/screens/character_creation/character_creation_screen.gd" id="1_cthox"]
 [ext_resource type="Shader" path="res://ui/screens/character_creation/character_creation_screen_bg.gdshader" id="2_2g30n"]
+[ext_resource type="AudioStream" uid="uid://mf1756f3yk4d" path="res://sounds/button click sound.mp3" id="2_qhgb3"]
 [ext_resource type="Texture2D" uid="uid://8ny152xv0mv7" path="res://ui/screens/character_creation/art/character creation background - tileable.png" id="3_k7fvb"]
 [ext_resource type="Texture2D" uid="uid://dtw0r5iluamob" path="res://ui/screens/character_creation/charactercreationshadow.png" id="4_llivr"]
 [ext_resource type="PackedScene" uid="uid://ff0pl457qtvi" path="res://characters/player_character/player_character_appearance/player_character_appearance.tscn" id="5_68xmi"]
@@ -230,3 +231,7 @@ libraries = {
 "": SubResource("AnimationLibrary_3c6bs")
 }
 script = ExtResource("7_bihlr")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_qhgb3")

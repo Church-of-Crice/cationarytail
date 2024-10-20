@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=4 uid="uid://dgvmjpupptnko"]
 
 [ext_resource type="TileSet" uid="uid://bcgv3j66veqt" path="res://locations/vet_office/tilemaps/vet_office_temp.tres" id="1_sbbk1"]
-[ext_resource type="TileSet" uid="uid://b1rkehngfg7yw" path="res://locations/animal_rescue/tilemaps/animal shelter_sprites.tres" id="2_6ea0m"]
+[ext_resource type="TileSet" uid="uid://1je6ueymiwty" path="res://locations/animal_rescue/tilemaps/animal shelter_sprites.tres" id="2_6ea0m"]
 [ext_resource type="PackedScene" uid="uid://c2v14girw0rtg" path="res://characters/npcs/shelter_clerk/shelter_clerk.tscn" id="4_4emik"]
 [ext_resource type="PackedScene" uid="uid://bty6hmjgyr0cn" path="res://characters/npcs/cat_owner/cat_owner.tscn" id="9_gg3b1"]
 [ext_resource type="PackedScene" uid="uid://dg3c4ngx1j6bk" path="res://characters/npcs/persian_cat/persian_cat.tscn" id="11_uu1wm"]

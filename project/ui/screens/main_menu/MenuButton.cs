@@ -4,7 +4,7 @@ using System;
 public partial class MenuButton : TextureButton
 {
 	public AudioStreamPlayer _audioPlayer;
-	public AudioStream _sound;
+	[Export] public AudioStream _sound;
 
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
@@ -14,7 +14,7 @@ public partial class MenuButton : TextureButton
 		AddChild(_audioPlayer);
 
 		// Preload the click sound file
-		_sound = (AudioStream)GD.Load("res://assets/audio/effects/Transition Test 1.wav");
+		//_sound = (AudioStream)GD.Load("res://assets/audio/effects/Transition Test 1.wav");
 		if (_sound == null)
 		{
 			throw new NullReferenceException("Click audio file not found.");

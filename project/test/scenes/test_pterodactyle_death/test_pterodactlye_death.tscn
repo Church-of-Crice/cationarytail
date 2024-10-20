@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://bs0grsfo77bur"]
+
+[ext_resource type="Texture2D" uid="uid://mql2ggkn1f8" path="res://test/scenes/test_pterodactyle_death/ptero_mock.png" id="1_487jg"]
+[ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="2_xdfxy"]
+
+[sub_resource type="Animation" id="Animation_uefsq"]
+resource_name = "swoop_down"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ptero:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 1.76667, 3),
+"transitions": PackedFloat32Array(1, 9.51365, 4.59479, 1),
+"update": 0,
+"values": [Vector2(305, 22), Vector2(140, 150), Vector2(140, 150), Vector2(-24, 40)]
+}
+
+[sub_resource type="Animation" id="Animation_6ulxt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Ptero:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(235, 89)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oyi8d"]
+_data = {
+"RESET": SubResource("Animation_6ulxt"),
+"swoop_down": SubResource("Animation_uefsq")
+}
+
+[node name="TestPterodactlyeDeath" type="Node2D"]
+
+[node name="Ptero" type="Sprite2D" parent="."]
+position = Vector2(235, 89)
+texture = ExtResource("1_487jg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_oyi8d")
+}
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("2_xdfxy")]
+position = Vector2(140, 171)

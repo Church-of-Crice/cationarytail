@@ -1,26 +1,16 @@
-[gd_scene load_steps=13 format=3 uid="uid://b55ikiyqxxt1i"]
+[gd_scene load_steps=9 format=3 uid="uid://b55ikiyqxxt1i"]
 
 [ext_resource type="Script" path="res://ui/screens/main_menu/main_menu.gd" id="1_w75in"]
-[ext_resource type="Texture2D" uid="uid://dvj4vh3aq5f48" path="res://locations/main menu background/main menu background.png" id="2_fn5qa"]
 [ext_resource type="Texture2D" uid="uid://dthmi4a3xbelb" path="res://ui/screens/main_menu/art/main_menu_paws.png" id="2_mei5d"]
 [ext_resource type="Texture2D" uid="uid://dghys0qxddrs" path="res://ui/screens/main_menu/art/main_menu_title.png" id="3_0misr"]
 [ext_resource type="Texture2D" uid="uid://4ui8db2cu3m" path="res://ui/screens/main_menu/art/main_menu_button_play.png" id="4_5vt13"]
 [ext_resource type="Texture2D" uid="uid://ufmi0as00iqt" path="res://ui/screens/main_menu/art/main_menu_button_quit.png" id="5_xlrcr"]
 [ext_resource type="Texture2D" uid="uid://cs0n0qqoxy1pj" path="res://ui/screens/main_menu/art/main_menu_button_settings.png" id="6_ut6yu"]
-[ext_resource type="Script" path="res://ui/screens/main_menu/MenuButton.cs" id="7_5tvrk"]
-[ext_resource type="AudioStream" uid="uid://dsyx58iyreac6" path="res://assets/audio/effects/pyrite7-32248.mp3" id="9_8ls5d"]
+[ext_resource type="Script" path="res://ui/screens/main_menu/PlayButton.cs" id="7_e0mi6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dq8kj"]
 atlas = ExtResource("4_5vt13")
 region = Rect2(26, 40, 20, 10)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_d17c1"]
-atlas = ExtResource("5_xlrcr")
-region = Rect2(26, 51, 21, 10)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hnn1k"]
-atlas = ExtResource("6_ut6yu")
-region = Rect2(17, 62, 37, 10)
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -37,28 +27,21 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_w75in")
 
-[node name="MainMenuBackground2" type="Sprite2D" parent="."]
-position = Vector2(160, 90)
-texture = ExtResource("2_fn5qa")
-
-[node name="MainMenuBackground" type="Sprite2D" parent="."]
-position = Vector2(160, 103)
-texture = ExtResource("2_fn5qa")
-
 [node name="Control" type="MarginContainer" parent="."]
 layout_mode = 1
-anchors_preset = -1
+anchors_preset = 8
 anchor_left = 0.5
-anchor_top = 0.478
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.478
-offset_left = -117.0
-offset_top = -43.04
-offset_right = -46.0
-offset_bottom = 29.96
+anchor_bottom = 0.5
+offset_left = -58.0
+offset_top = -89.0
+offset_right = 13.0
+offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(2, 2)
+metadata/_edit_group_ = true
 
 [node name="paw" type="TextureRect" parent="Control"]
 layout_mode = 2
@@ -75,7 +58,6 @@ texture = ExtResource("3_0misr")
 stretch_mode = 3
 
 [node name="play" type="TextureRect" parent="Control"]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -83,7 +65,6 @@ texture = ExtResource("4_5vt13")
 stretch_mode = 3
 
 [node name="quit" type="TextureRect" parent="Control"]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -91,76 +72,32 @@ texture = ExtResource("5_xlrcr")
 stretch_mode = 3
 
 [node name="settings" type="TextureRect" parent="Control"]
-visible = false
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("6_ut6yu")
 stretch_mode = 3
 
-[node name="QuitButton" type="TextureButton" parent="."]
-unique_name_in_owner = true
-z_as_relative = false
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -76.0
-offset_top = 41.0
-offset_right = -5.0
-offset_bottom = 114.0
-grow_horizontal = 0
-texture_normal = ExtResource("5_xlrcr")
-ignore_texture_size = true
-stretch_mode = 1
-script = ExtResource("7_e0mi6")
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control2"]
-stream = ExtResource("9_8ls5d")
-
-[node name="Control2" type="Control" parent="."]
-anchors_preset = 0
-offset_left = 94.0
-offset_top = -40.0
-offset_right = 134.0
-metadata/_edit_group_ = true
-
-[node name="PlayButton" type="TextureButton" parent="Control2"]
+[node name="PlayButton" type="TextureButton" parent="."]
 unique_name_in_owner = true
 layout_mode = 2
-offset_left = 140.0
-offset_top = 93.0
-offset_right = 160.0
-offset_bottom = 103.0
+offset_left = 154.0
+offset_top = 81.0
+offset_right = 174.0
+offset_bottom = 91.0
 scale = Vector2(2, 2)
 texture_normal = SubResource("AtlasTexture_dq8kj")
-script = ExtResource("7_5tvrk")
+script = ExtResource("7_e0mi6")
 
-[node name="QuitButton" type="TextureButton" parent="Control2"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 139.0
-offset_top = 115.0
-offset_right = 160.0
-offset_bottom = 125.0
-scale = Vector2(2, 2)
-texture_normal = SubResource("AtlasTexture_d17c1")
-script = ExtResource("7_5tvrk")
-
-[node name="SettingsButton" type="TextureButton" parent="Control2"]
-unique_name_in_owner = true
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+visible = false
 layout_mode = 1
-anchors_preset = 7
+anchors_preset = 13
 anchor_left = 0.5
-anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 103.0
-offset_top = 97.0
-offset_right = 140.0
-offset_bottom = 107.0
+offset_left = -10.0
+offset_right = 10.0
 grow_horizontal = 2
-grow_vertical = 0
+grow_vertical = 2
 scale = Vector2(2, 2)
-texture_normal = SubResource("AtlasTexture_hnn1k")
-script = ExtResource("7_5tvrk")

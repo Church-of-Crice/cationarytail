@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=4 uid="uid://dgwhkxs1f25vm"]
+[gd_scene load_steps=5 format=4 uid="uid://dgwhkxs1f25vm"]
 
-[ext_resource type="TileSet" uid="uid://c1q7o6eq38mof" path="res://locations/pond/art/lake_tileset_01.tres" id="1_645ew"]
+[ext_resource type="TileSet" uid="uid://d11da57scn8xy" path="res://locations/pond/art/lake_tileset_01.tres" id="1_645ew"]
 [ext_resource type="Texture2D" uid="uid://k75vhrp10a0c" path="res://locations/pond/art/pond MVP.png" id="2_ivp6x"]
-[ext_resource type="TileSet" uid="uid://c20qqbfpin4d7" path="res://locations/pond/art/lake_tileset_16px.tres" id="3_2xgq4"]
+[ext_resource type="TileSet" uid="uid://djnxtqbkddtvm" path="res://locations/pond/art/lake_tileset_16px.tres" id="3_2xgq4"]
+[ext_resource type="PackedScene" uid="uid://y6f686d6sys2" path="res://story_scenes/17_fishing_big_fish/cat_dies_fishing.tscn" id="4_u2pde"]
 
 [node name="Pond" type="Node2D"]
 
@@ -18,3 +19,6 @@ texture = ExtResource("2_ivp6x")
 [node name="TileMapLayer16" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAD///L/AAAAAAAAAAD///P/AAAAAAEAAAD///T/AAAAAAIAAAD///X/AAAAAAMAAAD///b/AAACAAMAAAD///f/AAAAAAIAAAD///j/AAAAAAMAAAD///n/AAACAAMAAAD///r/AAAAAAIAAAD///v/AAAAAAMAAAD///z/AAACAAMAAAD///3/AAAAAAIAAAD///7/AAABAAQAAAAAAPL/AAABAAAAAAAAAPP/AAABAAEAAAAAAPT/AAABAAIAAAAAAPX/AAABAAAAAAAAAPb/AAABAAEAAAAAAPf/AAABAAIAAAAAAPj/AAABAAAAAAAAAPn/AAABAAEAAAAAAPr/AAABAAIAAAAAAPv/AAABAAAAAAAAAPz/AAABAAEAAAAAAP3/AAABAAIAAAABAPL/AAACAAAAAAABAPP/AAACAAEAAAABAPT/AAACAAIAAAABAPX/AAABAAMAAAABAPb/AAAAAAQAAAABAPf/AAACAAIAAAABAPj/AAABAAMAAAABAPn/AAAAAAQAAAABAPr/AAACAAIAAAABAPv/AAABAAMAAAABAPz/AAAAAAQAAAABAP3/AAACAAIAAAABAP7/AAAAAAUAAAD+//T/AQAIAAUAAAD+//X/AQAIAAUAAAD+//b/AQAIAAUAAAD+//f/AQAIAAUAAAD+//j/AQAIAAUAAAD+//n/AQAIAAUAAAD+//r/AQAIAAUAAAD+//v/AQAIAAUAAAD+//z/AQAIAAUAAAD+//3/AQAIAAUAAAD+//7/AAACAAQAAAAAAP7/AAACAAQAAAD+//L/AQAAAAQAAAD+//P/AQAAAAUAAAA=")
 tile_set = ExtResource("3_2xgq4")
+
+[node name="CatDiesFishing" parent="." instance=ExtResource("4_u2pde")]
+position = Vector2(6, -11)

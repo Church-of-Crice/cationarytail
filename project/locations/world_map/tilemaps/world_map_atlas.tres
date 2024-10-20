@@ -220,6 +220,10 @@ texture = ExtResource("1_bogaq")
 13:4/size_in_atlas = Vector2i(2, 2)
 13:4/0 = 0
 13:4/0/texture_origin = Vector2i(0, 8)
+15:0/size_in_atlas = Vector2i(3, 5)
+15:0/0 = 0
+15:5/size_in_atlas = Vector2i(3, 5)
+15:5/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4kr4o"]
 texture = ExtResource("2_ujqc5")

@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://1je6ueymiwty"]
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://b1rkehngfg7yw"]
 
 [ext_resource type="Texture2D" uid="uid://cyd2pi287l40o" path="res://locations/animal_rescue/art/animal shelter_sprites.png" id="1_3a7dp"]
 [ext_resource type="Texture2D" uid="uid://ctjhjgj182rkl" path="res://locations/animal_rescue/art/animal shelter_fence.png" id="2_2hlm2"]

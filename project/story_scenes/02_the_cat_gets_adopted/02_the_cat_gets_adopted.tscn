@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://bdp663vtdnenq"]
 
 [ext_resource type="PackedScene" uid="uid://dgvmjpupptnko" path="res://locations/animal_rescue/animal_rescue.tscn" id="1_k0dg7"]
-[ext_resource type="PackedScene" uid="uid://81h1ottsp85g" path="res://utility/teleporter.tscn" id="2_v4x1m"]
+[ext_resource type="PackedScene" uid="uid://bo6h85vqf2a1y" path="res://utility/scene_doorway_activate.tscn" id="2_g7uvo"]
 [ext_resource type="PackedScene" uid="uid://clceinkcx81eu" path="res://story_scenes/03-0_first_day_home_adopted/03-0_first_day_home_adopted.tscn" id="3_qqyny"]
 [ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="4_obbyh"]
 
@@ -9,7 +9,8 @@
 
 [node name="AnimalRescue" parent="." instance=ExtResource("1_k0dg7")]
 
-[node name="Teleporter" parent="AnimalRescue" instance=ExtResource("2_v4x1m")]
+[node name="LocationDoorway" parent="AnimalRescue" instance=ExtResource("2_g7uvo")]
+position = Vector2(-136, 61)
 destination = ExtResource("3_qqyny")
 
 [node name="PlayerCharacter" parent="AnimalRescue" instance=ExtResource("4_obbyh")]

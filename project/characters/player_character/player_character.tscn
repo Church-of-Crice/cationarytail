@@ -13,7 +13,7 @@ height = 17.4665
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vmrq6"]
 size = Vector2(18, 20)
 
-[node name="PlayerCharacter" type="CharacterBody2D"]
+[node name="PlayerCharacter" type="CharacterBody2D" groups=["Player"]]
 collision_layer = 2
 motion_mode = 1
 script = ExtResource("1_tdqt1")

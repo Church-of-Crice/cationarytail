@@ -27,14 +27,6 @@ size_flags_horizontal = 4
 size_flags_vertical = 4
 script = ExtResource("1_w75in")
 
-[node name="MainMenuBackground2" type="Sprite2D" parent="."]
-position = Vector2(160, 91)
-texture = ExtResource("2_4getw")
-
-[node name="MainMenuBackground" type="Sprite2D" parent="."]
-position = Vector2(160, 103)
-texture = ExtResource("2_4getw")
-
 [node name="Control" type="MarginContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8

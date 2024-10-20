@@ -2,14 +2,18 @@ extends BaseDeathHandler
 
 @export var seconds_until_death: int
 
+@export var animation_player: AnimationPlayer
+
 @export var pterodactyl_sound: AudioStream
 
-var audio_player: AudioStreamPlayer;
+var audio_player: AudioStreamPlayer
 var timer: Timer
 
+# Initialise any dependencies.
 func _ready() -> void:
 	super._ready()
 	_init_audio_player()
+	_init_animation_player()
 	_init_timer()
 
 func _init_audio_player() -> void:
@@ -17,11 +21,14 @@ func _init_audio_player() -> void:
 	add_child(audio_player)
 	audio_player.stream = pterodactyl_sound
 
+func _init_animation_player() -> void:
+	animation_player.animation_finished.connect(func(animation_name): _on_death_end())
+
 func _init_timer() -> void:
 	timer = Timer.new()
 	timer.one_shot = true
 	timer.wait_time = seconds_until_death
-	timer.timeout.connect(on_death_start)
+	timer.timeout.connect(_on_death_start)
 	add_child(timer)
 
 func _input(event: InputEvent) -> void:
@@ -36,7 +43,5 @@ func on_interact() -> void:
 		timer.start()
 
 func on_death_start() -> void:
-	print("Pterodactyl")
 	audio_player.play()
-	# TODO: Animate pterodactyl.
-	_on_death_end()
+	animation_player.play("pterodactyl_swoop")

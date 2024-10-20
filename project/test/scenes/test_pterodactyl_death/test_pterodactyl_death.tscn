@@ -1,9 +1,70 @@
-[gd_scene load_steps=5 format=3 uid="uid://fu2dhtfprl2l"]
+[gd_scene load_steps=8 format=3 uid="uid://fu2dhtfprl2l"]
 
 [ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="1_fmht0"]
 [ext_resource type="PackedScene" uid="uid://c2b5trrmnpydo" path="res://props/deadly_interactables/deadly_interactable.tscn" id="2_7tvan"]
 [ext_resource type="Texture2D" uid="uid://xofxv3fh5gjq" path="res://assets/art/flower_bush.png" id="3_7ehsq"]
 [ext_resource type="Script" path="res://test/scenes/test_pterodactyl_death/pterodactyl_death.gd" id="4_ah4lw"]
+
+[sub_resource type="Animation" id="Animation_gfntp"]
+resource_name = "pterodactyl_swoop"
+length = 2.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pterodactyl:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 2.46667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pterodactyl:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 1.36667, 2.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(115, -100), Vector2(58, -69), Vector2(58, -69), Vector2(-1, -102)]
+}
+
+[sub_resource type="Animation" id="Animation_556ab"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Pterodactyl:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Pterodactyl:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(115, -100)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q7f7v"]
+_data = {
+"RESET": SubResource("Animation_556ab"),
+"pterodactyl_swoop": SubResource("Animation_gfntp")
+}
 
 [node name="TestPterodactylDeath" type="Node2D"]
 
@@ -14,6 +75,17 @@ thought_text = "Might as well stop and smell the flowers"
 texture = ExtResource("3_7ehsq")
 detectable_range = 20.0
 
-[node name="PterodactylDeath" type="Node2D" parent="DeadlyInteractable"]
+[node name="PterodactylDeath" type="Node2D" parent="DeadlyInteractable" node_paths=PackedStringArray("animation_player")]
 script = ExtResource("4_ah4lw")
 seconds_until_death = 3
+animation_player = NodePath("../../AnimationPlayer")
+
+[node name="Pterodactyl" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(115, -100)
+texture = ExtResource("3_7ehsq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_q7f7v")
+}

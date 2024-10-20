@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://fu2dhtfprl2l"]
+
+[ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="1_fmht0"]
+[ext_resource type="PackedScene" uid="uid://c2b5trrmnpydo" path="res://props/deadly_interactables/deadly_interactable.tscn" id="2_7tvan"]
+[ext_resource type="Texture2D" uid="uid://o4mo2w2ftx1v" path="res://addons/gut/images/yellow.png" id="3_uapsy"]
+[ext_resource type="Script" path="res://test/scenes/test_pterodactyl_death/pterodactyl_death.gd" id="4_ah4lw"]
+
+[node name="TestPterodactylDeath" type="Node2D"]
+
+[node name="PlayerCharacter" parent="." instance=ExtResource("1_fmht0")]
+
+[node name="DeadlyInteractable" parent="." instance=ExtResource("2_7tvan")]
+thought_text = "Might as well stop and smell the flowers"
+texture = ExtResource("3_uapsy")
+detectable_range = 20.0
+
+[node name="PterodactylDeath" type="Node2D" parent="DeadlyInteractable"]
+script = ExtResource("4_ah4lw")

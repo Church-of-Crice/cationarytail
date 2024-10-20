@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://dvaiyelyx08yj"]
+[gd_scene load_steps=15 format=3 uid="uid://dvaiyelyx08yj"]
 
 [ext_resource type="Script" path="res://story_scenes/05_owner_is_mad_after_vet_and_cat_is_set_free/05_owner_is_mad_after_vet_and_cat_is_set_free.gd" id="1_xutie"]
 [ext_resource type="PackedScene" uid="uid://dibsuh2sssqtc" path="res://locations/home_of_adopter/home_of_adopter.tscn" id="2_i6f6d"]
@@ -7,10 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="3_oef1c"]
 [ext_resource type="Script" path="res://ui/dialog/dialog_sequence.gd" id="4_c7byf"]
 [ext_resource type="PackedScene" uid="uid://bty6hmjgyr0cn" path="res://characters/npcs/cat_owner/cat_owner.tscn" id="4_tx1a6"]
-[ext_resource type="Script" path="res://locations/home_of_adopter/home_of_adopter.gd" id="6_ngpov"]
-[ext_resource type="PackedScene" uid="uid://81h1ottsp85g" path="res://utility/teleporter.tscn" id="8_yurvh"]
+[ext_resource type="PackedScene" uid="uid://bfwrp8mwdwpjv" path="res://utility/doorway.tscn" id="6_yngyq"]
 [ext_resource type="PackedScene" uid="uid://fks7rwjturoy" path="res://game_world/game_world.tscn" id="9_50ipu"]
-[ext_resource type="PackedScene" uid="uid://bc12727t1eydw" path="res://ui/components/door_exit/door_exit_area.tscn" id="10_8ehlg"]
 
 [sub_resource type="Resource" id="Resource_bwsxc"]
 script = ExtResource("2_ikxk1")
@@ -41,7 +39,10 @@ start_dialog_sequence = SubResource("Resource_a0x12")
 end_dialog_sequence = SubResource("Resource_dbce3")
 
 [node name="HomeOfAdopter" parent="." instance=ExtResource("2_i6f6d")]
-script = ExtResource("6_ngpov")
+
+[node name="Doorway" parent="HomeOfAdopter" instance=ExtResource("6_yngyq")]
+position = Vector2(-1, 76)
+destination = ExtResource("9_50ipu")
 
 [node name="PlayerCharacter" parent="HomeOfAdopter" instance=ExtResource("3_oef1c")]
 
@@ -54,11 +55,3 @@ offset_top = 64.0
 offset_right = 22.0
 offset_bottom = 87.0
 text = "EXIT"
-
-[node name="Teleporter" parent="." instance=ExtResource("8_yurvh")]
-position = Vector2(2, 75)
-destination = ExtResource("9_50ipu")
-
-[node name="DoorExitSoundTeleporter" parent="." instance=ExtResource("10_8ehlg")]
-
-[connection signal="body_entered" from="Teleporter" to="HomeOfAdopter" method="_on_teleporter_body_entered"]

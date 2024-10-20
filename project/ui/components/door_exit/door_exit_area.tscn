@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bc12727t1eydw"]
-
-[ext_resource type="AudioStream" uid="uid://d2erlbu2g32lv" path="res://assets/audio/effects/Door&Transition.mp3" id="2_8bnr7"]
-
-[node name="DoorExitSoundTeleporter" type="AudioStreamPlayer2D"]
-stream = ExtResource("2_8bnr7")

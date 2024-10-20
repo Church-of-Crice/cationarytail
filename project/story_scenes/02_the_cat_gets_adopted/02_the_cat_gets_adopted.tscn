@@ -1,24 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://bdp663vtdnenq"]
+[gd_scene load_steps=5 format=3 uid="uid://bdp663vtdnenq"]
 
 [ext_resource type="PackedScene" uid="uid://dgvmjpupptnko" path="res://locations/animal_rescue/animal_rescue.tscn" id="1_k0dg7"]
-[ext_resource type="PackedScene" uid="uid://81h1ottsp85g" path="res://utility/teleporter.tscn" id="2_v4x1m"]
-[ext_resource type="Script" path="res://locations/animal_rescue/animal_rescue.gd" id="2_wg1ae"]
+[ext_resource type="PackedScene" uid="uid://bfwrp8mwdwpjv" path="res://utility/doorway.tscn" id="2_rp8hi"]
 [ext_resource type="PackedScene" uid="uid://clceinkcx81eu" path="res://story_scenes/03-0_first_day_home_adopted/03-0_first_day_home_adopted.tscn" id="3_qqyny"]
 [ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="4_obbyh"]
-[ext_resource type="PackedScene" uid="uid://bc12727t1eydw" path="res://ui/components/door_exit/door_exit_area.tscn" id="5_xw6bq"]
 
 [node name="Template" type="Node2D"]
 
 [node name="AnimalRescue" parent="." instance=ExtResource("1_k0dg7")]
-script = ExtResource("2_wg1ae")
 
-[node name="Teleporter" parent="AnimalRescue" instance=ExtResource("2_v4x1m")]
+[node name="Doorway" parent="AnimalRescue" instance=ExtResource("2_rp8hi")]
 destination = ExtResource("3_qqyny")
 
 [node name="PlayerCharacter" parent="AnimalRescue" instance=ExtResource("4_obbyh")]
 position = Vector2(-100, 28)
 scale = Vector2(0.75, 0.75)
-
-[node name="DoorExitArea" parent="." instance=ExtResource("5_xw6bq")]
-
-[connection signal="body_entered" from="AnimalRescue/Teleporter" to="AnimalRescue" method="_on_teleporter_body_entered"]

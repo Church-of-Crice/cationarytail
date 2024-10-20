@@ -1,11 +1,14 @@
-[gd_scene load_steps=12 format=3 uid="uid://bg5cs57ay7ftj"]
+[gd_scene load_steps=15 format=3 uid="uid://bg5cs57ay7ftj"]
 
 [ext_resource type="PackedScene" uid="uid://ff0pl457qtvi" path="res://characters/player_character/player_character_appearance/player_character_appearance.tscn" id="1_imksy"]
 [ext_resource type="Script" path="res://ui/screens/character_creation/character_creation_screen.gd" id="1_ljgtx"]
 [ext_resource type="Texture2D" uid="uid://dds1rvno21ter" path="res://ui/screens/character_creation/art/charactercreationarrows.png" id="2_hx4sp"]
 [ext_resource type="Texture2D" uid="uid://8ny152xv0mv7" path="res://ui/screens/character_creation/art/character creation background - tileable.png" id="3_crjwi"]
 [ext_resource type="Texture2D" uid="uid://dtw0r5iluamob" path="res://ui/screens/character_creation/charactercreationshadow.png" id="4_lxrm0"]
+[ext_resource type="Texture2D" uid="uid://ydbgsk7pfedy" path="res://ui/components/buttons/button art/Catbox.png" id="4_uot0r"]
 [ext_resource type="Shader" path="res://ui/screens/character_creation/character_creation_screen_bg.gdshader" id="5_mkx4i"]
+[ext_resource type="Texture2D" uid="uid://c1gq2dkyb6rl7" path="res://ui/components/buttons/button art/catsave.png" id="7_cym0j"]
+[ext_resource type="Texture2D" uid="uid://cbycyr5j8s5d" path="res://ui/components/character creation editor component/cat selector.png" id="8_v2deb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_urj62"]
 shader = ExtResource("5_mkx4i")
@@ -60,6 +63,10 @@ offset_bottom = 27.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Catbox" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(26, 27)
+texture = ExtResource("4_uot0r")
+
 [node name="Charactercreationshadow" type="Sprite2D" parent="PanelContainer"]
 position = Vector2(27, 29)
 texture = ExtResource("4_lxrm0")
@@ -77,6 +84,15 @@ size = Vector2i(32, 32)
 unique_name_in_owner = true
 position = Vector2(16, 16)
 data = null
+
+[node name="Catsave" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(132, 79)
+texture = ExtResource("7_cym0j")
+
+[node name="CatSelector" type="Sprite2D" parent="PanelContainer"]
+position = Vector2(-80, 24)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_v2deb")
 
 [node name="StartButton" type="Button" parent="."]
 unique_name_in_owner = true

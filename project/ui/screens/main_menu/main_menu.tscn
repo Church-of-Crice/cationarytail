@@ -1,7 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://b55ikiyqxxt1i"]
 
 [ext_resource type="Script" path="res://ui/screens/main_menu/main_menu.gd" id="1_w75in"]
-[ext_resource type="Texture2D" uid="uid://by7elko5v310p" path="res://locations/main menu background/main menu background better sky.png" id="2_4getw"]
 [ext_resource type="Texture2D" uid="uid://dthmi4a3xbelb" path="res://ui/screens/main_menu/art/main_menu_paws.png" id="2_mei5d"]
 [ext_resource type="Texture2D" uid="uid://dghys0qxddrs" path="res://ui/screens/main_menu/art/main_menu_title.png" id="3_0misr"]
 [ext_resource type="Texture2D" uid="uid://4ui8db2cu3m" path="res://ui/screens/main_menu/art/main_menu_button_play.png" id="4_5vt13"]

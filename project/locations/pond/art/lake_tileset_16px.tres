@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://c20qqbfpin4d7"]
+[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://djnxtqbkddtvm"]
 
 [ext_resource type="Texture2D" uid="uid://cblxilnyhxosm" path="res://locations/pond/art/lake_tileset_16px-sheet.png" id="1_nkpsf"]
 [ext_resource type="Texture2D" uid="uid://btacl5bhrs4hb" path="res://locations/pond/art/lake_tileset.png" id="2_uipur"]

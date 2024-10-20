@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="3_oef1c"]
 [ext_resource type="Script" path="res://ui/dialog/dialog_sequence.gd" id="4_c7byf"]
 [ext_resource type="PackedScene" uid="uid://bty6hmjgyr0cn" path="res://characters/npcs/cat_owner/cat_owner.tscn" id="4_tx1a6"]
-[ext_resource type="PackedScene" uid="uid://81h1ottsp85g" path="res://utility/teleporter.tscn" id="8_yurvh"]
+[ext_resource type="PackedScene" uid="uid://bfwrp8mwdwpjv" path="res://utility/doorway.tscn" id="6_yngyq"]
 [ext_resource type="PackedScene" uid="uid://fks7rwjturoy" path="res://game_world/game_world.tscn" id="9_50ipu"]
 
 [sub_resource type="Resource" id="Resource_bwsxc"]
@@ -40,6 +40,10 @@ end_dialog_sequence = SubResource("Resource_dbce3")
 
 [node name="HomeOfAdopter" parent="." instance=ExtResource("2_i6f6d")]
 
+[node name="Doorway" parent="HomeOfAdopter" instance=ExtResource("6_yngyq")]
+position = Vector2(-1, 76)
+destination = ExtResource("9_50ipu")
+
 [node name="PlayerCharacter" parent="HomeOfAdopter" instance=ExtResource("3_oef1c")]
 
 [node name="CatOwner" parent="HomeOfAdopter" instance=ExtResource("4_tx1a6")]
@@ -51,7 +55,3 @@ offset_top = 64.0
 offset_right = 22.0
 offset_bottom = 87.0
 text = "EXIT"
-
-[node name="Teleporter" parent="." instance=ExtResource("8_yurvh")]
-position = Vector2(2, 75)
-destination = ExtResource("9_50ipu")

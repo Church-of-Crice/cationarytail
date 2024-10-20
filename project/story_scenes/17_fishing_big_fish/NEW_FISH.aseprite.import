@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://c1avuuouff6yx"
+path="res://.godot/imported/NEW_FISH.aseprite-1e10e92defa34b269c51ba8348142b60.res"
+
+[deps]
+
+source_file="res://story_scenes/17_fishing_big_fish/NEW_FISH.aseprite"
+dest_files=["res://.godot/imported/NEW_FISH.aseprite-1e10e92defa34b269c51ba8348142b60.res"]
+
+[params]
+

@@ -10,7 +10,8 @@ enum DeathType {
 	COYOTE,
 	BLENDER,
 	DRYER,
-	POUND_EUTHENIZED
+	POUND_EUTHENIZED,
+	FISH
 }
 
 var player_name: String

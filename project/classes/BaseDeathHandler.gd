@@ -25,10 +25,11 @@ func _on_death_end() -> void:
 # timer is responsible for calling `on_death_start`.
 func on_interact() -> void:
 	print("Default on_interact.")
-	on_death_start()
+	await on_death_start()
+	_on_death_end()
 
 # This is called when the death has started.
 # This should play any sounds or animations.
 func on_death_start() -> void:
 	print("Default on_death_start.")
-	_on_death_end()
+	#_on_death_end()

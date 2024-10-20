@@ -41,6 +41,10 @@ project/assembly_name="godot-project-template"
 
 enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addons/gut/plugin.cfg")
 
+[global_group]
+
+Player=""
+
 [input]
 
 move_left={

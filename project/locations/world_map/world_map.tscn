@@ -107,3 +107,7 @@ texture = ExtResource("8_qaq7y")
 [node name="BushArt3" type="Sprite2D" parent="."]
 position = Vector2(550, -525)
 texture = ExtResource("8_qaq7y")
+
+[node name="WaterTilesWap4" type="Sprite2D" parent="."]
+position = Vector2(696, -772)
+texture = ExtResource("2_xwx8x")

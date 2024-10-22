@@ -16,8 +16,10 @@ next_scene = ExtResource("3_gnm11")
 [node name="VetOffice" parent="." instance=ExtResource("1_og2v4")]
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("1_xhisw")]
+position = Vector2(-50, 88)
 
 [node name="CatOwner" parent="." instance=ExtResource("2_wuwcc")]
-position = Vector2(115, 27)
+position = Vector2(-34, 69)
 
 [node name="DrFrankensteinTheVet" parent="." instance=ExtResource("3_a4sb3")]
+position = Vector2(-90, 89)

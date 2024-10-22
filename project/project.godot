@@ -25,6 +25,11 @@ DialogManager="*res://autoloads/DialogManager.tscn"
 SceneTransitionManager="*res://ui/scene_transitions/scene_transition_manager.tscn"
 UiSound="*res://autoloads/ui_sound.tscn"
 
+[debug]
+
+gdscript/warnings/unused_parameter=0
+gdscript/warnings/int_as_enum_without_cast=0
+
 [display]
 
 window/size/viewport_width=320

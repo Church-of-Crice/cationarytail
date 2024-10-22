@@ -10,6 +10,11 @@
 *.yml eol=lf
 *.sln eol=lf
 *.csproj eol=lf
+*.tres eol=lf
+*.gdshader eol=lf
+*.tscn eol=lf
+*.gltf eol=lf
+project.godot eol=lf
 
 # Prevent Git from treating binary files as text
 *.png binary

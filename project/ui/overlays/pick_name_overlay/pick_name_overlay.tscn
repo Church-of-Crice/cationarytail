@@ -46,7 +46,7 @@ text = "Pick a name"
 [node name="LineEdit" type="LineEdit" parent="Control/PanelContainer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
-text = "kitty"
+text = "Kitty😺"
 placeholder_text = "name"
 max_length = 8
 

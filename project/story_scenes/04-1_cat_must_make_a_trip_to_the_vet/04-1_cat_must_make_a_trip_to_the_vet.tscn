@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://bhpufm708ly3v"]
+[gd_scene load_steps=10 format=3 uid="uid://bhpufm708ly3v"]
 
 [ext_resource type="Script" path="res://story_scenes/04-1_cat_must_make_a_trip_to_the_vet/04-1_cat_must_make_a_trip_to_the_vet.gd" id="1_aocxq"]
 [ext_resource type="Resource" uid="uid://chir1nn2tinpb" path="res://story_scenes/04-1_cat_must_make_a_trip_to_the_vet/resources/04-1_cat_after_surgery_dialog.tres" id="2_j5y3f"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="4_gksay"]
 [ext_resource type="PackedScene" uid="uid://bty6hmjgyr0cn" path="res://characters/npcs/cat_owner/cat_owner.tscn" id="5_c8psw"]
 [ext_resource type="PackedScene" uid="uid://bfbjea81jtr2u" path="res://characters/npcs/dr_frankenstein_the_vet/dr_frankenstein_the_vet.tscn" id="6_amk8n"]
+[ext_resource type="Texture2D" uid="uid://bact8j1hb26x" path="res://props/googly_eye_singular.png" id="9_g6ikk"]
 
 [node name="CatFirstTripToVet" type="Node2D"]
 script = ExtResource("1_aocxq")
@@ -18,8 +19,14 @@ next_scene = ExtResource("4_4vkjp")
 [node name="VetOffice" parent="." instance=ExtResource("3_cgw75")]
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("4_gksay")]
+position = Vector2(-41, -124)
 
 [node name="CatOwner" parent="." instance=ExtResource("5_c8psw")]
-position = Vector2(115, 27)
+position = Vector2(12, -105)
 
 [node name="DrFrankensteinTheVet" parent="." instance=ExtResource("6_amk8n")]
+position = Vector2(-71, -78)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-21, -92)
+texture = ExtResource("9_g6ikk")

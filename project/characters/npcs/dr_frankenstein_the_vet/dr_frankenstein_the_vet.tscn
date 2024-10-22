@@ -1,3 +1,21 @@
-[gd_scene format=3 uid="uid://bfbjea81jtr2u"]
+[gd_scene load_steps=3 format=3 uid="uid://bfbjea81jtr2u"]
 
-[node name="DrFrankensteinTheVet" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://bw8nqktsjwtma" path="res://characters/npcs/dr_frankenstein_the_vet/art/dr_mortimer_katzenfleisch.png" id="1_qwudj"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ko75s"]
+radius = 6.0
+height = 20.0
+
+[node name="DrMortimerKatzenfleisch" type="CharacterBody2D"]
+y_sort_enabled = true
+collision_layer = 3
+collision_mask = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+texture = ExtResource("1_qwudj")
+offset = Vector2(0, -24)
+
+[node name="CollisionDetectionShape" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3)
+shape = SubResource("CapsuleShape2D_ko75s")

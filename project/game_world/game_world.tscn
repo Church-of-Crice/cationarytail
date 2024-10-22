@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://fks7rwjturoy"]
+[gd_scene load_steps=12 format=3 uid="uid://fks7rwjturoy"]
 
 [ext_resource type="Script" path="res://game_world/game_world.gd" id="1_s5lep"]
 [ext_resource type="PackedScene" uid="uid://l8yumgsqntlj" path="res://locations/world_map/world_map.tscn" id="2_o52o3"]
@@ -8,10 +8,12 @@
 [ext_resource type="PackedScene" uid="uid://b82hrig3tito5" path="res://locations/neighborhood_laundromat/neighborhood_laundromat.tscn" id="7_ic4tt"]
 [ext_resource type="PackedScene" uid="uid://cyasofva442mf" path="res://locations/the_pound/the_pound.tscn" id="9_c3ajq"]
 [ext_resource type="PackedScene" uid="uid://b6a7wy52lf8wv" path="res://locations/vet_office/vet_office.tscn" id="10_c8bur"]
+[ext_resource type="PackedScene" uid="uid://p4jp7674dlbn" path="res://death_scenes/pterodactyl_death.tscn" id="11_gj5bo"]
 [ext_resource type="PackedScene" uid="uid://bfwbmxf8cteby" path="res://utility/location_doorway.tscn" id="11_htiur"]
 [ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="11_qpo1q"]
 
 [node name="GameWorld" type="Node2D"]
+y_sort_enabled = true
 script = ExtResource("1_s5lep")
 
 [node name="Outdoors" parent="." instance=ExtResource("2_o52o3")]
@@ -35,19 +37,23 @@ position = Vector2(-3178, -138)
 position = Vector2(-2542, -184)
 
 [node name="InteriorVetExitDestination" type="Marker2D" parent="VetOffice"]
-position = Vector2(1809, -378)
+position = Vector2(1798, -392)
 
 [node name="InteriorVetExit" parent="VetOffice" node_paths=PackedStringArray("destination_mark") instance=ExtResource("11_htiur")]
 position = Vector2(33, 77)
 destination_mark = NodePath("../InteriorVetExitDestination")
 
 [node name="PlayerCharacter" parent="." instance=ExtResource("11_qpo1q")]
+y_sort_enabled = true
 position = Vector2(-142, -825)
 
 [node name="ExteriorVetEntranceDestination" type="Marker2D" parent="."]
 position = Vector2(-2510, -148)
 
 [node name="ExteriorVetEntrance" parent="." node_paths=PackedStringArray("destination_mark") instance=ExtResource("11_htiur")]
-position = Vector2(-765, -562)
-rotation = 1.57079
+position = Vector2(-744, -584)
+rotation = 3.14159
 destination_mark = NodePath("../ExteriorVetEntranceDestination")
+
+[node name="PterodactylDeathScene" parent="." instance=ExtResource("11_gj5bo")]
+position = Vector2(792, -680)

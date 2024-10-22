@@ -1,12 +1,18 @@
-[gd_scene load_steps=21 format=3 uid="uid://p4jp7674dlbn"]
+[gd_scene load_steps=23 format=3 uid="uid://p4jp7674dlbn"]
 
 [ext_resource type="PackedScene" uid="uid://c2b5trrmnpydo" path="res://props/deadly_interactables/deadly_interactable.tscn" id="2_8qxgl"]
-[ext_resource type="Texture2D" uid="uid://xofxv3fh5gjq" path="res://assets/art/flower_bush.png" id="3_sp0fs"]
+[ext_resource type="Script" path="res://props/deadly_interactables/deadly_interactable_data.gd" id="2_ae2ef"]
+[ext_resource type="Texture2D" uid="uid://xofxv3fh5gjq" path="res://props/nature_stuff/flower_bush.png" id="3_sp0fs"]
 [ext_resource type="AudioStream" uid="uid://c702ya8w0ggjn" path="res://death_scenes/pteradactyl/long_screech.wav" id="4_2oxuj"]
 [ext_resource type="AudioStream" uid="uid://cg4m0fwc16o34" path="res://death_scenes/pteradactyl/repeated_screeching.wav" id="4_retbh"]
 [ext_resource type="Script" path="res://death_scenes/pterodactyl_death.gd" id="4_t6msx"]
 [ext_resource type="Texture2D" uid="uid://deng1h1rj6w4d" path="res://test/scenes/test_pterodactyl_death/Pyro the dactyl-pterodactyl.png" id="5_gn63d"]
 [ext_resource type="AudioStream" uid="uid://bw3q04rqg41hc" path="res://death_scenes/pteradactyl/pteradactyl_whack.wav" id="6_4ga7n"]
+
+[sub_resource type="Resource" id="Resource_7cdin"]
+script = ExtResource("2_ae2ef")
+world_sprite = ExtResource("3_sp0fs")
+death_type = 0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ac32x"]
 radius = 2.0
@@ -191,6 +197,7 @@ _data = {
 [node name="PterodactylDeathScene" type="Node2D"]
 
 [node name="DeadlyInteractable" parent="." instance=ExtResource("2_8qxgl")]
+deadly_interactable_data = SubResource("Resource_7cdin")
 thought_text = "Might as well stop and smell the flowers"
 texture = ExtResource("3_sp0fs")
 
@@ -201,6 +208,7 @@ collision_mask = 0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DeadlyInteractable/StaticBody2D"]
 rotation = 1.57079
 shape = SubResource("CapsuleShape2D_ac32x")
+debug_color = Color(0.862745, 0.262745, 0.211765, 0.588235)
 
 [node name="PterodactylDeath" type="Node2D" parent="DeadlyInteractable" node_paths=PackedStringArray("animation_player")]
 script = ExtResource("4_t6msx")

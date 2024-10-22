@@ -42,6 +42,7 @@ script = ExtResource("3_smk1v")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectableDeadlyArea2D"]
 unique_name_in_owner = true
 shape = SubResource("CircleShape2D_rt8xg")
+debug_color = Color(0.876696, 0.169953, 0.73078, 0.42)
 
 [node name="DeadlyThoughtIntervalTimer" type="Timer" parent="DetectableDeadlyArea2D"]
 unique_name_in_owner = true

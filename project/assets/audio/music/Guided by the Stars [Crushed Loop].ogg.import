@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c15t1ttnh8oc5"
+path="res://.godot/imported/Guided by the Stars [Crushed Loop].ogg-bfa5e14236a4c9c4775e9391b345f111.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/music/Guided by the Stars [Crushed Loop].ogg"
+dest_files=["res://.godot/imported/Guided by the Stars [Crushed Loop].ogg-bfa5e14236a4c9c4775e9391b345f111.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://entd2qi6pf3e"
+path="res://.godot/imported/Through Space and Time [Crushed Loop].ogg-edf8491cd44c3accf84e7a78546427c1.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/music/Through Space and Time [Crushed Loop].ogg"
+dest_files=["res://.godot/imported/Through Space and Time [Crushed Loop].ogg-edf8491cd44c3accf84e7a78546427c1.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dw75mnffvjhp4"
+path="res://.godot/imported/Juxtapositioned [Crushed Loop].ogg-ecaa7c01e3e6193c9b801efa98d1cdc4.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/music/Juxtapositioned [Crushed Loop].ogg"
+dest_files=["res://.godot/imported/Juxtapositioned [Crushed Loop].ogg-ecaa7c01e3e6193c9b801efa98d1cdc4.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

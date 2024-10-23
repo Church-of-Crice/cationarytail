@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://1uyoophcyp2k"
+path="res://.godot/imported/The Fallen Angel and His Nun [Crushed Loop].ogg-19d91a12507488b8f146d826c41a79af.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/music/The Fallen Angel and His Nun [Crushed Loop].ogg"
+dest_files=["res://.godot/imported/The Fallen Angel and His Nun [Crushed Loop].ogg-19d91a12507488b8f146d826c41a79af.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

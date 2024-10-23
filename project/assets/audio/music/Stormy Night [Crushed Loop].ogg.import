@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cdjbevlgyoifv"
+path="res://.godot/imported/Stormy Night [Crushed Loop].ogg-0f495bc1908cbe6c667535a4fea9c0db.oggvorbisstr"
+
+[deps]
+
+source_file="res://assets/audio/music/Stormy Night [Crushed Loop].ogg"
+dest_files=["res://.godot/imported/Stormy Night [Crushed Loop].ogg-0f495bc1908cbe6c667535a4fea9c0db.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

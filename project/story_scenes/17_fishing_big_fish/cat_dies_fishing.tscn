@@ -364,6 +364,7 @@ shape = SubResource("CircleShape2D_38p00")
 
 [node name="FishDeathHandler" type="Node2D" parent="DeadlyInteractable" node_paths=PackedStringArray("animation_player")]
 script = ExtResource("3_ex38y")
+seconds_until_death = 1
 animation_player = NodePath("../../AnimationPlayer")
 
 [node name="FishAnimatedSprite2D" type="AnimatedSprite2D" parent="."]

@@ -32,7 +32,6 @@ start_dialog_sequence = ExtResource("2_o3n4k")
 after_choosing_name_dialog = SubResource("Resource_m7h6x")
 
 [node name="HomeOfAdopter" parent="." instance=ExtResource("5_t1udm")]
-y_sort_enabled = true
 
 [node name="Lucretia" parent="HomeOfAdopter" instance=ExtResource("6_v8a8s")]
 position = Vector2(-115, -35)

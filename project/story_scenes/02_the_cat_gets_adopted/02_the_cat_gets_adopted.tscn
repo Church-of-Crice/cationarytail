@@ -1,18 +1,77 @@
-[gd_scene load_steps=5 format=3 uid="uid://bdp663vtdnenq"]
+[gd_scene load_steps=23 format=3 uid="uid://bdp663vtdnenq"]
 
 [ext_resource type="PackedScene" uid="uid://dgvmjpupptnko" path="res://locations/animal_rescue/animal_rescue.tscn" id="1_k0dg7"]
+[ext_resource type="Script" path="res://story_scenes/02_the_cat_gets_adopted/02_the_cat_gets_adopted.gd" id="1_wsalp"]
 [ext_resource type="PackedScene" uid="uid://bo6h85vqf2a1y" path="res://utility/scene_doorway_activate.tscn" id="2_g7uvo"]
+[ext_resource type="Script" path="res://ui/dialog/dialog_sequence.gd" id="2_pmh6j"]
 [ext_resource type="PackedScene" uid="uid://clceinkcx81eu" path="res://story_scenes/03-0_first_day_home_adopted/03-0_first_day_home_adopted.tscn" id="3_qqyny"]
-[ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="4_obbyh"]
+[ext_resource type="Resource" uid="uid://dfai4t3fkvw8y" path="res://characters/npcs/pug_dog/pug_dog_dialog.tres" id="3_ygcyr"]
+[ext_resource type="PackedScene" uid="uid://lwaoxyt5ig6w" path="res://characters/player_character/player_character_lucretia.tscn" id="4_0trwf"]
+[ext_resource type="Resource" uid="uid://cjri3trn0vkpw" path="res://characters/npcs/persian_cat/persian_cat_dialog.tres" id="4_kc4y3"]
+[ext_resource type="Resource" uid="uid://m04jl3nrg8w7" path="res://characters/npcs/german_shepard/german_shephard_dialog.tres" id="5_228r2"]
+[ext_resource type="Resource" uid="uid://ehaydg8yxp5r" path="res://ui/dialog/resources/dialog_sequences/long_dog_dialog_sequence.tres" id="6_87ix6"]
+[ext_resource type="Script" path="res://ui/dialog/dialog_event.gd" id="7_cn3dn"]
+[ext_resource type="Resource" uid="uid://c3i151loyf71h" path="res://ui/dialog/resources/shelter_clerk_character.tres" id="8_qeuwo"]
+[ext_resource type="Resource" uid="uid://diliy5h3y7r5m" path="res://ui/dialog/resources/lucretia_character.tres" id="9_5y40u"]
+[ext_resource type="Script" path="res://story_scenes/02_the_cat_gets_adopted/counter_barrier.gd" id="11_qqp4x"]
+[ext_resource type="Texture2D" uid="uid://cyd2pi287l40o" path="res://locations/animal_rescue/art/animal shelter_sprites.png" id="12_kl33k"]
 
-[node name="Template" type="Node2D"]
+[sub_resource type="Resource" id="Resource_yx76x"]
+script = ExtResource("7_cn3dn")
+character = ExtResource("8_qeuwo")
+text = "Did you find one you liked?"
+
+[sub_resource type="Resource" id="Resource_qd4yp"]
+script = ExtResource("7_cn3dn")
+character = ExtResource("9_5y40u")
+text = "Uhm, all the animals here are like, not the vibe."
+
+[sub_resource type="Resource" id="Resource_dh6hm"]
+script = ExtResource("7_cn3dn")
+character = ExtResource("9_5y40u")
+text = "Do you have any cutesy ones?"
+
+[sub_resource type="Resource" id="Resource_kb70y"]
+script = ExtResource("7_cn3dn")
+character = ExtResource("8_qeuwo")
+text = "Sure, there’s this little kitty that we just finished processing."
+
+[sub_resource type="Resource" id="Resource_hj0rf"]
+script = ExtResource("2_pmh6j")
+events = Array[ExtResource("7_cn3dn")]([SubResource("Resource_yx76x"), SubResource("Resource_qd4yp"), SubResource("Resource_dh6hm"), SubResource("Resource_kb70y")])
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4a5te"]
+atlas = ExtResource("12_kl33k")
+region = Rect2(144, 48, 6, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m0pjl"]
+size = Vector2(30, 30)
+
+[node name="CatGetsAdopted" type="Node2D"]
+script = ExtResource("1_wsalp")
+dialogs = Array[ExtResource("2_pmh6j")]([ExtResource("3_ygcyr"), ExtResource("4_kc4y3"), ExtResource("5_228r2"), ExtResource("6_87ix6")])
+clerk_dialog_after_animals = SubResource("Resource_hj0rf")
 
 [node name="AnimalRescue" parent="." instance=ExtResource("1_k0dg7")]
 
 [node name="LocationDoorway" parent="AnimalRescue" instance=ExtResource("2_g7uvo")]
-position = Vector2(-136, 61)
+position = Vector2(-136, 209)
 destination = ExtResource("3_qqyny")
 
-[node name="PlayerCharacter" parent="AnimalRescue" instance=ExtResource("4_obbyh")]
-position = Vector2(-100, 28)
-scale = Vector2(0.75, 0.75)
+[node name="PlayerCharacterLucretia" parent="AnimalRescue" instance=ExtResource("4_0trwf")]
+position = Vector2(-137, 50)
+
+[node name="CounterBarrier" type="StaticBody2D" parent="AnimalRescue"]
+unique_name_in_owner = true
+position = Vector2(-18, -34)
+script = ExtResource("11_qqp4x")
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimalRescue/CounterBarrier"]
+y_sort_enabled = true
+position = Vector2(-11, 2)
+scale = Vector2(4.33333, 1)
+texture = SubResource("AtlasTexture_4a5te")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimalRescue/CounterBarrier"]
+position = Vector2(-9, 2)
+shape = SubResource("RectangleShape2D_m0pjl")

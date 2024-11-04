@@ -20,6 +20,7 @@ visible = false
 position = Vector2(1, 2)
 character = ExtResource("3_aymhr")
 dialog_sequence = ExtResource("4_xyimn")
+one_time_only = true
 
 [node name="CollisionShape2D" parent="DialogArea" index="0"]
 position = Vector2(-0.5, -2)

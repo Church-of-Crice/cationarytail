@@ -1,9 +1,8 @@
-[gd_scene load_steps=9 format=4 uid="uid://dgvmjpupptnko"]
+[gd_scene load_steps=8 format=4 uid="uid://dgvmjpupptnko"]
 
 [ext_resource type="TileSet" uid="uid://bcgv3j66veqt" path="res://locations/animal_rescue/tilemaps/animal_rescue_atlas.tres" id="1_mv1yo"]
 [ext_resource type="TileSet" uid="uid://b1rkehngfg7yw" path="res://locations/animal_rescue/tilemaps/animal shelter_sprites.tres" id="2_6ea0m"]
 [ext_resource type="PackedScene" uid="uid://c2v14girw0rtg" path="res://characters/npcs/shelter_clerk/shelter_clerk.tscn" id="4_4emik"]
-[ext_resource type="PackedScene" uid="uid://bty6hmjgyr0cn" path="res://characters/npcs/cat_owner/cat_owner.tscn" id="9_gg3b1"]
 [ext_resource type="PackedScene" uid="uid://dg3c4ngx1j6bk" path="res://characters/npcs/persian_cat/persian_cat.tscn" id="11_uu1wm"]
 [ext_resource type="PackedScene" uid="uid://cjm1wa8lbybab" path="res://characters/npcs/german_shepard/german_shephard.tscn" id="12_ts80i"]
 [ext_resource type="PackedScene" uid="uid://ciq52ea2psb3d" path="res://characters/npcs/pug_dog/pug_dog.tscn" id="13_a373y"]
@@ -45,6 +44,3 @@ y_sort_enabled = true
 [node name="LongDog" parent="Characters" instance=ExtResource("14_74pdf")]
 y_sort_enabled = true
 position = Vector2(119.031, -22)
-
-[node name="CatOwner" parent="Characters" instance=ExtResource("9_gg3b1")]
-position = Vector2(-140, 0)

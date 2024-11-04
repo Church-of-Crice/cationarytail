@@ -26,6 +26,7 @@ texture = ExtResource("1_vfyd5")
 position = Vector2(1, 2)
 character = ExtResource("3_two84")
 dialog_sequence = ExtResource("4_rod77")
+one_time_only = true
 
 [node name="CollisionShape2D" parent="DialogArea" index="0"]
 position = Vector2(-2, 0)

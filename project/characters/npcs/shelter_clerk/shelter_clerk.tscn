@@ -1,12 +1,75 @@
-[gd_scene load_steps=2 format=3 uid="uid://c2v14girw0rtg"]
+[gd_scene load_steps=17 format=3 uid="uid://c2v14girw0rtg"]
 
+[ext_resource type="Script" path="res://characters/npcs/shelter_clerk/shelter_clerk.gd" id="1_rcypy"]
 [ext_resource type="Texture2D" uid="uid://pkbq6gvrrbew" path="res://characters/npcs/shelter_clerk/art/shelter_clerk.png" id="1_ummm1"]
+[ext_resource type="PackedScene" uid="uid://ckqymeml2cb8l" path="res://ui/overlays/dialog_overlay/DialogArea.tscn" id="2_v0sbw"]
+[ext_resource type="Resource" uid="uid://c3i151loyf71h" path="res://ui/dialog/resources/shelter_clerk_character.tres" id="3_u5g2b"]
+[ext_resource type="Script" path="res://ui/dialog/dialog_event.gd" id="4_rv4e4"]
+[ext_resource type="Resource" uid="uid://diliy5h3y7r5m" path="res://ui/dialog/resources/lucretia_character.tres" id="5_id4cs"]
+[ext_resource type="Script" path="res://ui/dialog/dialog_sequence.gd" id="6_8i0vk"]
 
-[node name="ShelterClerk" type="Node2D"]
+[sub_resource type="Resource" id="Resource_nk72r"]
+script = ExtResource("4_rv4e4")
+character = ExtResource("5_id4cs")
+text = "Uhm, excuse me, is this Seconds Left to Live?"
+
+[sub_resource type="Resource" id="Resource_eoyqc"]
+script = ExtResource("4_rv4e4")
+character = ExtResource("5_id4cs")
+text = "I would like to adopt please."
+
+[sub_resource type="Resource" id="Resource_pfv0j"]
+script = ExtResource("4_rv4e4")
+character = ExtResource("3_u5g2b")
+text = "Sure! We have some animals available in the back."
+
+[sub_resource type="Resource" id="Resource_hx3tl"]
+script = ExtResource("4_rv4e4")
+character = ExtResource("3_u5g2b")
+text = "What type of pet are you looking for?"
+
+[sub_resource type="Resource" id="Resource_i13jd"]
+script = ExtResource("4_rv4e4")
+character = ExtResource("5_id4cs")
+text = "I dunno, I want a like, cute one, you know."
+
+[sub_resource type="Resource" id="Resource_aqu4l"]
+script = ExtResource("4_rv4e4")
+character = ExtResource("5_id4cs")
+text = "I see them all the time on my friend's Feed, cute pets get all the attention."
+
+[sub_resource type="Resource" id="Resource_3fsg1"]
+script = ExtResource("4_rv4e4")
+character = ExtResource("3_u5g2b")
+text = "Feel free to look around, I'm sure you can figure it out."
+
+[sub_resource type="Resource" id="Resource_f0nq7"]
+script = ExtResource("6_8i0vk")
+events = Array[ExtResource("4_rv4e4")]([SubResource("Resource_nk72r"), SubResource("Resource_eoyqc"), SubResource("Resource_pfv0j"), SubResource("Resource_hx3tl"), SubResource("Resource_i13jd"), SubResource("Resource_aqu4l"), SubResource("Resource_3fsg1")])
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4eir2"]
+size = Vector2(35, 70)
+
+[node name="ShelterClerk" type="Node2D" groups=["ShelterClerk"]]
 y_sort_enabled = true
+script = ExtResource("1_rcypy")
 
 [node name="Sheltrinatrix" type="Sprite2D" parent="."]
 y_sort_enabled = true
 position = Vector2(0, 25)
 texture = ExtResource("1_ummm1")
 offset = Vector2(0, -25)
+
+[node name="DialogArea" parent="." instance=ExtResource("2_v0sbw")]
+unique_name_in_owner = true
+position = Vector2(1, 2)
+character = ExtResource("3_u5g2b")
+dialog_sequence = SubResource("Resource_f0nq7")
+one_time_only = true
+
+[node name="CollisionShape2D" parent="DialogArea" index="0"]
+position = Vector2(-0.5, 21)
+shape = SubResource("RectangleShape2D_4eir2")
+debug_color = Color(0.730479, 0.396804, 0.673502, 0.42)
+
+[editable path="DialogArea"]

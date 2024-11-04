@@ -7,8 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://4ui8db2cu3m" path="res://ui/screens/main_menu/art/main_menu_button_play.png" id="4_5vt13"]
 [ext_resource type="Texture2D" uid="uid://ufmi0as00iqt" path="res://ui/screens/main_menu/art/main_menu_button_quit.png" id="5_xlrcr"]
 [ext_resource type="Texture2D" uid="uid://cs0n0qqoxy1pj" path="res://ui/screens/main_menu/art/main_menu_button_settings.png" id="6_ut6yu"]
-[ext_resource type="Script" path="res://ui/screens/main_menu/MenuButton.cs" id="7_5tvrk"]
 [ext_resource type="AudioStream" uid="uid://dsyx58iyreac6" path="res://assets/audio/effects/pyrite7-32248.mp3" id="9_8ls5d"]
+[ext_resource type="Script" path="res://ui/screens/main_menu/menu_button.gd" id="9_tjc0k"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dq8kj"]
 atlas = ExtResource("4_5vt13")
@@ -113,7 +113,7 @@ offset_right = 160.0
 offset_bottom = 103.0
 scale = Vector2(2, 2)
 texture_normal = SubResource("AtlasTexture_dq8kj")
-script = ExtResource("7_5tvrk")
+script = ExtResource("9_tjc0k")
 
 [node name="QuitButton" type="TextureButton" parent="Control2"]
 unique_name_in_owner = true
@@ -124,7 +124,7 @@ offset_right = 160.0
 offset_bottom = 125.0
 scale = Vector2(2, 2)
 texture_normal = SubResource("AtlasTexture_d17c1")
-script = ExtResource("7_5tvrk")
+script = ExtResource("9_tjc0k")
 
 [node name="SettingsButton" type="TextureButton" parent="Control2"]
 unique_name_in_owner = true
@@ -142,4 +142,4 @@ grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(2, 2)
 texture_normal = SubResource("AtlasTexture_hnn1k")
-script = ExtResource("7_5tvrk")
+script = ExtResource("9_tjc0k")

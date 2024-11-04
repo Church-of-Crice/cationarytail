@@ -1,0 +1,43 @@
+[gd_scene load_steps=9 format=3 uid="uid://c7rhol71x6qt2"]
+
+[ext_resource type="Script" path="res://test/scenes/test_music_loops/test_music_loops.gd" id="1_l1gxb"]
+[ext_resource type="AudioStream" uid="uid://c8en4snaj47mp" path="res://assets/audio/music/Adventure Time [Crushed Loop].ogg" id="1_rw2ae"]
+[ext_resource type="AudioStream" uid="uid://c15t1ttnh8oc5" path="res://assets/audio/music/Guided by the Stars [Crushed Loop].ogg" id="2_jd84j"]
+[ext_resource type="AudioStream" uid="uid://blflokfgvc1jn" path="res://assets/audio/music/Home for Now [Crushed Loop].ogg" id="3_6eyl2"]
+[ext_resource type="AudioStream" uid="uid://dw75mnffvjhp4" path="res://assets/audio/music/Juxtapositioned [Crushed Loop].ogg" id="4_q01ni"]
+[ext_resource type="AudioStream" uid="uid://cdjbevlgyoifv" path="res://assets/audio/music/Stormy Night [Crushed Loop].ogg" id="5_wc6yr"]
+[ext_resource type="AudioStream" uid="uid://1uyoophcyp2k" path="res://assets/audio/music/The Fallen Angel and His Nun [Crushed Loop].ogg" id="6_1ag56"]
+[ext_resource type="AudioStream" uid="uid://entd2qi6pf3e" path="res://assets/audio/music/Through Space and Time [Crushed Loop].ogg" id="7_onm8p"]
+
+[node name="TestMusicLoops" type="Node2D"]
+script = ExtResource("1_l1gxb")
+
+[node name="AdventureTime[crushedLoop]" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("1_rw2ae")
+autoplay = true
+parameters/looping = true
+
+[node name="GuidedByTheStars[crushedLoop]" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_jd84j")
+
+[node name="HomeForNow[crushedLoop]" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("3_6eyl2")
+
+[node name="Juxtapositioned[crushedLoop]" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_q01ni")
+
+[node name="StormyNight[crushedLoop]" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("5_wc6yr")
+
+[node name="TheFallenAngelAndHisNun[crushedLoop]" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("6_1ag56")
+
+[node name="ThroughSpaceAndTime[crushedLoop]" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("7_onm8p")

@@ -12,12 +12,11 @@ config_version=5
 
 config/name="Cationary Tail"
 run/main_scene="res://ui/screens/main_menu/main_menu.tscn"
-config/features=PackedStringArray("4.3", "C#")
+config/features=PackedStringArray("4.3")
 config/icon="res://icon.png"
 
 [autoload]
 
-Globals="res://misc/Globals.cs"
 CharacterData="*res://autoloads/CharacterData.tscn"
 SceneManager="*res://autoloads/scene_manager.gd"
 SignalBus="*res://autoloads/SignalBus.gd"
@@ -51,6 +50,7 @@ enabled=PackedStringArray("res://addons/AsepriteWizard/plugin.cfg", "res://addon
 [global_group]
 
 Player=""
+ShelterClerk=""
 
 [input]
 

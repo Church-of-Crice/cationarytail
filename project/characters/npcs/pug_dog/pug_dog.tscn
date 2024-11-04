@@ -1,35 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://ciq52ea2psb3d"]
+[gd_scene load_steps=7 format=3 uid="uid://ciq52ea2psb3d"]
 
 [ext_resource type="Texture2D" uid="uid://dnu263ojg426r" path="res://characters/npcs/pug_dog/pug dog.png" id="1_d8k1q"]
 [ext_resource type="PackedScene" uid="uid://ckqymeml2cb8l" path="res://ui/overlays/dialog_overlay/DialogArea.tscn" id="2_dickc"]
+[ext_resource type="Resource" uid="uid://dfai4t3fkvw8y" path="res://characters/npcs/pug_dog/pug_dog_dialog.tres" id="3_2jt0e"]
 [ext_resource type="Resource" uid="uid://dvxlvqwf5tor7" path="res://characters/npcs/pug_dog/pug_dog_character.tres" id="3_8yidq"]
-[ext_resource type="Script" path="res://ui/dialog/dialog_event.gd" id="5_3wfff"]
-[ext_resource type="Resource" uid="uid://diliy5h3y7r5m" path="res://ui/dialog/resources/lucretia_character.tres" id="6_v5vgr"]
-[ext_resource type="Script" path="res://ui/dialog/dialog_sequence.gd" id="7_47xwl"]
-
-[sub_resource type="Resource" id="Resource_kxvdv"]
-script = ExtResource("5_3wfff")
-character = ExtResource("6_v5vgr")
-text = "Gross, look at the sag on this one, what are you, my grandma's tits!?"
-
-[sub_resource type="Resource" id="Resource_oo275"]
-script = ExtResource("5_3wfff")
-character = ExtResource("3_8yidq")
-text = "POP A FUCKING XANNY, WHORE!"
-
-[sub_resource type="Resource" id="Resource_t6oyk"]
-script = ExtResource("5_3wfff")
-character = ExtResource("3_8yidq")
-text = "GET THE FUCK OUT OF MY FACE!"
-
-[sub_resource type="Resource" id="Resource_51q1v"]
-script = ExtResource("5_3wfff")
-character = ExtResource("6_v5vgr")
-text = "Excuse me?! What’s a Xanny?"
-
-[sub_resource type="Resource" id="Resource_khubi"]
-script = ExtResource("7_47xwl")
-events = Array[ExtResource("5_3wfff")]([SubResource("Resource_kxvdv"), SubResource("Resource_oo275"), SubResource("Resource_t6oyk"), SubResource("Resource_51q1v")])
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7qgea"]
 size = Vector2(37, 26)
@@ -44,7 +18,8 @@ position = Vector2(100, 8)
 [node name="DialogArea" parent="." instance=ExtResource("2_dickc")]
 position = Vector2(1, 2)
 character = ExtResource("3_8yidq")
-dialog_sequence = SubResource("Resource_khubi")
+dialog_sequence = ExtResource("3_2jt0e")
+one_time_only = true
 
 [node name="CollisionShape2D" parent="DialogArea" index="0"]
 position = Vector2(-1.5, -1)

@@ -8,25 +8,25 @@ var next_scene: PackedScene = SceneManager._03_1_CAT_GETS_IN_TROUBLE_FIRST_DAY_H
 @onready var pick_name_overlay: PickNameOverlay = %PickNameOverlay
 
 func _ready() -> void:
-	# Add opening animation.
-	# await the end of the opening animation
-	await start_opening_dialog()
-	await pick_name()
-	await continue_scene()
-	end_scene()
-	
+  # Add opening animation.
+  # await the end of the opening animation
+  await start_opening_dialog()
+  await pick_name()
+  await continue_scene()
+  end_scene()
+  
 func start_opening_dialog():
-	DialogManager.start_dialog_sequence.emit(start_dialog_sequence)
-	await start_dialog_sequence.finished
+  DialogManager.start_dialog_sequence.emit(start_dialog_sequence)
+  await start_dialog_sequence.finished
 
 func pick_name():
-	pick_name_overlay.show()
-	await pick_name_overlay.done
-	pick_name_overlay.hide()
+  pick_name_overlay.show()
+  await pick_name_overlay.done
+  pick_name_overlay.hide()
 
 func continue_scene():
-	DialogManager.start_dialog_sequence.emit(after_choosing_name_dialog)
-	await after_choosing_name_dialog.finished
+  DialogManager.start_dialog_sequence.emit(after_choosing_name_dialog)
+  await after_choosing_name_dialog.finished
 
 func end_scene():
-	SceneTransitionManager.change_scene_with_transition(next_scene, SceneManager.FADE_TRANSITION)
+  SceneTransitionManager.change_scene_with_transition(next_scene, SceneManager.FADE_TRANSITION)

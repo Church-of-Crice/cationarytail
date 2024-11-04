@@ -1,63 +1,59 @@
-[gd_scene load_steps=19 format=3 uid="uid://bty6hmjgyr0cn"]
+[gd_scene load_steps=18 format=3 uid="uid://lwaoxyt5ig6w"]
 
-[ext_resource type="Texture2D" uid="uid://r7l1rqoc0uig" path="res://characters/npcs/cat_owner/art/lucretia_arm_front_1x.png" id="1_2luoi"]
-[ext_resource type="Texture2D" uid="uid://dthv2feknrk0n" path="res://characters/npcs/cat_owner/Lucretia_All_In-World_Sprites.png" id="2_1vca1"]
-[ext_resource type="Script" path="res://characters/npcs/cat_owner/auto_animator.gd" id="3_w2a0s"]
-[ext_resource type="Script" path="res://characters/player_character/horizontal_flipper.gd" id="4_26m4q"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cxxmk"]
-radius = 6.0
-height = 20.0
+[ext_resource type="PackedScene" uid="uid://c3iur4l67uyh2" path="res://characters/player_character/player_character.tscn" id="1_xlqac"]
+[ext_resource type="Texture2D" uid="uid://r7l1rqoc0uig" path="res://characters/npcs/cat_owner/art/lucretia_arm_front_1x.png" id="2_c1de8"]
+[ext_resource type="Texture2D" uid="uid://dthv2feknrk0n" path="res://characters/npcs/cat_owner/Lucretia_All_In-World_Sprites.png" id="3_1k8v3"]
+[ext_resource type="Script" path="res://characters/npcs/cat_owner/auto_animator.gd" id="4_n1da7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3gvnk"]
-atlas = ExtResource("2_1vca1")
+atlas = ExtResource("3_1k8v3")
 region = Rect2(0, 0, 32, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bciai"]
-atlas = ExtResource("2_1vca1")
+atlas = ExtResource("3_1k8v3")
 region = Rect2(64, 64, 32, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0vb5o"]
-atlas = ExtResource("2_1vca1")
+atlas = ExtResource("3_1k8v3")
 region = Rect2(32, 128, 32, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mvaaf"]
-atlas = ExtResource("2_1vca1")
+atlas = ExtResource("3_1k8v3")
 region = Rect2(96, 0, 32, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cnfy6"]
-atlas = ExtResource("2_1vca1")
+atlas = ExtResource("3_1k8v3")
 region = Rect2(32, 0, 32, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ssvuh"]
-atlas = ExtResource("2_1vca1")
+atlas = ExtResource("3_1k8v3")
 region = Rect2(64, 0, 32, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_auaju"]
-atlas = ExtResource("2_1vca1")
+atlas = ExtResource("3_1k8v3")
 region = Rect2(96, 64, 32, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f82sj"]
-atlas = ExtResource("2_1vca1")
+atlas = ExtResource("3_1k8v3")
 region = Rect2(0, 128, 32, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5nkku"]
-atlas = ExtResource("2_1vca1")
+atlas = ExtResource("3_1k8v3")
 region = Rect2(64, 128, 32, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bj868"]
-atlas = ExtResource("2_1vca1")
+atlas = ExtResource("3_1k8v3")
 region = Rect2(96, 128, 32, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pv6eg"]
-atlas = ExtResource("2_1vca1")
+atlas = ExtResource("3_1k8v3")
 region = Rect2(0, 64, 32, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6pooo"]
-atlas = ExtResource("2_1vca1")
+atlas = ExtResource("3_1k8v3")
 region = Rect2(32, 64, 32, 64)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_udytw"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_iwfpc"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -160,27 +156,23 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="CatOwner" type="CharacterBody2D"]
-y_sort_enabled = true
-collision_layer = 3
-collision_mask = 3
+[node name="PlayerCharacter" instance=ExtResource("1_xlqac")]
 
-[node name="Lucretia" type="Sprite2D" parent="."]
+[node name="PlayerCharacterAppearance" parent="." index="0"]
+visible = false
+
+[node name="Lucretia" type="Sprite2D" parent="." index="7"]
+visible = false
 y_sort_enabled = true
 position = Vector2(1, 26)
-texture = ExtResource("1_2luoi")
+texture = ExtResource("2_c1de8")
 offset = Vector2(-1, -24)
 
-[node name="CollisionDetectionShape" type="CollisionShape2D" parent="."]
-z_index = 1
-position = Vector2(1, 26)
-rotation = 1.5708
-shape = SubResource("CapsuleShape2D_cxxmk")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." index="8"]
 unique_name_in_owner = true
 texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_udytw")
+position = Vector2(0, -24)
+sprite_frames = SubResource("SpriteFrames_iwfpc")
 animation = &"idle_down"
 metadata/_aseprite_wizard_interface_config_ = {
 "layer_section": false,
@@ -199,8 +191,6 @@ metadata/_aseprite_wizard_config_ = {
 }
 metadata/_aseprite_wizard_source_file_hash_ = "e573bd037185d270a8912cfc4c9f8ac4"
 
-[node name="AutoAnimator" type="Node" parent="."]
-script = ExtResource("3_w2a0s")
-
-[node name="HorizontalFlipper" type="Node" parent="."]
-script = ExtResource("4_26m4q")
+[node name="AutoAnimator" type="Node" parent="." index="9" node_paths=PackedStringArray("character_body_2d")]
+script = ExtResource("4_n1da7")
+character_body_2d = NodePath("..")

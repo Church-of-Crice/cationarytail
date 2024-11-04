@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://c3i151loyf71h"]
+
+[ext_resource type="Texture2D" uid="uid://c0ypdj0l2xrk4" path="res://characters/npcs/shelter_clerk/art/shelter_clerk_portrait.png" id="1_7pfbr"]
+[ext_resource type="Script" path="res://ui/dialog/character.gd" id="2_el2ou"]
+
+[resource]
+script = ExtResource("2_el2ou")
+name = "Shelter Clerk"
+portrait = ExtResource("1_7pfbr")

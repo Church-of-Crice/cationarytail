@@ -1,0 +1,14 @@
+[remap]
+
+importer="aseprite_wizard.plugin.noop"
+type="PackedDataContainer"
+uid="uid://cn38hv8xaghxg"
+path="res://.godot/imported/Lucretia_All_In-World_Sprites.aseprite-8ea5d13e7424801eb646e894837d5b83.res"
+
+[deps]
+
+source_file="res://characters/npcs/cat_owner/walk animations/Lucretia_All_In-World_Sprites.aseprite"
+dest_files=["res://.godot/imported/Lucretia_All_In-World_Sprites.aseprite-8ea5d13e7424801eb646e894837d5b83.res"]
+
+[params]
+

@@ -39,6 +39,8 @@ texture = ExtResource("1_3a7dp")
 2:3/0 = 0
 2:3/0/texture_origin = Vector2i(2, 8)
 2:3/0/physics_layer_0/polygon_0/points = PackedVector2Array(-10, 4, 6.5, 4, 6.5, 8, -10, 8)
+3:3/size_in_atlas = Vector2i(1, 2)
+3:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_hmupi"]
 texture = ExtResource("2_2hlm2")

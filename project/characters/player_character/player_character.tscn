@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://c3iur4l67uyh2"]
 
-[ext_resource type="Script" path="res://characters/player_character/PlayerCharacter.cs" id="1_tdqt1"]
+[ext_resource type="Script" path="res://characters/player_character/player_character.gd" id="1_muhhc"]
 [ext_resource type="PackedScene" uid="uid://ff0pl457qtvi" path="res://characters/player_character/player_character_appearance/player_character_appearance.tscn" id="2_ro1wt"]
 [ext_resource type="Script" path="res://characters/player_character/horizontal_flipper.gd" id="3_ko3l0"]
 [ext_resource type="PackedScene" uid="uid://765r1e1m0xr1" path="res://props/thought_bubble_interactable/thought_bubble_container.tscn" id="4_a6t6r"]
@@ -16,7 +16,7 @@ size = Vector2(18, 20)
 [node name="PlayerCharacter" type="CharacterBody2D" groups=["Player"]]
 collision_layer = 2
 motion_mode = 1
-script = ExtResource("1_tdqt1")
+script = ExtResource("1_muhhc")
 
 [node name="PlayerCharacterAppearance" parent="." instance=ExtResource("2_ro1wt")]
 unique_name_in_owner = true
